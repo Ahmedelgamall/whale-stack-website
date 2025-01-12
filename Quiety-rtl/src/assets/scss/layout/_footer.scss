@@ -85,7 +85,7 @@
   border-color: rgba(0, 0, 0, 0.08);
 }
 .register-form input.form-control:focus {
-  border-color: $primary;
+  border: 2px #ff3951 solid !important;
 }
 .footer-bottom {
   position: relative;

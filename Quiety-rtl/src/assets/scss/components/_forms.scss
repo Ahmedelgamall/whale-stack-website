@@ -18,7 +18,7 @@ label{
 }
 .form-control:focus,
 .custom-select:focus {
-  background-color: $white;
+  border: 2px #ff3951 solid !important;
   outline: 0;
   box-shadow: none;
 }
