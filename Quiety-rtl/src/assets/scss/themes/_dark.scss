@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 //For dark version
 
 [data-bs-theme="dark"] {
@@ -89,14 +96,19 @@
 
 	.bg-gradient,
 	.event-hero {
+		background: -webkit-gradient(linear, left top, right top, from($gray-900), to(darken($primary, 45%))) !important;
+		background: -o-linear-gradient(left, $gray-900, darken($primary, 45%)) !important;
 		background: linear-gradient(90deg, $gray-900, darken($primary, 45%)) !important;
 	}
 
 	.ins-contact-section::before {
+		background: -o-linear-gradient(354.5deg, rgb(17 24 39), rgb(17 24 38 / 98%));
 		background: linear-gradient(95.5deg, rgb(17 24 39), rgb(17 24 38 / 98%));
 	}
 
 	.payment-news-letter {
+		background: -webkit-gradient(linear, left bottom, left top, color-stop(13.3%, $gray-800), to(rgba(255, 255, 255, 0)));
+		background: -o-linear-gradient(bottom, $gray-800 13.3%, rgba(255, 255, 255, 0) 100%);
 		background: linear-gradient(0deg, $gray-800 13.3%, rgba(255, 255, 255, 0) 100%);
 	}
 
@@ -110,11 +122,8 @@
 
 	.two-bg-dark-light,
 	.hd-hero-section {
-		background-image: -webkit-gradient(linear,
-				left top,
-				right top,
-				color-stop(40%, $dark),
-				color-stop(0, $gray-900));
+		background-image: -webkit-gradient(linear, left top, right top, color-stop(40%, $dark), color-stop(0, $gray-900));
+		background-image: -o-linear-gradient(left, $dark 40%, $gray-900 0);
 		background-image: linear-gradient(90deg, $dark 40%, $gray-900 0);
 	}
 
@@ -254,6 +263,7 @@
 
 	.ca-two-bg-hover-two {
 		&:hover {
+			background: -o-linear-gradient(351deg, #2ACE93 7.76%, #9CE842 100%);
 			background: linear-gradient(99deg, #2ACE93 7.76%, #9CE842 100%);
 			border-color: transparent;
 		}
@@ -285,7 +295,8 @@
 		background-color: $github;
 
 		.ca-two-info-icon {
-			filter: invert(1);
+			-webkit-filter: invert(1);
+			        filter: invert(1);
 		}
 
 		h5,
@@ -295,7 +306,8 @@
 	}
 
 	.ca-two-mission-img {
-		filter: invert(1);
+		-webkit-filter: invert(1);
+		        filter: invert(1);
 	}
 
 	.ca-two-pf-posts .ca-two-bg-five {
@@ -315,7 +327,8 @@
 	}
 
 	.ca-two-pf-img {
-		filter: brightness(0.9);
+		-webkit-filter: brightness(0.9);
+		        filter: brightness(0.9);
 	}
 
 	.ca-two-product-item {
@@ -343,6 +356,7 @@
 
 		.ca-two-bg-hover:hover {
 			border-color: transparent;
+			background: -o-linear-gradient(351deg, #2ACE93 7.76%, #9CE842 100%);
 			background: linear-gradient(99deg, #2ACE93 7.76%, #9CE842 100%);
 			color: $white;
 		}
@@ -350,6 +364,7 @@
 
 	.ca-two-ss-area,
 	.ca-two-footer {
+		background: -o-linear-gradient(351deg, #2ACE93 7.76%, #9CE842 100%);
 		background: linear-gradient(99deg, #2ACE93 7.76%, #9CE842 100%);
 	}
 
@@ -433,11 +448,13 @@
 
 	.rm-hero::after,
 	.rm-footer-top::after {
-		filter: brightness(0.1);
+		-webkit-filter: brightness(0.1);
+		        filter: brightness(0.1);
 	}
 
 	.rm-service-area .s-two {
-		filter: grayscale(1);
+		-webkit-filter: grayscale(1);
+		        filter: grayscale(1);
 	}
 
 	// Home 28
@@ -478,13 +495,15 @@
 	}
 
 	.it-company-service-area::after {
-		filter: invert(1);
+		-webkit-filter: invert(1);
+		        filter: invert(1);
     	opacity: .9;
 	}
 
 	.it-company-team-area::after,
 	.it-company-footer::after {
-		filter: brightness(0.0);
+		-webkit-filter: brightness(0.0);
+		        filter: brightness(0.0);
 	}
 
 	.it-company-faq-area .ca-accordion .accordion-body {
@@ -510,6 +529,7 @@
 		border-color: $gray-900;
 
 		&::before {
+			background-image: -o-radial-gradient(0 0, circle, transparent 1rem, $gray-900 0.5rem);
 			background-image: radial-gradient(circle at 0 0, transparent 1rem, $gray-900 0.5rem);
 		}
 	}
@@ -530,6 +550,7 @@
 
 	.aih-portfolio-area .qty-portfolio__arrow::before,
 	.aih-portfolio-area .qty-portfolio__arrow::after {
+		background-image: -o-radial-gradient(0 0, circle, transparent 1rem, $gray-900 0.5rem);
 		background-image: radial-gradient(circle at 0 0, transparent 1rem, $gray-900 0.5rem);
 	}
 
@@ -563,11 +584,13 @@
 	}
 
 	.ail-feature-tab .nav-link img {
-		filter: invert(1);
+		-webkit-filter: invert(1);
+		        filter: invert(1);
 	}
 
 	.ail-feature-tab .nav-link img.active {
-		filter: inherit;
+		-webkit-filter: inherit;
+		        filter: inherit;
 	}
 
 	.ail-ft-content::after {
@@ -644,7 +667,8 @@
 		}
 		.scroller-x {
 			li img {
-				filter: invert(1);
+				-webkit-filter: invert(1);
+				        filter: invert(1);
 			}
 		}
 	}
@@ -759,4 +783,3 @@
 		color: $white;
 	}
 }
-
