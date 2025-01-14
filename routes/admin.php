@@ -7,8 +7,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\BlogController;
+use App\Http\Controllers\Admin\BrandController;
 use App\Http\Controllers\Admin\LanguageController;
 use App\Http\Controllers\Admin\SeoSettingController;
+use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\StaticTextController;
 use App\Http\Controllers\Admin\TestimonialController;
@@ -53,6 +55,16 @@ Route::group(
             Route::get('blogs/data', [BlogController::class, 'data'])->name('blogs.data');
             Route::post('blogs/bulk-delete', [BlogController::class, 'bulkDelete'])->name('blogs.bulkDelete');
             Route::resource('blogs', BlogController::class);
+
+            // services
+            Route::get('services/data', [ServiceController::class, 'data'])->name('services.data');
+            Route::post('services/bulk-delete', [ServiceController::class, 'bulkDelete'])->name('services.bulkDelete');
+            Route::resource('services', ServiceController::class);
+
+            // brands
+            Route::get('brands/data', [BrandController::class, 'data'])->name('brands.data');
+            Route::post('brands/bulk-delete', [BrandController::class, 'bulkDelete'])->name('brands.bulkDelete');
+            Route::resource('brands', BrandController::class);
 
             // static_texts
             Route::get('static_texts/data', [StaticTextController::class, 'data'])->name('static_texts.data');

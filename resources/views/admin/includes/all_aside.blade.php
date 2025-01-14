@@ -123,6 +123,32 @@
 
                 </ul>
             </li>
+            <li class=" nav-item">
+                <a class="d-flex align-items-center" href="#">
+                    <i data-feather='cloud'></i><span class="menu-title text-truncate"
+                        data-i18n="Roles&Permissions">Services</span>
+                </a>
+                <ul class="menu-content">
+                    <li class="nav-item {{ active('services') }} "><a class="d-flex align-items-center"
+                            href="{{ route('services.index') }}"><i data-feather='cloud'></i><span
+                                class="menu-title text-truncate" data-i18n="Languages">Services </span></a>
+                    </li>
+
+                </ul>
+            </li>
+            <li class=" nav-item">
+                <a class="d-flex align-items-center" href="#">
+                    <i data-feather='star'></i><span class="menu-title text-truncate"
+                        data-i18n="Roles&Permissions">Brands</span>
+                </a>
+                <ul class="menu-content">
+                    <li class="nav-item {{ active('brands') }} "><a class="d-flex align-items-center"
+                            href="{{ route('brands.index') }}"><i data-feather='star'></i><span
+                                class="menu-title text-truncate" data-i18n="Languages">Brands </span></a>
+                    </li>
+
+                </ul>
+            </li>
 
             <li class=" nav-item">
                 <a class="d-flex align-items-center" href="#">
