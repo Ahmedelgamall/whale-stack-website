@@ -96,29 +96,36 @@
 
                 </ul>
             </li>
-
-            <li class=" nav-item">
-                <a class="d-flex align-items-center" href="#">
-                    <i data-feather='list'></i><span class="menu-title text-truncate"
-                        data-i18n="Roles&Permissions">Categories</span>
-                </a>
-                <ul class="menu-content">
-                    <li class="nav-item {{ active('categories') }} "><a class="d-flex align-items-center"
-                            href="{{ route('categories.index') }}"><i data-feather='list'></i><span
-                                class="menu-title text-truncate" data-i18n="Languages">Categories </span></a>
-                    </li>
-
-                </ul>
-            </li>
             <li class=" nav-item">
                 <a class="d-flex align-items-center" href="#">
                     <i data-feather='bar-chart-2'></i><span class="menu-title text-truncate"
                         data-i18n="Roles&Permissions">Blogs</span>
                 </a>
                 <ul class="menu-content">
+                    {{-- <li class="nav-item {{ active('categories') }} "><a class="d-flex align-items-center"
+                            href="{{ route('categories.index') }}"><i data-feather='list'></i><span
+                                class="menu-title text-truncate" data-i18n="Languages">Categories </span></a>
+                    </li> --}}
                     <li class="nav-item {{ active('blogs') }} "><a class="d-flex align-items-center"
                             href="{{ route('blogs.index') }}"><i data-feather='bar-chart-2'></i><span
                                 class="menu-title text-truncate" data-i18n="Languages">Blogs </span></a>
+                    </li>
+
+                </ul>
+            </li>
+            <li class=" nav-item">
+                <a class="d-flex align-items-center" href="#">
+                    <i data-feather='list'></i><span class="menu-title text-truncate"
+                        data-i18n="Roles&Permissions">Projects</span>
+                </a>
+                <ul class="menu-content">
+                    <li class="nav-item {{ active('project-categories') }} "><a class="d-flex align-items-center"
+                            href="{{ route('project-categories.index') }}"><i data-feather='grid'></i><span
+                                class="menu-title text-truncate" data-i18n="Languages">Project Categories </span></a>
+                    </li>
+                    <li class="nav-item {{ active('projects') }} "><a class="d-flex align-items-center"
+                            href="{{ route('projects.index') }}"><i data-feather='list'></i><span
+                                class="menu-title text-truncate" data-i18n="Languages">Projects </span></a>
                     </li>
 
                 </ul>
@@ -162,7 +169,7 @@
                     </li>
                 </ul>
             </li>
-            
+
             <li class=" nav-item">
                 <a class="d-flex align-items-center" href="#">
                     <i data-feather='activity'></i><span class="menu-title text-truncate"
@@ -175,7 +182,7 @@
                     </li>
                 </ul>
             </li>
-            
+
             <li class=" nav-item">
                 <a class="d-flex align-items-center" href="#">
                     <i data-feather="search" title="SEO Analysis"></i><span class="menu-title text-truncate"
@@ -183,8 +190,9 @@
                 </a>
                 <ul class="menu-content">
                     <li class="nav-item {{ active('seo_settings') }} "><a class="d-flex align-items-center"
-                            href="{{ route('seo_settings.index') }}"><i data-feather="search" title="SEO Analysis"></i><span
-                                class="menu-title text-truncate" data-i18n="Languages">SEO </span></a>
+                            href="{{ route('seo_settings.index') }}"><i data-feather="search"
+                                title="SEO Analysis"></i><span class="menu-title text-truncate"
+                                data-i18n="Languages">SEO </span></a>
                     </li>
                 </ul>
 

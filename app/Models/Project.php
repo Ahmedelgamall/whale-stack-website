@@ -3,17 +3,18 @@
 namespace App\Models;
 
 use Astrotomic\Translatable\Translatable;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\File;
 
-class Blog extends Model
+class Project extends Model
 {
     use Translatable;
 
     protected $with = ['translations'];
     protected $guarded = [];
 
-    protected $translatedAttributes = ['title', 'description', 'meta_title', 'meta_keyword', 'meta_description'];
+    protected $translatedAttributes = ['title', 'description'];
 
 
     protected static function boot()

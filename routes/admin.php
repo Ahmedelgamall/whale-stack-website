@@ -9,6 +9,8 @@ use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\BrandController;
 use App\Http\Controllers\Admin\LanguageController;
+use App\Http\Controllers\Admin\ProjectCategoryController;
+use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\Admin\SeoSettingController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\SettingController;
@@ -42,9 +44,19 @@ Route::group(
             // Route::any('about-us/update/{id}', [AboutUsAdminController::class, 'updateAbout'])->name('about.update');
 
             // categories
-            Route::get('categories/data', [CategoryController::class, 'data'])->name('categories.data');
-            Route::post('categories/bulk-delete', [CategoryController::class, 'bulkDelete'])->name('categories.bulkDelete');
-            Route::resource('categories', CategoryController::class);
+            // Route::get('categories/data', [CategoryController::class, 'data'])->name('categories.data');
+            // Route::post('categories/bulk-delete', [CategoryController::class, 'bulkDelete'])->name('categories.bulkDelete');
+            // Route::resource('categories', CategoryController::class);
+
+            // Project Categories
+            Route::get('project-categories/data', [ProjectCategoryController::class, 'data'])->name('project-categories.data');
+            Route::post('project-categories/bulk-delete', [ProjectCategoryController::class, 'bulkDelete'])->name('project-categories.bulkDelete');
+            Route::resource('project-categories', ProjectCategoryController::class);
+        
+            // Projects
+            Route::get('projects/data', [ProjectController::class, 'data'])->name('projects.data');
+            Route::post('projects/bulk-delete', [ProjectController::class, 'bulkDelete'])->name('projects.bulkDelete');
+            Route::resource('projects', ProjectController::class);
 
             // faqs
             Route::get('faqs/data', [FaqController::class, 'data'])->name('faqs.data');
