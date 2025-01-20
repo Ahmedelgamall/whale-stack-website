@@ -7,6 +7,7 @@ use App\Http\Controllers\Web\HomeController;
 use App\Http\Controllers\Web\InsightController;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,22 +22,28 @@ use Illuminate\Support\Facades\Route;
 
 /* Home page */
 
-Route::get('/', function () {
-    return Redirect::to('admin/login');
-})->name('web.home');
+Route::group(
+    [
+        'prefix' => LaravelLocalization::setLocale(),
+        'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
+    ],
+    function () {
+        Route::get('/', [HomeController::class, 'getHome'])->name('web.home');
 
-/* About Pages */
-Route::get('/why-choose-us', [AboutController::class, 'getWhyChooseUs'])->name('web.why-choose-us');
-Route::get('/our-cluture', [AboutController::class, 'getOurCluture'])->name('web.our-cluture');
-Route::get('/leader-ship-team', [AboutController::class, 'getLeaderShipTeam'])->name('web.leader-ship-team');
+        /* About Pages */
+        Route::get('/why-choose-us', [AboutController::class, 'getWhyChooseUs'])->name('web.why-choose-us');
+        Route::get('/our-cluture', [AboutController::class, 'getOurCluture'])->name('web.our-cluture');
+        Route::get('/leader-ship-team', [AboutController::class, 'getLeaderShipTeam'])->name('web.leader-ship-team');
 
-/* Careers Page */
-Route::get('/careers', [CareerController::class, 'getCareer'])->name('web.careers');
+        /* Careers Page */
+        Route::get('/careers', [CareerController::class, 'getCareer'])->name('web.careers');
 
-/* Insights Page */
-Route::get('/insights', [InsightController::class, 'getInsight'])->name('web.insights');
+        /* Insights Page */
+        Route::get('/insights', [InsightController::class, 'getInsight'])->name('web.insights');
 
-/* Careers Page */
-Route::get('/contact-us', [ContactController::class, 'getContactUs'])->name('web.contact-us');
+        /* Careers Page */
+        Route::get('/contact-us', [ContactController::class, 'getContactUs'])->name('web.contact-us');
 
-Route::post('/contact-submit', [ContactController::class, 'submitContact'])->name('contact.submit');
+        Route::post('/contact-submit', [ContactController::class, 'submitContact'])->name('contact.submit');
+    }
+);

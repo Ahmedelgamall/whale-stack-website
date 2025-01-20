@@ -92,7 +92,21 @@ if (!function_exists('getSettingOf')) {
         $translate_key = $key . '_' . config('app.locale');
         $settings = \Spatie\Valuestore\Valuestore::make(config_path('settings.json'));
         return $settings->get($translate_key) ?? $settings->get($key);
+    }
+}
+if (!function_exists('formateTitle')) {
+    function formateTitle($title)
+    {
+        $parts = explode(' ', $title);
+        $formattedTitle = collect($parts)->map(function ($word, $index) {
+            if ($index === 1 || $index === 2) {
+                return "<span class='risk-gd-text'>{$word}</span>";
+            } elseif ($index === 3) {
+                return "<span class='text-ind'>{$word}</span>";
+            }
+            return $word;
+        })->implode(' ');
 
-
+        return $formattedTitle;
     }
 }

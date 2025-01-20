@@ -13,11 +13,11 @@ return [
     'locales' => [
         'en',
         'ar',
-//        'fr',
-//        'es' => [
-//            'MX', // mexican spanish
-//            'CO', // colombian spanish
-//        ],
+        //        'fr',
+        //        'es' => [
+        //            'MX', // mexican spanish
+        //            'CO', // colombian spanish
+        //        ],
     ],
 
     /*
@@ -44,8 +44,10 @@ return [
     | and never fallback to the translator one.
     |
     */
-    'locale' => null,
 
+    
+    // Fallback locale used when translation is not available
+    'fallback_locale' => 'en',
     /*
     |--------------------------------------------------------------------------
     | Use fallback
@@ -57,7 +59,7 @@ return [
     | $useTranslationFallback when defined
     |
     */
-    'use_fallback' => false,
+    'use_fallback' => true,
 
     /*
     |--------------------------------------------------------------------------

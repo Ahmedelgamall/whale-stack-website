@@ -5,12 +5,10 @@ namespace App\Enums;
 enum PageType: int
 {
     case HOME = 1;
-    case ABOUT_US_WHY_CHOOSE_US = 2;
-    case ABOUT_US_OUR_CLUTURE = 3;
-    case ABOUT_US_LEADER_SHIP_TEAM = 4;
-    case CAREERS = 5;
-    case INSIGHTS = 6;
-    case CONTACT_US = 7;
+    case BLOGS = 2;
+    case PORTFOLIO = 3;
+    case ABOUT_US = 4;
+    case CONTACT_US = 5;
 
     /**
      * Get a human-readable label for each page type.
@@ -19,11 +17,9 @@ enum PageType: int
     {
         return match ($this) {
             self::HOME => 'Home',
-            self::ABOUT_US_WHY_CHOOSE_US => 'About Us: why choose us',
-            self::ABOUT_US_OUR_CLUTURE => 'About Us: our cluture',
-            self::ABOUT_US_LEADER_SHIP_TEAM => 'About Us: leader ship team',
-            self::CAREERS => 'Careers',
-            self::INSIGHTS => 'Insights',
+            self::BLOGS => 'Blogs',
+            self::PORTFOLIO => 'Portfolio',
+            self::ABOUT_US => 'About Us',
             self::CONTACT_US => 'Contact Us',
         };
     }
@@ -44,22 +40,22 @@ enum PageType: int
         return array_column(self::cases(), 'value');
     }
 
-    /**
-     * Get an enum instance by its label.
-     */
-    public static function fromLabel(string $label): ?self
-    {
-        return match ($label) {
-            'Home' => self::HOME,
-            'About Us: why choose us' => self::ABOUT_US_WHY_CHOOSE_US,
-            'About Us: our cluture' => self::ABOUT_US_OUR_CLUTURE,
-            'About Us: leader ship team' => self::ABOUT_US_LEADER_SHIP_TEAM,
-            'Careers' => self::CAREERS,
-            'Insights' => self::INSIGHTS,
-            'Contact Us' => self::CONTACT_US,
-            default => null,
-        };
-    }
+    // /**
+    //  * Get an enum instance by its label.
+    //  */
+    // public static function fromLabel(string $label): ?self
+    // {
+    //     return match ($label) {
+    //         'Home' => self::HOME,
+    //         'About Us: why choose us' => self::ABOUT_US_WHY_CHOOSE_US,
+    //         'About Us: our cluture' => self::ABOUT_US_OUR_CLUTURE,
+    //         'About Us: leader ship team' => self::ABOUT_US_LEADER_SHIP_TEAM,
+    //         'Careers' => self::CAREERS,
+    //         'Insights' => self::INSIGHTS,
+    //         'Contact Us' => self::CONTACT_US,
+    //         default => null,
+    //     };
+    // }
 
     /**
      * Get the label for a given case number.
