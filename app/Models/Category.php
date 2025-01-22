@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
 {
-     use Translatable;
+    use Translatable, HasFactory;
 
     protected $with = ['translations'];
     protected $guarded = [];

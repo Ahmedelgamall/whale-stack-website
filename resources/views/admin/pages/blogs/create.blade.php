@@ -46,6 +46,20 @@
                                     </div>
                                 </nav>
                                 <div class="tab-content" id="nav-tabContent">
+                                    <div class="row">
+                                        <div class="col-md-12 col-12">
+                                            <div class="mb-1">
+                                                <label class="form-label" for="Page">Category</label>
+                                                <select name="category_id" id="Page" class="form-control">
+                                                    <option disabled selected>Select Category</option>
+                                                    @foreach ($categories as $category)
+                                                        <option value="{{ $category->id }}">{{ $category->name }}
+                                                        </option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
                                     @foreach ($activeLanguages as $lang)
                                         <div class="tab-pane fade {{ $loop->first ? 'active' : '' }} show"
                                             id="{{ $lang->locale }}" role="tabpanel"
@@ -105,8 +119,8 @@
                                             <div class="col-md-8 col-8">
                                                 <div class="mb-1">
                                                     <label class="form-label" for="first-name-column">Image</label>
-                                                    <input type="file" id="first-name-column" class="form-control photo"
-                                                        placeholder="image" name="image">
+                                                    <input type="file" id="first-name-column"
+                                                        class="form-control photo" placeholder="image" name="image">
                                                 </div>
                                             </div>
                                             <div class="col-md-4 col-4">

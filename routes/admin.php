@@ -44,9 +44,9 @@ Route::group(
             // Route::any('about-us/update/{id}', [AboutUsAdminController::class, 'updateAbout'])->name('about.update');
 
             // categories
-            // Route::get('categories/data', [CategoryController::class, 'data'])->name('categories.data');
-            // Route::post('categories/bulk-delete', [CategoryController::class, 'bulkDelete'])->name('categories.bulkDelete');
-            // Route::resource('categories', CategoryController::class);
+            Route::get('categories/data', [CategoryController::class, 'data'])->name('categories.data');
+            Route::post('categories/bulk-delete', [CategoryController::class, 'bulkDelete'])->name('categories.bulkDelete');
+            Route::resource('categories', CategoryController::class);
 
             // Project Categories
             Route::get('project-categories/data', [ProjectCategoryController::class, 'data'])->name('project-categories.data');

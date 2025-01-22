@@ -21,9 +21,9 @@ class HomeController extends Controller
     public function getHome()
     {
         $rows = StaticText::where('page_id', PageType::HOME)->get();
-        $brands = Brand::all();
+        $brands = Brand::latest()->limit(18)->get();
         $testimonials = Testimonial::all();
-        $faqs = Faq::all();
+        $faqs = Faq::latest()->limit(12)->get();
         $blogs = Blog::with('category')->latest()->limit(3)->get();
         return view('website.pages.home', compact('rows', 'brands', 'testimonials', 'faqs', 'blogs'));
     }

@@ -41,6 +41,7 @@
                                     </th>
                                     <th>#</th>
                                     <th>Image</th>
+                                    <th>Category</th>
                                     <th>Title</th>
                                     <th>Actions</th>
                                 </tr>
@@ -70,6 +71,7 @@
                 {data: "check", name: "check", sortable: false, searchable: false},
                 {data: "id", name: "id"},
                 {data: "image", name: "image"},
+                {data: "category", name: "category"},
                 {data: "title", name: "title"},
                 {data: "actions", name: "actions"},
             ],

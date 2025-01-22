@@ -442,9 +442,9 @@
                                         </div>
                                     </div>
                                     <!-- <div class="col-12">
-                                                                            <button type="submit" class="btn btn-primary mt-4 d-block w-100">Get Started
-                                                                            </button>
-                                                                        </div> -->
+                                                                                    <button type="submit" class="btn btn-primary mt-4 d-block w-100">Get Started
+                                                                                    </button>
+                                                                                </div> -->
                                 </div>
                                 <div class="position-relative digi-news-form">
                                     <input required type="text" class="form-control ah-input-bg"
@@ -657,42 +657,37 @@
             </div>
             <div class="row">
                 @foreach ($blogs as $blog)
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-article rounded-custom mb-4 mb-lg-0">
-                        <a href="blog-single.html" class="article-img">
-                            <img src="{{ asset('storage'.'/'.$blog->image) }}" alt="article"
-                                class="img-fluid">
-                        </a>
-                        <div class="article-content p-4">
-                            <div class="article-category mb-4 d-block">
-                                <a href="javascript:;"
-                                    class="d-inline-block text-warning badge bg-warning-soft">Design</a>
-                            </div>
-                            <a href="blog-single.html">
-                                <h2 class="h5 article-title limit-2-line-text">Do you really understand the
-                                    concept of product value?</h2>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-article rounded-custom mb-4 mb-lg-0">
+                            <a href="{{ route('web.show.blog', ['slug' => $blog->slug]) }}" class="article-img">
+                                <img src="{{ asset('storage' . '/' . $blog->image) }}" alt="article" class="img-fluid">
                             </a>
-                            <p class="limit-2-line-text">Society is fragmenting into two parallel realities. In
-                                one reality, you have infinite upside and opportunity. In the other reality, you’ll
-                                continue to see the gap between your standard of living and those at the top grow
-                                more and more.</p>
+                            <div class="article-content p-4">
+                                <div class="article-category mb-4 d-block">
+                                    <a href="javascript:;"
+                                        class="d-inline-block text-warning badge bg-warning-soft">{{ $blog->category?->name }}</a>
+                                </div>
+                                <a href="{{ route('web.show.blog', ['slug' => $blog->slug]) }}">
+                                    <h2 class="h5 article-title limit-2-line-text">{{ $blog->title }}</h2>
+                                </a>
+                                <p class="limit-2-line-text">{!! Str::limit($blog->description, 150, '...') !!}</p>
 
-                            <a href="javascript:;">
-                                <div class="d-flex align-items-center pt-4">
-                                    {{-- <div class="avatar">
+                                <a href="javascript:;">
+                                    <div class="d-flex align-items-center pt-4">
+                                        {{-- <div class="avatar">
                                         <img src="{{ asset('assets/web/') }}/assets/img/testimonial/6.jpg" alt="avatar"
                                             width="40" class="img-fluid rounded-circle me-3">
                                     </div> --}}
-                                    <div class="avatar-info">
-                                        {{-- <h6 class="mb-0 avatar-name">Jane Martin</h6> --}}
-                                        <span class="small fw-medium text-muted">April 24, 2021</span>
+                                        <div class="avatar-info">
+                                            {{-- <h6 class="mb-0 avatar-name">Jane Martin</h6> --}}
+                                            <span class="small fw-medium text-muted">{{ $blog->created_at->format('F d, Y') }}</span>
+                                        </div>
                                     </div>
-                                </div>
-                            </a>
+                                </a>
 
+                            </div>
                         </div>
                     </div>
-                </div>
                 @endforeach
             </div>
             <div class="row justify-content-center">

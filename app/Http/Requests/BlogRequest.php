@@ -30,6 +30,7 @@ class BlogRequest extends FormRequest
     public function onStore()
     {
         $data = [
+            'category_id' => 'required|exists:categories,id',
             'image' => 'required|image|mimes:jpeg,jpg,png',
         ];
         foreach (activeLanguages() as $lang) {
@@ -47,6 +48,7 @@ class BlogRequest extends FormRequest
     public function onUpdate()
     {
         $data = [
+            'category_id' => 'required|exists:categories,id',
             'image' => 'sometimes|nullable|image|mimes:jpeg,jpg,png',
         ];
         foreach (activeLanguages() as $lang) {

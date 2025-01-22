@@ -102,10 +102,10 @@
                         data-i18n="Roles&Permissions">Blogs</span>
                 </a>
                 <ul class="menu-content">
-                    {{-- <li class="nav-item {{ active('categories') }} "><a class="d-flex align-items-center"
+                    <li class="nav-item {{ active('categories') }} "><a class="d-flex align-items-center"
                             href="{{ route('categories.index') }}"><i data-feather='list'></i><span
                                 class="menu-title text-truncate" data-i18n="Languages">Categories </span></a>
-                    </li> --}}
+                    </li>
                     <li class="nav-item {{ active('blogs') }} "><a class="d-flex align-items-center"
                             href="{{ route('blogs.index') }}"><i data-feather='bar-chart-2'></i><span
                                 class="menu-title text-truncate" data-i18n="Languages">Blogs </span></a>

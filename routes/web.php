@@ -1,10 +1,10 @@
 <?php
 
 use App\Http\Controllers\Web\AboutController;
+use App\Http\Controllers\Web\BlogController;
 use App\Http\Controllers\Web\CareerController;
 use App\Http\Controllers\Web\ContactController;
 use App\Http\Controllers\Web\HomeController;
-use App\Http\Controllers\Web\InsightController;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -38,8 +38,9 @@ Route::group(
         /* Careers Page */
         Route::get('/careers', [CareerController::class, 'getCareer'])->name('web.careers');
 
-        /* Insights Page */
-        Route::get('/insights', [InsightController::class, 'getInsight'])->name('web.insights');
+        /* Blogs Page */
+        Route::get('/blogs', [BlogController::class, 'getBlogs'])->name('web.blogs');
+        Route::get('/blog/{slug}', [BlogController::class, 'showBlog'])->name('web.show.blog');
 
         /* Careers Page */
         Route::get('/contact-us', [ContactController::class, 'getContactUs'])->name('web.contact-us');

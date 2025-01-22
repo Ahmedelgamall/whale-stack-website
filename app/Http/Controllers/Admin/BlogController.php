@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\BlogRequest;
 use App\Models\Blog;
+use App\Models\Category;
 use App\Traits\Files;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
@@ -30,12 +31,15 @@ class BlogController extends Controller
     public function data()
     {
 
-        $insghts = Blog::query();
+        $insghts = Blog::query()->with('category');
 
         $model = 'blogs';
         return DataTables::of($insghts)
             ->addColumn('actions', function ($raw) use ($model) {
                 return view('admin.includes.actions', compact('raw', 'model'));
+            })
+            ->addColumn('category', function ($raw) {
+                return $raw->category?->name ?? '';
             })
             ->addColumn('check', function ($raw) {
                 return view('admin.includes.checkbox', compact('raw'));
@@ -49,7 +53,7 @@ class BlogController extends Controller
 
     public function create()
     {
-        return view('admin.pages.blogs.create', ['data' => $this->data]);
+        return view('admin.pages.blogs.create', ['data' => $this->data, 'categories' => Category::all()]);
     }
 
     /**
@@ -67,8 +71,12 @@ class BlogController extends Controller
                 $data['image'] = $image;
             }
 
-            $data['slug'] = Str::slug($data['en']['title']);
-            Blog::create($data);
+            // Create the blog record to get the ID
+            $blog = Blog::create($data);
+
+            // Update the slug by concatenating the ID
+            $slug = Str::slug($data['en']['title']) . '-' . $blog->id;
+            $blog->update(['slug' => $slug]);
         } catch (\Exception $exception) {
             return final_response('error', $exception->getMessage(), '', 500);
         }
@@ -96,7 +104,7 @@ class BlogController extends Controller
     public function edit($id)
     {
         $row = Blog::query()->find($id);
-        return view('admin.pages.blogs.edit', ['data' => $this->data, 'row' => $row]);
+        return view('admin.pages.blogs.edit', ['data' => $this->data, 'row' => $row, 'categories' => Category::all()]);
     }
 
     /**
@@ -116,7 +124,7 @@ class BlogController extends Controller
                 $data['image'] = $image;
             }
 
-            $data['slug'] = Str::slug($data['en']['title']);
+            $data['slug'] = Str::slug($data['en']['title']) . '-' . $blogs->id;
             $blogs->update($data);
         } catch (\Exception $exception) {
             return final_response('error', $exception->getMessage(), '', $exception->getMessage(), 500);
