@@ -8,6 +8,7 @@ use App\Models\Blog;
 use App\Models\Category;
 use App\Traits\Files;
 use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
 use Yajra\DataTables\Facades\DataTables;
 use Illuminate\Support\Str;
 
@@ -72,6 +73,7 @@ class BlogController extends Controller
             }
 
             // Create the blog record to get the ID
+            $data = Arr::except($data, '')
             $blog = Blog::create($data);
 
             // Update the slug by concatenating the ID
