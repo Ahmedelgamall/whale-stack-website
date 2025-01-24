@@ -107,97 +107,29 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6 col-md-10">
                     <div class="section-heading text-center" data-aos="fade-up">
-                        <h2>أفضل الخدمات لتعزيز قيمة عملك</h2>
-                        <p>Globally actualize cost effective with resource maximizing leadership skills.</p>
+                        <h2>{{ __('app.Best Services to Boost Your Business Value') }}</h2>
+                        <p>{{ __('app.globally_actualize') }}</p>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-12">
                     <div class="feature-grid">
-                        <div class="feature-card  bg-custom-light promo-border-hover border border-2 border-light text-white shadow-sm highlight-card rounded-custom p-5"
-                            data-aos="fade-up" data-aos-delay="50">
-                            <div class="icon-box d-inline-block rounded-circle bg-primary-soft mb-32">
-                                <i class="fas fa-chart-simple icon-sm text-primary"></i>
+                        @foreach ($services as $service)
+                            <div class="feature-card  bg-custom-light promo-border-hover border border-2 border-light text-white shadow-sm rounded-custom @if ($loop->first) highlight-card @endif p-5"
+                                data-aos="fade-up" data-aos-delay="50">
+                                <div class="icon-box d-inline-block rounded-circle bg-primary-soft mb-32">
+                                    <i class="fas {{ $service->icon }}"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3 class="h5">{{ $service->title }}</h3>
+                                    {!! Str::limit($service->description, 300, '...') !!}
+                                </div>
+                                <a href="service-single.html"
+                                    class="link-with-icon text-decoration-none mt-3">{{ __('app.View_Details') }}<i
+                                        class="fas fa-arrow-right"></i></a>
                             </div>
-                            <div class="feature-content">
-                                <h3 class="h5">Advanced analytics</h3>
-                                <p>Synergistically pursue accurate initiatives without economically sound
-                                    imperatives.</p>
-                                <p> Professionally architect unique process improvements via optimal.</p>
-                                <h6 class="mt-4">Included with...</h6>
-                                <ul class="list-unstyled mb-0">
-                                    <li class="py-1"><i class="far fa-check-circle me-2 text-primary"></i>High
-                                        -converting</li>
-                                    <li class="py-1"><i class="far fa-check-circle me-2 text-primary"></i>Personal
-                                        branding</li>
-                                    <li class="py-1"><i class="far fa-check-circle me-2 text-primary"></i>Modernized
-                                        prospecting</li>
-                                    <li class="py-1"><i class="far fa-check-circle me-2 text-primary"></i>Clean
-                                        and
-                                        modern</li>
-                                    <li class="py-1"><i class="far fa-check-circle me-2 text-primary"></i>Showcasing
-                                        success</li>
-                                    <li class="py-1"><i class="far fa-check-circle me-2 text-primary"></i>Bootstrap
-                                        latest
-                                        version</li>
-                                </ul>
-                            </div>
-                            <a href="service-single.html" class="link-with-icon text-decoration-none mt-3">View
-                                Details <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                        <div class="feature-card  bg-custom-light promo-border-hover border border-2 border-light text-white shadow-sm rounded-custom p-5"
-                            data-aos="fade-up" data-aos-delay="50">
-                            <div class="icon-box d-inline-block rounded-circle bg-success-soft mb-32">
-                                <i class="fas fa-file icon-sm text-success"></i>
-                            </div>
-                            <div class="feature-content">
-                                <h3 class="h5">Automated Reports</h3>
-                                <p class="mb-0">Synergistically pursue accurate initiatives without economically
-                                    imperatives.</p>
-                            </div>
-                            <a href="service-single.html" class="link-with-icon text-decoration-none mt-3">View
-                                Details <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                        <div class="feature-card  bg-custom-light promo-border-hover border border-2 border-light text-white shadow-sm rounded-custom p-5"
-                            data-aos="fade-up" data-aos-delay="50">
-                            <div class="icon-box d-inline-block rounded-circle bg-danger-soft mb-32">
-                                <i class="fas fa-user-group icon-sm text-danger"></i>
-                            </div>
-                            <div class="feature-content">
-                                <h3 class="h5">User Journey Flow</h3>
-                                <p class="mb-0">Quickly productize prospective value before collaborative
-                                    benefits.</p>
-                            </div>
-                            <a href="service-single.html" class="link-with-icon text-decoration-none mt-3">View
-                                Details <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                        <div class="feature-card  bg-custom-light promo-border-hover border border-2 border-light text-white shadow-sm rounded-custom p-5"
-                            data-aos="fade-up" data-aos-delay="50">
-                            <div class="icon-box d-inline-block rounded-circle bg-dark-soft mb-32">
-                                <i class="fas fa-spell-check icon-sm text-dark"></i>
-                            </div>
-                            <div class="feature-content">
-                                <h3 class="h5">Compare A/B Testing</h3>
-                                <p class="mb-0">Credibly disintermediate functional processes for team driven
-                                    action.</p>
-                            </div>
-                            <a href="service-single.html" class="link-with-icon text-decoration-none mt-3">View
-                                Details <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                        <div class="feature-card  bg-custom-light promo-border-hover border border-2 border-light text-white shadow-sm rounded-custom p-5"
-                            data-aos="fade-up" data-aos-delay="50">
-                            <div class="icon-box d-inline-block rounded-circle bg-warning-soft mb-32">
-                                <i class="fas fa-cog icon-sm text-warning"></i>
-                            </div>
-                            <div class="feature-content">
-                                <h3 class="h5">Easy Customization</h3>
-                                <p class="mb-0">Dynamically develop ubiquitous opportunities whereas
-                                    relationships.</p>
-                            </div>
-                            <a href="service-single.html" class="link-with-icon text-decoration-none mt-3">View
-                                Details <i class="fas fa-arrow-right"></i></a>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -355,8 +287,8 @@
             <div class="row justify-content-center">
                 <div class="col-md-10 col-lg-6">
                     <div class="section-heading text-center" data-aos="fade-up">
-                        <h4 class="h5 text-primary">Process</h4>
-                        <h2>We Follow Our Work Process</h2>
+                        {{-- <h4 class="h5 text-primary">Process</h4> --}}
+                        <h2>{{ __('app.We_Follow_Our_Work_Process') }}</h2>
                         <p>Conveniently mesh cooperative services via magnetic outsourcing. Dynamically grow
                             functionalized value whereas accurate e-commerce. </p>
                     </div>
@@ -369,8 +301,8 @@
                         <div class="process-icon border border-light bg-custom-light rounded-custom p-3">
                             <span class="h2 mb-0 text-primary fw-bold">1</span>
                         </div>
-                        <h3 class="h5">Research</h3>
-                        <p class="mb-0">Uniquely pursue restore efficient for initiatives expanded.</p>
+                        <h3 class="h5">{{ __('app.Research') }}</h3>
+                        <p class="mb-0">{{ __('app.Uniquely_pursue') }}</p>
                     </div>
                 </div>
                 <div class="dots-line first"></div>
@@ -380,8 +312,8 @@
                         <div class="process-icon border border-light bg-custom-light rounded-custom p-3">
                             <span class="h2 mb-0 text-primary fw-bold">2</span>
                         </div>
-                        <h3 class="h5">Designing</h3>
-                        <p class="mb-0">Restore efficient human pursue for compelling initiatives.</p>
+                        <h3 class="h5">{{ __('app.Designing') }}</h3>
+                        <p class="mb-0">{{ __('app.Restore_efficient') }}.</p>
                     </div>
                 </div>
                 <div class="dots-line first"></div>
@@ -391,8 +323,8 @@
                         <div class="process-icon border border-light bg-custom-light rounded-custom p-3">
                             <span class="h2 mb-0 text-primary fw-bold">3</span>
                         </div>
-                        <h3 class="h5">Building</h3>
-                        <p class="mb-0">Continually enhance pursue compelling initiatives enhance.</p>
+                        <h3 class="h5">{{ __('app.Building') }}</h3>
+                        <p class="mb-0">{{ __('app.Continually_enhance') }}.</p>
                     </div>
                 </div>
                 <div class="dots-line first"></div>
@@ -402,8 +334,8 @@
                         <div class="process-icon border border-light bg-custom-light rounded-custom p-3">
                             <span class="h2 mb-0 text-primary fw-bold">4</span>
                         </div>
-                        <h3 class="h5">Deliver</h3>
-                        <p class="mb-0">Uniquely for compelling initiatives expanded interactive.</p>
+                        <h3 class="h5">{{ __('app.Deliver') }}</h3>
+                        <p class="mb-0">{{ __('app.Uniquely_for_compelling') }}.</p>
                     </div>
                 </div>
             </div>
@@ -442,9 +374,9 @@
                                         </div>
                                     </div>
                                     <!-- <div class="col-12">
-                                                                                    <button type="submit" class="btn btn-primary mt-4 d-block w-100">Get Started
-                                                                                    </button>
-                                                                                </div> -->
+                                                                                            <button type="submit" class="btn btn-primary mt-4 d-block w-100">Get Started
+                                                                                            </button>
+                                                                                        </div> -->
                                 </div>
                                 <div class="position-relative digi-news-form">
                                     <input required type="text" class="form-control ah-input-bg"
@@ -581,8 +513,7 @@
                 <div class="row justify-content-center">
                     <div class="col-md-8 col-lg-7 col-xxl-6">
                         <h2 class="text-center mb-0 heading-text">
-                            We don’t just make projects
-                            create experiences
+                            {{ __('app.create_experience') }}
                         </h2>
                     </div>
                 </div>
@@ -593,42 +524,12 @@
                 <div class="col-12">
                     <div class="project-gallery">
                         <div class="d-flex justify-content-center align-items-center gap-4 flex-wrap">
-                            <a href="#" class="d-inline-block">
-                                <img src="{{ asset('assets/web/') }}/assets/img/project-1.png" alt="image"
-                                    class="img-fluid">
-                            </a>
-                            <a href="#" class="d-inline-block">
-                                <img src="{{ asset('assets/web/') }}/assets/img/project-2.png" alt="image"
-                                    class="img-fluid">
-                            </a>
-                            <a href="#" class="d-inline-block">
-                                <img src="{{ asset('assets/web/') }}/assets/img/project-3.png" alt="image"
-                                    class="img-fluid">
-                            </a>
-                            <a href="#" class="d-inline-block">
-                                <img src="{{ asset('assets/web/') }}/assets/img/project-4.png" alt="image"
-                                    class="img-fluid">
-                            </a>
-                            <a href="#" class="d-inline-block">
-                                <img src="{{ asset('assets/web/') }}/assets/img/project-5.png" alt="image"
-                                    class="img-fluid">
-                            </a>
-                            <a href="#" class="d-inline-block">
-                                <img src="{{ asset('assets/web/') }}/assets/img/project-6.png" alt="image"
-                                    class="img-fluid">
-                            </a>
-                            <a href="#" class="d-inline-block">
-                                <img src="{{ asset('assets/web/') }}/assets/img/project-7.png" alt="image"
-                                    class="img-fluid">
-                            </a>
-                            <a href="#" class="d-inline-block">
-                                <img src="{{ asset('assets/web/') }}/assets/img/project-8.png" alt="image"
-                                    class="img-fluid">
-                            </a>
-                            <a href="#" class="d-inline-block">
-                                <img src="{{ asset('assets/web/') }}/assets/img/project-9.png" alt="image"
-                                    class="img-fluid">
-                            </a>
+                            @foreach ($projects as $project)
+                                <a href="{{ $project->url }}" class="d-inline-block">
+                                    <img src="{{ asset('storage') . '/' . $project->image }}" alt="{{ $project->title }}"
+                                        class="img-fluid">
+                                </a>
+                            @endforeach
                         </div>
                         <button class="btn btn-primary project-gallery__btn">
                             All Templates
@@ -648,7 +549,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6 col-md-12">
                     <div class="section-heading text-center">
-                        <h4 class="text-primary h5">Blog</h4>
+                        {{-- <h4 class="text-primary h5">Blog</h4> --}}
                         <h2>Our Latest News and Update</h2>
                         <p>Assertively maximize cost effective methods of iterate team driven manufactured products
                             through equity invested via customized benefits. </p>
@@ -680,7 +581,8 @@
                                     </div> --}}
                                         <div class="avatar-info">
                                             {{-- <h6 class="mb-0 avatar-name">Jane Martin</h6> --}}
-                                            <span class="small fw-medium text-muted">{{ $blog->created_at->format('F d, Y') }}</span>
+                                            <span
+                                                class="small fw-medium text-muted">{{ $blog->created_at->format('F d, Y') }}</span>
                                         </div>
                                     </div>
                                 </a>
@@ -692,7 +594,7 @@
             </div>
             <div class="row justify-content-center">
                 <div class="text-center mt-5">
-                    <a href="blog.html" class="btn btn-primary">View All Article</a>
+                    <a href="{{ route('web.blogs') }}" class="btn btn-primary">{{ __('app.View_All_Blogs') }}</a>
                 </div>
             </div>
         </div>
