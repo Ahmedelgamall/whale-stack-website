@@ -33,7 +33,7 @@ Route::group(
         /* Blogs Page */
         Route::get('/blogs', [BlogController::class, 'getBlogs'])->name('web.blogs');
         Route::get('/blog/{slug}', [BlogController::class, 'showBlog'])->name('web.show.blog');
-       
+
         /* Blogs Page */
         Route::get('/blogs', [BlogController::class, 'getBlogs'])->name('web.blogs');
         Route::get('/blog/{slug}', [BlogController::class, 'showBlog'])->name('web.show.blog');
