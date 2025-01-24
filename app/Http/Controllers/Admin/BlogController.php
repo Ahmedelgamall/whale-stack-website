@@ -73,9 +73,7 @@ class BlogController extends Controller
             }
 
             // Create the blog record to get the ID
-            $data = Arr::except($data, '')
             $blog = Blog::create($data);
-
             // Update the slug by concatenating the ID
             $slug = Str::slug($data['en']['title']) . '-' . $blog->id;
             $blog->update(['slug' => $slug]);
