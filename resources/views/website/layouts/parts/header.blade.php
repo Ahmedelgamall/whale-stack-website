@@ -20,102 +20,11 @@
                     <div class="clearfix"></div>
                     <div class="collapse navbar-collapse justify-content-center">
                         <ul class="nav col-12 col-md-auto justify-content-center main-menu">
-                            <li><a href="contact-us.html" class="nav-link">Contact us</a></li>
-                            <li><a href="about-us.html" class="nav-link">About us</a></li>
-                            <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-                            <li><a href="portfolio.html" class="nav-link">Blogs</a></li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">Company</a>
-                                <div class="dropdown-menu border-0 rounded-custom shadow py-0 bg-white">
-                                    <div class="dropdown-grid rounded-custom width-full">
-                                        <div class="dropdown-grid-item bg-white radius-left-side">
-                                            <h6 class="drop-heading">Useful Links</h6>
-                                            <a href="about-us.html" class="dropdown-link px-0">
-                                                <span class="me-2">
-                                                    <i class="flaticon-fingerprint"></i>
-                                                </span>
-                                                <div class="drop-title">About Us</div>
-                                            </a>
-                                            <a href="contact-us.html" class="dropdown-link px-0">
-                                                <span class="me-2">
-                                                    <i class="flaticon-phone-book"></i>
-                                                </span>
-                                                <div class="drop-title">Contact Us</div>
-                                            </a>
-                                            <a href="services.html" class="dropdown-link">
-                                                <span class="me-2">
-                                                    <i class="flaticon-pie-chart"></i>
-                                                </span>
-                                                <div class="drop-title">Services</div>
-                                            </a>
-                                            <a href="service-single.html" class="dropdown-link px-0">
-                                                <span class="me-2">
-                                                    <i class="flaticon-server-storage"></i>
-                                                </span>
-                                                <div class="drop-title">Services Single</div>
-                                            </a>
-                                            <a href="blog.html" class="dropdown-link">
-                                                <span class="me-2">
-                                                    <i class="flaticon-clipboard"></i>
-                                                </span>
-                                                <div class="drop-title">Our Latest News</div>
-                                            </a>
-                                            <a href="blog-single.html" class="dropdown-link">
-                                                <span class="me-2">
-                                                    <i class="flaticon-menu"></i>
-                                                </span>
-                                                <div class="drop-title">News Details</div>
-                                            </a>
-                                            <a href="career.html" class="dropdown-link px-0">
-                                                <span class="me-2">
-                                                    <i class="flaticon-graduate"></i>
-                                                </span>
-                                                <div class="drop-title">Career</div>
-                                            </a>
-                                            <a href="career-single.html" class="dropdown-link px-0">
-                                                <span class="me-2">
-                                                    <i class="flaticon-pen-tool"></i>
-                                                </span>
-                                                <div class="drop-title">Career Single</div>
-                                            </a>
-                                        </div>
-                                        <div class="dropdown-grid-item radius-right-side bg-light-subtle">
-                                            <h6 class="drop-heading">Utility Pages</h6>
-                                            <a href="support.html" class="dropdown-link">
-                                                <span class="me-2">
-                                                    <i class="flaticon-headset"></i>
-                                                </span>
-                                                <div class="drop-title">Help Center</div>
-                                            </a>
-                                            <a href="support-single.html" class="dropdown-link">
-                                                <span class="me-2">
-                                                    <i class="flaticon-envelope"></i>
-                                                </span>
-                                                <div class="drop-title">Help Details</div>
-                                            </a>
-                                            <a href="team.html" class="dropdown-link">
-                                                <span class="me-2">
-                                                    <i class="flaticon-avatar"></i>
-                                                </span>
-                                                <div class="drop-title">Our Team</div>
-                                            </a>
-                                            <a href="404.html" class="dropdown-link">
-                                                <span class="me-2">
-                                                    <i class="flaticon-web-programming"></i>
-                                                </span>
-                                                <div class="drop-title">404 Page</div>
-                                            </a>
-                                            <a href="coming-soon.html" class="dropdown-link">
-                                                <span class="me-2">
-                                                    <i class="flaticon-reload"></i>
-                                                </span>
-                                                <div class="drop-title">Coming Soon</div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
+                            <li><a href="{{ route('web.contact-us') }}" class="nav-link">{{ __('app.Contact_us') }}</a></li>
+                            <li><a href="about-us.html" class="nav-link">{{ __('app.About_us') }}</a></li>
+                            <li><a href="portfolio.html" class="nav-link">{{ __('app.Projects') }}</a></li>
+                            <li><a href="{{ route('web.blogs') }}" class="nav-link">{{ __('app.Blogs') }}</a></li>
+                            <li><a href="{{ route('web.home') }}" class="nav-link">{{ __('app.Home') }}</a></li>
                         </ul>
                     </div>
 

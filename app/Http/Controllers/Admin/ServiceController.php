@@ -67,8 +67,12 @@ class ServiceController extends Controller
                 $data['image'] = $image;
             }
 
-            $data['slug'] = Str::slug($data['en']['title']);
-            Service::create($data);
+            $service = Service::create($data);
+
+            // Update the slug by concatenating the ID
+            $slug = Str::slug($data['en']['title']) . '-' . $service->id;
+            $service->update(['slug' => $slug]);
+
         } catch (\Exception $exception) {
             return final_response('error', $exception->getMessage(), '', 500);
         }
@@ -116,7 +120,7 @@ class ServiceController extends Controller
                 $data['image'] = $image;
             }
 
-            $data['slug'] = Str::slug($data['en']['title']);
+            $data['slug'] = Str::slug($data['en']['title']) . '-' . $service->id;
             $service->update($data);
         } catch (\Exception $exception) {
             return final_response('error', $exception->getMessage(), '', $exception->getMessage(), 500);

@@ -30,14 +30,10 @@ Route::group(
     function () {
         Route::get('/', [HomeController::class, 'getHome'])->name('web.home');
 
-        /* About Pages */
-        Route::get('/why-choose-us', [AboutController::class, 'getWhyChooseUs'])->name('web.why-choose-us');
-        Route::get('/our-cluture', [AboutController::class, 'getOurCluture'])->name('web.our-cluture');
-        Route::get('/leader-ship-team', [AboutController::class, 'getLeaderShipTeam'])->name('web.leader-ship-team');
-
-        /* Careers Page */
-        Route::get('/careers', [CareerController::class, 'getCareer'])->name('web.careers');
-
+        /* Blogs Page */
+        Route::get('/blogs', [BlogController::class, 'getBlogs'])->name('web.blogs');
+        Route::get('/blog/{slug}', [BlogController::class, 'showBlog'])->name('web.show.blog');
+       
         /* Blogs Page */
         Route::get('/blogs', [BlogController::class, 'getBlogs'])->name('web.blogs');
         Route::get('/blog/{slug}', [BlogController::class, 'showBlog'])->name('web.show.blog');

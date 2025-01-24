@@ -106,13 +106,13 @@
                         <div class="col-md-4 col-lg-4">
                             <div class="footer-single-col text-start text-lg-end text-md-end">
                                 <ul class="list-unstyled list-inline footer-social-list mb-0">
-                                    <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <li class="list-inline-item"><a href="{{ getSettingOf('facebook') }}" target="_blank"><i class="fab fa-facebook-f"></i></a>
                                     </li>
-                                    <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a>
+                                    <li class="list-inline-item"><a href="{{ getSettingOf('instagram') }}" target="_blank"><i class="fab fa-instagram"></i></a>
                                     </li>
-                                    <li class="list-inline-item"><a href="#"><i class="fab fa-dribbble"></i></a>
+                                    <li class="list-inline-item"><a href="{{ getSettingOf('youtube') }}" target="_blank"><i class="fab fa-youtube"></i></a>
                                     </li>
-                                    <li class="list-inline-item"><a href="#"><i class="fab fa-github"></i></a>
+                                    <li class="list-inline-item"><a href="{{ getSettingOf('twitter') }}" target="_blank"><i class="fab fa-twitter"></i></a>
                                     </li>
                                 </ul>
                             </div>
