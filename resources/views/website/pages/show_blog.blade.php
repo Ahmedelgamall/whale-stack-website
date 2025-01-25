@@ -75,7 +75,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="single-article rounded-custom mb-4 mb-lg-0">
                             <a href="{{ route('web.show.blog', ['slug' => $row->slug]) }}" class="article-img">
-                                <img src="assets/img/blog/blog-1.jpg" alt="article" class="img-fluid">
+                                <img src="{{ asset('storage' . '/' . $row->image) }}" alt="article" class="img-fluid">
                             </a>
                             <div class="article-content p-4">
                                 <div class="article-category mb-4 d-block">

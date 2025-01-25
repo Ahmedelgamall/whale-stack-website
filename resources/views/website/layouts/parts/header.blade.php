@@ -8,9 +8,31 @@
                             class="img-fluid logo-color" />
                     </a>
 
-                    <div class="dropdown" tab-index="0">
-                        <button id="dropdown-btn"></button>
-                        <ul class="dropdown-content" id="dropdown-content"></ul>
+                    <div class="nav-item dropdown" style="margin-left: 50px;">
+                        <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            @if (app()->getLocale() == 'ar')
+                                <img src="https://flagsapi.com/SA/shiny/64.png" style="width: 20px; height: 20px;">
+                                العربية
+                            @else
+                                <img src="https://flagsapi.com/GB/shiny/64.png" style="width: 20px; height: 20px;">
+                                English
+                            @endif
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                            <li>
+                                <a class="dropdown-item" href="{{ LaravelLocalization::getLocalizedURL('ar') }}">
+                                    <img src="https://flagsapi.com/SA/shiny/64.png" style="width: 20px; height: 20px;">
+                                    {{ __('app.Arabic') }}
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="{{ LaravelLocalization::getLocalizedURL('en') }}">
+                                    <img src="https://flagsapi.com/GB/shiny/64.png" style="width: 20px; height: 20px;">
+                                    {{ __('app.English') }}
+                                </a>
+                            </li>
+                        </ul>
                     </div>
 
                     <a class="navbar-toggler position-absolute right-0 border-0" href="#offcanvasWithBackdrop">
@@ -20,16 +42,16 @@
                     <div class="clearfix"></div>
                     <div class="collapse navbar-collapse justify-content-center">
                         <ul class="nav col-12 col-md-auto justify-content-center main-menu">
-                            <li><a href="{{ route('web.contact-us') }}" class="nav-link">{{ __('app.Contact_us') }}</a></li>
+                            <li><a href="{{ route('web.contact-us') }}" class="nav-link">{{ __('app.Contact_us') }}</a>
+                            </li>
                             <li><a href="about-us.html" class="nav-link">{{ __('app.About_us') }}</a></li>
-                            <li><a href="portfolio.html" class="nav-link">{{ __('app.Projects') }}</a></li>
+                            <li><a href="{{ route('web.projects') }}" class="nav-link">{{ __('app.Projects') }}</a></li>
                             <li><a href="{{ route('web.blogs') }}" class="nav-link">{{ __('app.Blogs') }}</a></li>
                             <li><a href="{{ route('web.home') }}" class="nav-link">{{ __('app.Home') }}</a></li>
                         </ul>
                     </div>
 
-                    <div style="margin: 0 20px;"
-                        class="action-btns text-end me-5 me-lg-0 d-none d-md-block d-lg-block">
+                    <div style="margin: 0 20px;" class="action-btns text-end me-5 me-lg-0 d-none d-md-block d-lg-block">
                         <a href="javascript:void(0)" class="btn btn-link p-1 tt-theme-toggle">
                             <div class="tt-theme-light" data-bs-toggle="tooltip" data-bs-placement="left"
                                 data-bs-title="Light"><i class="flaticon-sun-1 fs-lg"></i></div>
@@ -48,16 +70,15 @@
                         <img src="{{ asset('assets/web/') }}/assets/img/logo-color.png" alt="logo"
                             class="img-fluid ps-2" />
                     </a>
-                    <button type="button" class="close-btn text-danger" data-bs-dismiss="offcanvas"
-                        aria-label="Close">
+                    <button type="button" class="close-btn text-danger" data-bs-dismiss="offcanvas" aria-label="Close">
                         <i class="flaticon-cancel"></i>
                     </button>
                 </div>
                 <div class="offcanvas-body z-10">
                     <ul class="nav col-12 col-md-auto justify-content-center main-menu">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
                                 Home
                             </a>
                             <div

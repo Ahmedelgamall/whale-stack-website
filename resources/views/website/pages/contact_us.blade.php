@@ -34,7 +34,7 @@
                                 <strong>9am to 5pm EST.</strong>
                             </p>
                         </div>
-                        <a href="mailto:hellothemetags@gmail.com" class="btn btn-link mt-auto">Chat with us</a>
+                        <a href="mailto:{{ getSettingOf('website_email') }}" class="btn btn-link mt-auto">Chat with us</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
@@ -43,10 +43,10 @@
                         <span class="fas fa-envelope fa-3x text-primary"></span>
                         <div class="contact-promo-info mb-4">
                             <h5>Email Us</h5>
-                            <p>Simple drop us an email at <strong>hellothemetags@gmail.com</strong>
+                            <p>Simple drop us an email at <strong>{{ getSettingOf('website_email') }}</strong>
                                 and you'll receive a reply within 24 hours</p>
                         </div>
-                        <a href="mailto:hellothemetags@gmail.com" class="btn btn-primary mt-auto">Email Us</a>
+                        <a href="mailto:{{ getSettingOf('website_email') }}" class="btn btn-primary mt-auto">Email Us</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
@@ -59,7 +59,7 @@
                                 <strong>9am to 5pm EST.</strong>
                             </p>
                         </div>
-                        <a href="tel:00-976-561-008" class="btn btn-link mt-auto">00-976-561-008</a>
+                        <a href="tel:{{ getSettingOf('website_phone') }}" class="btn btn-link mt-auto">{{ getSettingOf('website_phone') }}</a>
                     </div>
                 </div>
             </div>
@@ -78,40 +78,41 @@
                         <p>Collaboratively promote client-focused convergence vis-a-vis customer directed alignments via
                             standardized infrastructures.</p>
                     </div>
-                    <form action="#" class="register-form">
+                    <form id="contactForm" class="register-form" method="POST">
+                        @csrf
                         <div class="row">
                             <div class="col-sm-6">
                                 <label for="firstName" class="mb-1">First name <span class="text-danger">*</span></label>
                                 <div class="input-group mb-3">
-                                    <input type="text" class="form-control" id="firstName" required
+                                    <input type="text" name="first_name" class="form-control" id="firstName" required
                                         placeholder="First name" aria-label="First name">
                                 </div>
                             </div>
                             <div class="col-sm-6 ">
                                 <label for="lastName" class="mb-1">Last name</label>
                                 <div class="input-group mb-3">
-                                    <input type="text" class="form-control" id="lastName" placeholder="Last name"
+                                    <input type="text" name="last_name" class="form-control" id="lastName" placeholder="Last name"
                                         aria-label="Last name">
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <label for="phone" class="mb-1">Phone <span class="text-danger">*</span></label>
                                 <div class="input-group mb-3">
-                                    <input type="text" class="form-control" id="phone" required placeholder="Phone"
+                                    <input type="text" name="phone" class="form-control" id="phone" required placeholder="Phone"
                                         aria-label="Phone">
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <label for="email" class="mb-1">Email<span class="text-danger">*</span></label>
                                 <div class="input-group mb-3">
-                                    <input type="email" class="form-control" id="email" required placeholder="Email"
+                                    <input type="email" name="email" class="form-control" id="email" required placeholder="Email"
                                         aria-label="Email">
                                 </div>
                             </div>
                             <div class="col-12">
                                 <label for="yourMessage" class="mb-1">Message <span class="text-danger">*</span></label>
                                 <div class="input-group mb-3">
-                                    <textarea class="form-control" id="yourMessage" required placeholder="How can we help you?" style="height: 120px"></textarea>
+                                    <textarea class="form-control" name="message" id="yourMessage" required placeholder="How can we help you?" style="height: 120px"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -130,4 +131,61 @@
     <!--contact us form end-->
 @endsection
 @section('js')
+    <script>
+        $(document).ready(function() {
+            $('#contactForm').on('submit', function(event) {
+                event.preventDefault();
+
+                // Get the submit button
+                var $submitButton = $(this).find('button[type="submit"]');
+
+                // Disable button and change text
+                $submitButton.prop('disabled', true).text('Sending...');
+
+                $.ajax({
+                    url: '{{ route('contact.submit') }}',
+                    method: 'POST',
+                    data: $(this).serialize(),
+                    headers: {
+                        'X-CSRF-TOKEN': $('input[name="_token"]').val()
+                    },
+                    success: function(response) {
+                        if (response.success) {
+                            sweetAlert('success', 'Message sent successfully!');
+                            $('#contactForm')[0].reset();
+                        } else if (response.errors) {
+                            sweetAlert('error', 'Validation Error: ' + JSON.stringify(response
+                                .errors));
+                        } else {
+                            sweetAlert('error', 'An error occurred. Please try again.');
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        if (xhr.status ===
+                            422) { // 422 is the status code for validation errors in Laravel
+                            const errors = xhr.responseJSON.errors;
+
+                            // Iterate through the errors and display them
+                            let errorMessages = '';
+                            for (const field in errors) {
+                                if (errors.hasOwnProperty(field)) {
+                                    errorMessages += errors[field].join('<br>') + '<br>';
+                                }
+                            }
+
+                            sweetAlert('error', errorMessages)
+                        } else {
+
+                            sweetAlert('error', 'Something went wrong. Please try again.')
+
+                        }
+                    },
+                    complete: function() {
+                        // Re-enable button and restore text
+                        $submitButton.prop('disabled', false).text('Send Message');
+                    }
+                });
+            });
+        });
+    </script>
 @endsection

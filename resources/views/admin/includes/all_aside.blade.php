@@ -182,7 +182,19 @@
                     </li>
                 </ul>
             </li>
+            <li class=" nav-item">
+                <a class="d-flex align-items-center" href="#">
+                    <i data-feather='message-circle'></i><span class="menu-title text-truncate"
+                        data-i18n="Roles&Permissions">Contact Us</span>
+                </a>
+                <ul class="menu-content">
+                    <li class="nav-item {{ active('contact-us') }} "><a class="d-flex align-items-center"
+                            href="{{ route('contact-us.index') }}"><i data-feather='message-circle'></i><span
+                                class="menu-title text-truncate" data-i18n="Languages">Contact Us </span></a>
+                    </li>
+                </ul>
 
+            </li>
             <li class=" nav-item">
                 <a class="d-flex align-items-center" href="#">
                     <i data-feather="search" title="SEO Analysis"></i><span class="menu-title text-truncate"

@@ -50,11 +50,15 @@
 
     <!--build:css-->
     <!-- endbuild -->
-        <link href="{{ asset('web/css/styles-front-rtl.css') }}" rel="stylesheet">
-        <link rel="stylesheet" href="{{ asset('assets/web/') }}/assets/css/custom-rtl.css">
-        <link rel="stylesheet" href="{{ asset('assets/web/') }}/assets/css/main-rtl.css">
+    <link href="{{ asset('web/css/styles-front-rtl.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('assets/web/') }}/assets/css/custom-rtl.css">
+    <link rel="stylesheet" href="{{ asset('assets/web/') }}/assets/css/main-rtl.css">
     <!--custom css start-->
     <!--custom css end-->
+    <link rel="stylesheet" type="text/css"
+        href="{{ asset('assets/admin') }}/app-assets/vendors/css/extensions/sweetalert2.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="{{ asset('assets/admin') }}/app-assets/vendors/css/extensions/toastr.min.css">
     @yield('css')
 </head>
 
@@ -87,7 +91,7 @@
 
 
     <!--build:js-->
-    <script src="{{ asset('assets/web/') }}/assets/js/vendors/jquery-3.6.0.min.js"></script>
+    <script src="{{ asset('assets/admin/app-assets/vendors/js/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('assets/web/') }}/assets/js/vendors/bootstrap.bundle.min.js"></script>
     <script src="{{ asset('assets/web/') }}/assets/js/vendors/swiper-bundle.min.js"></script>
     <script src="{{ asset('assets/web/') }}/assets/js/vendors/jquery.magnific-popup.min.js"></script>
@@ -96,6 +100,11 @@
     <script src="{{ asset('assets/web/') }}/assets/js/vendors/massonry.min.js"></script>
     <script src="{{ asset('assets/web/') }}/assets/js/app.js"></script>
     <!--endbuild-->
+    <script src="{{ asset('assets/admin') }}/app-assets/vendors/js/extensions/sweetalert2.all.min.js"></script>
+    <script src="{{ asset('assets/admin/app-assets/vendors/js/extensions/toastr.min.js') }}"></script>
+    @yield('js')
+    @include('admin.includes.swal')
+
 </body>
 
 </html>

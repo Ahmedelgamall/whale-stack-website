@@ -93,7 +93,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <img src="{{ asset('assets/web/') }}/assets/img/risk_managment/service_content.png" alt=""
+                    <img src="{{ asset('storage' . '/' . $secondSection->image) }}" alt="{{ $secondSection->title }}"
                         class="risk-sc-img img-fluid">
                 </div>
             </div>
