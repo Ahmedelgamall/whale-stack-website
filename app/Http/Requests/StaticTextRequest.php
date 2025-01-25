@@ -64,7 +64,7 @@ class StaticTextRequest extends FormRequest
                 Rule::enum(SectionType::class),
                 Rule::unique('static_texts', 'section')
                     ->where('page_id', $this->input('page_id'))
-                    ->ignore($this->input('section'))
+                    ->ignore($this->route('static_text'))
             ],
             // 'page_name' => ['required', Rule::in(array_map(fn($case) => $case->value, PageType::cases()))]
         ];

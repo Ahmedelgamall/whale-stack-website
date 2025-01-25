@@ -16,8 +16,7 @@ class ContactController extends Controller
      */
     public function getContactUs()
     {
-        $faq = Faq::all();
-        return view('website.pages.contact_us', compact('faq'));
+        return view('website.pages.contact_us');
     }
 
     /**

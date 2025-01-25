@@ -26,4 +26,8 @@ class Project extends Model
                     File::delete(public_path('storage/' . $raw->image));
         });
     }
+    public function category()
+    {
+        return $this->belongsTo(ProjectCategory::class, 'project_category_id');
+    }
 }

@@ -6,7 +6,7 @@ enum PageType: int
 {
     case HOME = 1;
     case BLOGS = 2;
-    case PORTFOLIO = 3;
+    case PROJECTS = 3;
     case ABOUT_US = 4;
     case CONTACT_US = 5;
 
@@ -18,7 +18,7 @@ enum PageType: int
         return match ($this) {
             self::HOME => 'Home',
             self::BLOGS => 'Blogs',
-            self::PORTFOLIO => 'Portfolio',
+            self::PROJECTS => 'Projects',
             self::ABOUT_US => 'About Us',
             self::CONTACT_US => 'Contact Us',
         };

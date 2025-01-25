@@ -1,11 +1,9 @@
 <?php
 
-use App\Http\Controllers\Web\AboutController;
 use App\Http\Controllers\Web\BlogController;
-use App\Http\Controllers\Web\CareerController;
 use App\Http\Controllers\Web\ContactController;
 use App\Http\Controllers\Web\HomeController;
-use Illuminate\Support\Facades\Redirect;
+use App\Http\Controllers\Web\ProjectController;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
@@ -30,17 +28,12 @@ Route::group(
     function () {
         Route::get('/', [HomeController::class, 'getHome'])->name('web.home');
 
-        /* About Pages */
-        Route::get('/why-choose-us', [AboutController::class, 'getWhyChooseUs'])->name('web.why-choose-us');
-        Route::get('/our-cluture', [AboutController::class, 'getOurCluture'])->name('web.our-cluture');
-        Route::get('/leader-ship-team', [AboutController::class, 'getLeaderShipTeam'])->name('web.leader-ship-team');
-
-        /* Careers Page */
-        Route::get('/careers', [CareerController::class, 'getCareer'])->name('web.careers');
-
         /* Blogs Page */
         Route::get('/blogs', [BlogController::class, 'getBlogs'])->name('web.blogs');
         Route::get('/blog/{slug}', [BlogController::class, 'showBlog'])->name('web.show.blog');
+
+        /* Projects Page */
+        Route::get('/projects', [ProjectController::class, 'getProjects'])->name('web.projects');
 
         /* Careers Page */
         Route::get('/contact-us', [ContactController::class, 'getContactUs'])->name('web.contact-us');
