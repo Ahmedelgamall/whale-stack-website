@@ -1,11 +1,9 @@
 <?php
 
-use App\Http\Controllers\Web\AboutController;
 use App\Http\Controllers\Web\BlogController;
-use App\Http\Controllers\Web\CareerController;
 use App\Http\Controllers\Web\ContactController;
 use App\Http\Controllers\Web\HomeController;
-use Illuminate\Support\Facades\Redirect;
+use App\Http\Controllers\Web\ProjectController;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
@@ -34,9 +32,8 @@ Route::group(
         Route::get('/blogs', [BlogController::class, 'getBlogs'])->name('web.blogs');
         Route::get('/blog/{slug}', [BlogController::class, 'showBlog'])->name('web.show.blog');
 
-        /* Blogs Page */
-        Route::get('/blogs', [BlogController::class, 'getBlogs'])->name('web.blogs');
-        Route::get('/blog/{slug}', [BlogController::class, 'showBlog'])->name('web.show.blog');
+        /* Projects Page */
+        Route::get('/projects', [ProjectController::class, 'getProjects'])->name('web.projects');
 
         /* Careers Page */
         Route::get('/contact-us', [ContactController::class, 'getContactUs'])->name('web.contact-us');
