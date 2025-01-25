@@ -1,5 +1,12 @@
 @extends('website.layouts.master')
+<?php $seo = getMetaOf(App\Enums\PageType::ABOUT_US); ?>
+@section('title')
+    {{ isset($seo) ? $seo->meta_title : 'About Us Page' }}
+@endsection
 @section('meta')
+    <meta name="description" content="{{ isset($seo) ? $seo->meta_description : '' }}">
+    <meta name="keywords" content="{{ isset($seo) ? $seo->meta_keyword : '' }}">
+    <meta name="author" content="Ahmed Elgamal">
 @endsection
 @section('css')
 @endsection

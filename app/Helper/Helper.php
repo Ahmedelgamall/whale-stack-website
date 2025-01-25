@@ -1,5 +1,7 @@
 <?php
 
+use App\Enums\PageType;
+use App\Models\SeoSetting;
 use Carbon\Carbon;
 
 if (!function_exists('a_url')) {
@@ -79,6 +81,12 @@ if (!function_exists('getFile')) {
     }
 }
 
+if (!function_exists('getMetaOf')) {
+    function getMetaOf(PageType $key)
+    {
+        return SeoSetting::where('page_id', $key)->first();
+    }
+}
 
 if (!function_exists('formatDate')) {
     function formatDate($date)
