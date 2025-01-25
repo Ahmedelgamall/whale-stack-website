@@ -85,9 +85,8 @@
                             {!! formateTitle($secondSection->title) !!}
                         </h2>
                         <p class="risk-color-two ff-dmsans fs-16 flh-28 mb-0 fch-50">{{ $secondSection->description }}</p>
-                        <a href="{{ $secondSection->url }}"
-                            class="btn risk-outline-btn mt-40 risk-color ff-risk-pri fs-14 fw-700">Start
-                            Free Trial</a>
+                        {{-- <a href="{{ $secondSection->url }}"
+                            class="btn risk-outline-btn mt-40 risk-color ff-risk-pri fs-14 fw-700"></a> --}}
                         <img src="{{ asset('storage' . '/' . $secondSection->image) }}" alt="{{ $secondSection->title }}"
                             class="s-one position-absolute">
                     </div>
@@ -125,9 +124,9 @@
                                     <h3 class="h5">{{ $service->title }}</h3>
                                     {!! Str::limit($service->description, 300, '...') !!}
                                 </div>
-                                <a href="service-single.html"
+                                {{-- <a href="service-single.html"
                                     class="link-with-icon text-decoration-none mt-3">{{ __('app.View_Details') }}<i
-                                        class="fas fa-arrow-right"></i></a>
+                                        class="fas fa-arrow-right"></i></a> --}}
                             </div>
                         @endforeach
                     </div>
@@ -507,7 +506,7 @@
     </section> <!--customer review tab section end-->
 
     <!-- Projects -->
-    <div class="sections pb-0">
+    {{-- <div class="sections pb-0">
         <div class="sections__head">
             <div class="container">
                 <div class="row justify-content-center">
@@ -538,7 +537,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- /Projects -->
 
 
