@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use App\Enums\PageType;
+use App\Models\Blog;
 use Illuminate\Console\Command;
 use Spatie\Sitemap\Sitemap;
 use Spatie\Sitemap\Tags\Url;
@@ -30,25 +31,40 @@ class SiteMapCommand extends Command
     {
         $sitemap = Sitemap::create();
 
-        // Add home page
-        $sitemap->add(
-            Url::create(config('app.url'))
-                ->setPriority(1.0)
-                ->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)
-        );
+        // Static Pages
+        $sitemap->add(Url::create('/')
+            ->setLastModificationDate(now())
+            ->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)
+            ->setPriority(1.0));
+        $sitemap->add(Url::create('/projects')
+            ->setLastModificationDate(now())
+            ->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)
+            ->setPriority(1.0));
+        $sitemap->add(Url::create('/about-us')
+            ->setLastModificationDate(now())
+            ->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)
+            ->setPriority(1.0));
+        $sitemap->add(Url::create('/blogs')
+            ->setLastModificationDate(now())
+            ->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)
+            ->setPriority(1.0));
+        $sitemap->add(Url::create('/contact-us')
+            ->setLastModificationDate(now())
+            ->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)
+            ->setPriority(1.0));
 
-        // Add pages for each PageType
-        foreach (PageType::cases() as $case) {
-            $sitemap->add(
-                Url::create(config('app.url') . '/' . $case->label())
-                    ->setPriority(1.0)
-                    ->setChangeFrequency(Url::CHANGE_FREQUENCY_WEEKLY)
-            );
+        // Dynamic Pages
+        $blogs = Blog::all();
+        foreach ($blogs as $blog) {
+            $sitemap->add(Url::create(route('web.show.blog', $blog->slug))
+                ->setLastModificationDate($blog->updated_at)
+                ->setChangeFrequency(Url::CHANGE_FREQUENCY_WEEKLY)
+                ->setPriority(0.8));
         }
 
-        // Save the sitemap
+        // Write to a file
         $sitemap->writeToFile(public_path('sitemap.xml'));
 
-        $this->info('Sitemap generated successfully at public/sitemap.xml');
+        $this->info('Sitemap generated successfully!');
     }
 }
