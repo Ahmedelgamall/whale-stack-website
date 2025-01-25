@@ -49,7 +49,3 @@ Route::group(
     }
 );
 
-
-
-
-// ahmed
