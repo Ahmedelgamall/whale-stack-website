@@ -1,2 +1,6 @@
 User-agent: *
 Disallow:
+
+Disallow: /admin/*
+
+Sitemap: https://whalestack.net/sitemap.xml
