@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\BrandController;
 use App\Http\Controllers\Admin\ContactUsController;
 use App\Http\Controllers\Admin\LanguageController;
+use App\Http\Controllers\Admin\MemberController;
 use App\Http\Controllers\Admin\ProjectCategoryController;
 use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\Admin\SeoSettingController;
@@ -98,6 +99,11 @@ Route::group(
             Route::get('contact-us/data', [ContactUsController::class, 'data'])->name('contact-us.data');
             Route::post('contact-us/bulk-delete', [ContactUsController::class, 'bulkDelete'])->name('contact-us.bulkDelete');
             Route::resource('contact-us', ContactUsController::class)->only('index');
+
+            // members
+            Route::get('members/data', [MemberController::class, 'data'])->name('members.data');
+            Route::post('members/bulk-delete', [MemberController::class, 'bulkDelete'])->name('members.bulkDelete');
+            Route::resource('members', MemberController::class);
 
             // languages
             Route::get('languages/data', [LanguageController::class, 'data'])->name('languages.data');

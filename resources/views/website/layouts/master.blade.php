@@ -60,6 +60,13 @@
     <link rel="stylesheet" type="text/css"
         href="{{ asset('assets/admin') }}/app-assets/vendors/css/extensions/toastr.min.css">
     @yield('css')
+    @if (app()->getLocale() == 'en')
+        <style>
+            .container {
+                direction: ltr !important;
+            }
+        </style>
+    @endif
 </head>
 
 <body>

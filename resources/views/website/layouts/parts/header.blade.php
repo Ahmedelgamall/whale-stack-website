@@ -44,7 +44,7 @@
                         <ul class="nav col-12 col-md-auto justify-content-center main-menu">
                             <li><a href="{{ route('web.contact-us') }}" class="nav-link">{{ __('app.Contact_us') }}</a>
                             </li>
-                            <li><a href="about-us.html" class="nav-link">{{ __('app.About_us') }}</a></li>
+                            <li><a href="{{ route('web.about') }}" class="nav-link">{{ __('app.About_us') }}</a></li>
                             <li><a href="{{ route('web.projects') }}" class="nav-link">{{ __('app.Projects') }}</a></li>
                             <li><a href="{{ route('web.blogs') }}" class="nav-link">{{ __('app.Blogs') }}</a></li>
                             <li><a href="{{ route('web.home') }}" class="nav-link">{{ __('app.Home') }}</a></li>

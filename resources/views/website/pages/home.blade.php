@@ -54,13 +54,13 @@
                                 </svg>
                             </a>
                             <div class="risk-social d-flex align-items-center flex-column gap-20">
-                                <a class="d-flex align-items-center gap-1 ff-risk-pri fs-14 fw-700" href=""><span><i
+                                <a class="d-flex align-items-center gap-1 ff-risk-pri fs-14 fw-700" href="{{ getSettingOf('facebook') }}" target="_blank"><span><i
                                             class="fa-brands fa-facebook-f"></i></span>Facebook</a>
-                                <a class="d-flex align-items-center gap-1 ff-risk-pri fs-14 fw-700" href=""><span><i
-                                            class="fa-brands fa-linkedin"></i></span>LinkedIn</a>
-                                <a class="d-flex align-items-center gap-1 ff-risk-pri fs-14 fw-700" href=""><span><i
+                                <a class="d-flex align-items-center gap-1 ff-risk-pri fs-14 fw-700" href="{{ getSettingOf('youtube') }}" target="_blank"><span><i
+                                            class="fa-brands fa-youtube"></i></span>Youtube</a>
+                                <a class="d-flex align-items-center gap-1 ff-risk-pri fs-14 fw-700" href="{{ getSettingOf('instagram') }}" target="_blank"><span><i
                                             class="fa-brands fa-instagram"></i></span>Instagram</a>
-                                <a class="d-flex align-items-center gap-1 ff-risk-pri fs-14 fw-700" href=""><span><i
+                                <a class="d-flex align-items-center gap-1 ff-risk-pri fs-14 fw-700" href="{{ getSettingOf('twitter') }}" target="_blank"><span><i
                                             class="fa-brands fa-twitter"></i></span>Twitter</a>
                             </div>
                         </div>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Web\AboutController;
 use App\Http\Controllers\Web\BlogController;
 use App\Http\Controllers\Web\ContactController;
 use App\Http\Controllers\Web\HomeController;
@@ -35,7 +36,10 @@ Route::group(
         /* Projects Page */
         Route::get('/projects', [ProjectController::class, 'getProjects'])->name('web.projects');
 
-        /* Careers Page */
+        /* About Page */
+        Route::get('/about-us', [AboutController::class, 'getAbout'])->name('web.about');
+
+        /* Contacts Page */
         Route::get('/contact-us', [ContactController::class, 'getContactUs'])->name('web.contact-us');
 
         Route::post('/contact-submit', [ContactController::class, 'submitContact'])->name('contact.submit');
