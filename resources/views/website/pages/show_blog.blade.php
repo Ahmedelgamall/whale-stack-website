@@ -1,5 +1,11 @@
 @extends('website.layouts.master')
+@section('title')
+    {{ isset($blog) ? @$blog->meta_title : @$blog->title }}
+@endsection
 @section('meta')
+    <meta name="description" content="{{ isset($blog) ? $blog->meta_description : '' }}">
+    <meta name="keywords" content="{{ isset($blog) ? $blog->meta_keyword : '' }}">
+    <meta name="author" content="Serag Aboushady">
 @endsection
 @section('css')
 @endsection

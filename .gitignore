@@ -16,6 +16,7 @@ yarn-error.log
 /.vscode
 /storage/logs
 public/images/*
+/public/sitemap.xml
 *.rar
 *.zip
 

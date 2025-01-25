@@ -44,8 +44,9 @@
                         <ul class="nav col-12 col-md-auto justify-content-center main-menu">
                             <li><a href="{{ route('web.contact-us') }}" class="nav-link">{{ __('app.Contact_us') }}</a>
                             </li>
-                            <li><a href="about-us.html" class="nav-link">{{ __('app.About_us') }}</a></li>
-                            <li><a href="{{ route('web.projects') }}" class="nav-link">{{ __('app.Projects') }}</a></li>
+                            <li><a href="{{ route('web.about') }}" class="nav-link">{{ __('app.About_us') }}</a></li>
+                            <li><a href="{{ route('web.projects') }}" class="nav-link">{{ __('app.Projects') }}</a>
+                            </li>
                             <li><a href="{{ route('web.blogs') }}" class="nav-link">{{ __('app.Blogs') }}</a></li>
                             <li><a href="{{ route('web.home') }}" class="nav-link">{{ __('app.Home') }}</a></li>
                         </ul>
@@ -76,6 +77,7 @@
                 </div>
                 <div class="offcanvas-body z-10">
                     <ul class="nav col-12 col-md-auto justify-content-center main-menu">
+<<<<<<< HEAD
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
@@ -282,189 +284,18 @@
                                     </div>
                                 </div>
                             </div>
+=======
+                        <li><a href="{{ route('web.contact-us') }}"
+                                class="nav-link dropdown">{{ __('app.Contact_us') }}</a>
+>>>>>>> b567b9a18db77ff8ec9e4be8f0c5048ac5fb1ce7
                         </li>
-                        <li><a href="services.html" class="nav-link">Services</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">Resources</a>
-                            <div class="dropdown-menu border-0 rounded-custom shadow py-0 bg-white">
-                                <div class="dropdown-grid rounded-custom width-full-3">
-                                    <div class="dropdown-grid-item bg-white radius-left-side">
-                                        <h6 class="drop-heading">Reusable Section</h6>
-                                        <a href="header.html" class="dropdown-link">
-                                            <span class="me-2">
-                                                <i class="flaticon-menu"></i>
-                                            </span>
-                                            <div class="drop-title">Navigations</div>
-                                        </a>
-                                        <a href="hero-sections.html" class="dropdown-link">
-                                            <span class="me-2">
-                                                <i class="flaticon-layer"></i>
-                                            </span>
-                                            <div class="drop-title">Hero Sections</div>
-                                        </a>
-                                        <a href="testimonials.html" class="dropdown-link">
-                                            <span class="me-2">
-                                                <i class="flaticon-phone-book"></i>
-                                            </span>
-                                            <div class="drop-title">Testimonials</div>
-                                        </a>
-                                        <a href="call-to-action.html" class="dropdown-link">
-                                            <span class="me-2">
-                                                <i class="flaticon-flash"></i>
-                                            </span>
-                                            <div class="drop-title">Call to Action</div>
-                                        </a>
-                                        <a href="tab-style.html" class="dropdown-link">
-                                            <span class="me-2">
-                                                <i class="flaticon-settings"></i>
-                                            </span>
-                                            <div class="drop-title">Tab Style</div>
-                                        </a>
-                                        <a href="services-style.html" class="dropdown-link">
-                                            <span class="me-2">
-                                                <i class="flaticon-graduation-cap"></i>
-                                            </span>
-                                            <div class="drop-title">Services Style</div>
-                                        </a>
-                                        <a href="work-process.html" class="dropdown-link">
-                                            <span class="me-2">
-                                                <i class="flaticon-folder"></i>
-                                            </span>
-                                            <div class="drop-title">Work Process</div>
-                                        </a>
-                                    </div>
-                                    <div class="dropdown-grid-item last-item bg-light-subtle radius-right-side">
-                                        <a href="#">
-                                            <img src="{{ asset('assets/web/') }}/assets/img/feature-img3.jpg"
-                                                alt="add" class="img-fluid rounded-custom" />
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+                        <li><a href="{{ route('web.about') }}" class="nav-link dropdown">{{ __('app.About_us') }}</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">Company</a>
-                            <div class="dropdown-menu border-0 rounded-custom shadow py-0 bg-white">
-                                <div class="dropdown-grid rounded-custom width-full">
-                                    <div class="dropdown-grid-item bg-white radius-left-side">
-                                        <h6 class="drop-heading">Useful Links</h6>
-                                        <a href="about-us.html" class="dropdown-link px-0">
-                                            <span class="me-2">
-                                                <i class="flaticon-fingerprint"></i>
-                                            </span>
-                                            <div class="drop-title">About Us</div>
-                                        </a>
-                                        <a href="contact-us.html" class="dropdown-link px-0">
-                                            <span class="me-2">
-                                                <i class="flaticon-phone-book"></i>
-                                            </span>
-                                            <div class="drop-title">Contact Us</div>
-                                        </a>
-                                        <a href="services.html" class="dropdown-link">
-                                            <span class="me-2">
-                                                <i class="flaticon-pie-chart"></i>
-                                            </span>
-                                            <div class="drop-title">Services</div>
-                                        </a>
-                                        <a href="service-single.html" class="dropdown-link px-0">
-                                            <span class="me-2">
-                                                <i class="flaticon-server-storage"></i>
-                                            </span>
-                                            <div class="drop-title">Services Single</div>
-                                        </a>
-                                        <a href="blog.html" class="dropdown-link">
-                                            <span class="me-2">
-                                                <i class="flaticon-clipboard"></i>
-                                            </span>
-                                            <div class="drop-title">Our Latest News</div>
-                                        </a>
-                                        <a href="blog-single.html" class="dropdown-link">
-                                            <span class="me-2">
-                                                <i class="flaticon-menu"></i>
-                                            </span>
-                                            <div class="drop-title">News Details</div>
-                                        </a>
-                                        <a href="career.html" class="dropdown-link px-0">
-                                            <span class="me-2">
-                                                <i class="flaticon-graduate"></i>
-                                            </span>
-                                            <div class="drop-title">Career</div>
-                                        </a>
-                                        <a href="career-single.html" class="dropdown-link px-0">
-                                            <span class="me-2">
-                                                <i class="flaticon-pen-tool"></i>
-                                            </span>
-                                            <div class="drop-title">Career Single</div>
-                                        </a>
-                                    </div>
-                                    <div class="dropdown-grid-item radius-right-side bg-light-subtle">
-                                        <h6 class="drop-heading">Utility Pages</h6>
-                                        <a href="style-guide.html" class="dropdown-link">
-                                            <span class="me-2">
-                                                <i class="flaticon-web-programming"></i>
-                                            </span>
-                                            <div class="drop-title">Style Guide</div>
-                                        </a>
-                                        <a href="support.html" class="dropdown-link">
-                                            <span class="me-2">
-                                                <i class="flaticon-headset"></i>
-                                            </span>
-                                            <div class="drop-title">Help Center</div>
-                                        </a>
-                                        <a href="support-single.html" class="dropdown-link">
-                                            <span class="me-2">
-                                                <i class="flaticon-envelope"></i>
-                                            </span>
-                                            <div class="drop-title">Help Details</div>
-                                        </a>
-                                        <a href="team.html" class="dropdown-link">
-                                            <span class="me-2">
-                                                <i class="flaticon-avatar"></i>
-                                            </span>
-                                            <div class="drop-title">Our Team</div>
-                                        </a>
-                                        <a href="request-demo.html" class="dropdown-link">
-                                            <span class="me-2">
-                                                <i class="flaticon-vector"></i>
-                                            </span>
-                                            <div class="drop-title">Request for Demo</div>
-                                        </a>
-                                        <a href="login.html" class="dropdown-link">
-                                            <span class="me-2">
-                                                <i class="flaticon-download"></i>
-                                            </span>
-                                            <div class="drop-title">User Login</div>
-                                        </a>
-                                        <a href="register.html" class="dropdown-link">
-                                            <span class="me-2">
-                                                <i class="flaticon-logout"></i>
-                                            </span>
-                                            <div class="drop-title">User SignUp</div>
-                                        </a>
-                                        <a href="password-reset.html" class="dropdown-link">
-                                            <span class="me-2">
-                                                <i class="flaticon-garbage"></i>
-                                            </span>
-                                            <div class="drop-title">Recovery Account</div>
-                                        </a>
-                                        <a href="404.html" class="dropdown-link">
-                                            <span class="me-2">
-                                                <i class="flaticon-web-programming"></i>
-                                            </span>
-                                            <div class="drop-title">404 Page</div>
-                                        </a>
-                                        <a href="coming-soon.html" class="dropdown-link">
-                                            <span class="me-2">
-                                                <i class="flaticon-reload"></i>
-                                            </span>
-                                            <div class="drop-title">Coming Soon</div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+                        <li><a href="{{ route('web.projects') }}"
+                                class="nav-link dropdown">{{ __('app.Projects') }}</a></li>
+                        <li><a href="{{ route('web.blogs') }}" class="nav-link dropdown">{{ __('app.Blogs') }}</a>
                         </li>
+                        <li><a href="{{ route('web.home') }}" class="nav-link dropdown">{{ __('app.Home') }}</a></li>
                     </ul>
                 </div>
             </div>

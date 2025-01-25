@@ -1,5 +1,12 @@
 @extends('website.layouts.master')
+<?php $seo = getMetaOf(App\Enums\PageType::HOME); ?>
+@section('title')
+    {{ isset($seo) ? $seo->meta_title : 'Home Page' }}
+@endsection
 @section('meta')
+    <meta name="description" content="{{ isset($seo) ? $seo->meta_description : '' }}">
+    <meta name="keywords" content="{{ isset($seo) ? $seo->meta_keyword : '' }}">
+    <meta name="author" content="Ahmed Elgamal">
 @endsection
 @section('css')
 @endsection
@@ -42,8 +49,8 @@
                     </div>
                     <div class="col-lg-5 col-md-8">
                         <div class="position-relative">
-                            <img src="{{ asset('storage' . '/' . $firstSection->image) }}" alt="{{ $secondSection->title }}"
-                                class="risk-hero-img img-fluid">
+                            <img src="{{ asset('storage' . '/' . $firstSection->image) }}"
+                                alt="{{ $secondSection->title }}" class="risk-hero-img img-fluid">
                             <a href=""
                                 class="risk-click-btn risk-gd-bg rounded-circle d-flex align-items-center justify-content-center position-absolute">
                                 <svg width="25" height="32" viewBox="0 0 25 32" fill="none"
@@ -54,13 +61,17 @@
                                 </svg>
                             </a>
                             <div class="risk-social d-flex align-items-center flex-column gap-20">
-                                <a class="d-flex align-items-center gap-1 ff-risk-pri fs-14 fw-700" href=""><span><i
+                                <a class="d-flex align-items-center gap-1 ff-risk-pri fs-14 fw-700"
+                                    href="{{ getSettingOf('facebook') }}" target="_blank"><span><i
                                             class="fa-brands fa-facebook-f"></i></span>Facebook</a>
-                                <a class="d-flex align-items-center gap-1 ff-risk-pri fs-14 fw-700" href=""><span><i
-                                            class="fa-brands fa-linkedin"></i></span>LinkedIn</a>
-                                <a class="d-flex align-items-center gap-1 ff-risk-pri fs-14 fw-700" href=""><span><i
+                                <a class="d-flex align-items-center gap-1 ff-risk-pri fs-14 fw-700"
+                                    href="{{ getSettingOf('youtube') }}" target="_blank"><span><i
+                                            class="fa-brands fa-youtube"></i></span>Youtube</a>
+                                <a class="d-flex align-items-center gap-1 ff-risk-pri fs-14 fw-700"
+                                    href="{{ getSettingOf('instagram') }}" target="_blank"><span><i
                                             class="fa-brands fa-instagram"></i></span>Instagram</a>
-                                <a class="d-flex align-items-center gap-1 ff-risk-pri fs-14 fw-700" href=""><span><i
+                                <a class="d-flex align-items-center gap-1 ff-risk-pri fs-14 fw-700"
+                                    href="{{ getSettingOf('twitter') }}" target="_blank"><span><i
                                             class="fa-brands fa-twitter"></i></span>Twitter</a>
                             </div>
                         </div>
@@ -373,9 +384,9 @@
                                         </div>
                                     </div>
                                     <!-- <div class="col-12">
-                                                                                            <button type="submit" class="btn btn-primary mt-4 d-block w-100">Get Started
-                                                                                            </button>
-                                                                                        </div> -->
+                                                                                                <button type="submit" class="btn btn-primary mt-4 d-block w-100">Get Started
+                                                                                                </button>
+                                                                                            </div> -->
                                 </div>
                                 <div class="position-relative digi-news-form">
                                     <input required type="text" class="form-control ah-input-bg"
@@ -525,8 +536,8 @@
                         <div class="d-flex justify-content-center align-items-center gap-4 flex-wrap">
                             @foreach ($projects as $project)
                                 <a href="{{ $project->url }}" class="d-inline-block">
-                                    <img src="{{ asset('storage') . '/' . $project->image }}" alt="{{ $project->title }}"
-                                        class="img-fluid">
+                                    <img src="{{ asset('storage') . '/' . $project->image }}"
+                                        alt="{{ $project->title }}" class="img-fluid">
                                 </a>
                             @endforeach
                         </div>

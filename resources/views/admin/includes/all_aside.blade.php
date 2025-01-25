@@ -145,6 +145,20 @@
             </li>
             <li class=" nav-item">
                 <a class="d-flex align-items-center" href="#">
+                    <i data-feather='users'></i><span class="menu-title text-truncate"
+                        data-i18n="Roles&Permissions">Members</span>
+                </a>
+                <ul class="menu-content">
+                    <li class="nav-item {{ active('members') }} "><a class="d-flex align-items-center"
+                            href="{{ route('members.index') }}"><i data-feather='users'></i><span
+                                class="menu-title text-truncate" data-i18n="Languages">Members </span></a>
+                    </li>
+                </ul>
+
+            </li>
+
+            <li class=" nav-item">
+                <a class="d-flex align-items-center" href="#">
                     <i data-feather='star'></i><span class="menu-title text-truncate"
                         data-i18n="Roles&Permissions">Brands</span>
                 </a>

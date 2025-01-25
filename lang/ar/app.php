@@ -1,6 +1,26 @@
 <?php
+
 return [
+    'Best Services to Boost Your Business Value' => 'أفضل الخدمات لتعزيز قيمة عملك',
+    'Home' => 'الرئيسية',
+    'Blogs' => 'المدونات',
+    'Projects' => 'المشاريع',
+    'About_us' => 'من نحن',
+    'Contact_us' => 'اتصل بنا',
+    'View_Details' => 'عرض التفاصيل',
+    'globally_actualize' => 'تحقيق التوازن العالمي بتكلفة فعالة مع تعزيز مهارات القيادة',
+    'create_experience' => 'نحن لا ننشئ المشاريع فقط، بل نصنع تجارب',
+    'View_All_Blogs' => 'عرض جميع المدونات',
+    'We_Follow_Our_Work_Process' => 'نتبع عملية العمل الخاصة بنا',
+    'Research' => 'بحث',
+    'Uniquely_pursue' => 'السعي بشكل فريد لاستعادة الكفاءة للمبادرات الموسعة',
+    'Designing' => 'التصميم',
+    'Restore_efficient' => 'استعادة الكفاءة البشرية والسعي للمبادرات المقنعة',
+    'Building' => 'البناء',
+    'Continually_enhance' => 'تعزيز السعي المستمر للمبادرات المقنعة',
+    'Deliver' => 'التسليم',
+    'Uniquely_for_compelling' => 'بشكل فريد للمبادرات الموسعة والتفاعلية المقنعة',
     'Arabic' => 'العربية',
-    'English' => 'الانجليزية',
+    'English' => 'الإنجليزية',
     'Language' => 'اللغة',
 ];
