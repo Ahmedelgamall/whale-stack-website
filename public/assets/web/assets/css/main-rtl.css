@@ -8086,7 +8086,7 @@
      display: block;
      margin: auto;
      text-align: center;
-     padding: 20px;
+     padding: 20px 8px;
      border-radius: 6px;
      -webkit-transition: all .3s ease;
      transition: all .3s ease

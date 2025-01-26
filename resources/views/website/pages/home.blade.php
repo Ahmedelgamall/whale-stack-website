@@ -415,19 +415,19 @@
         <div class="row align-items-center justify-content-lg-between">
             <div class="col-lg-6 col-md-12">
                 <div class="section-heading" data-aos="fade-up">
-                    <h4 class="h5 text-primary">Integration</h4>
-                    <h2>We Collaborate with Top Software Company</h2>
+                    <h4 class="h5 text-primary">Our customers</h4>
+                    <h2>We Collaborate with Top Brands and Companies</h2>
                 </div>
             </div>
             <div class="col-lg-4 col-md-12">
                 <div class="text-lg-end mb-5 mb-lg-0" data-aos="fade-up">
-                    <a href="integrations.html" class="btn btn-primary">View All Integrations</a>
+                    <a href="integrations.html" class="btn btn-primary">View All Brands</a>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-12">
-                <div id="integrationCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                <div id="integrationCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="30000">
                     <div class="carousel-inner">
                         @php
                             $chunks = $brands->chunk(6); // Adjust number of items per slide
@@ -439,8 +439,8 @@
                                         <div class="col-md-2 col-4" data-aos="fade-up" data-aos-delay="50">
                                             <div class="single-integration bg-white">
                                                 <img src="{{ asset('storage') . '/' . $brand->image }}" alt="{{ $brand->name }}"
-                                                    class="img-fluid">
-                                                <h6 class="mb-0 mt-4">{{ $brand->name }}</h6>
+                                                    class="img-fluid" style="width: 170px; height: 100px; object-fit: cover; ">
+                                                {{-- <h6 class="mb-0 mt-4">{{ $brand->name }}</h6> --}}
                                             </div>
                                         </div>
                                     @endforeach
