@@ -409,52 +409,61 @@
     <!-- Newsletter End -->
 
 
-    <section class="integration-section pt-60 pb-120">
-        <div class="container">
-            <div class="row align-items-center justify-content-lg-between">
-                <div class="col-lg-6 col-md-12">
-                    <div class="section-heading" data-aos="fade-up">
-                        <h4 class="h5 text-primary">Integration</h4>
-                        <h2>We Collaborate with Top Software Company</h2>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-12">
-                    <div class="text-lg-end mb-5 mb-lg-0" data-aos="fade-up">
-                        <a href="integrations.html" class="btn btn-primary">View All Integrations</a>
-                    </div>
+<!--integration section start-->
+<section class="integration-section pt-60 pb-120">
+    <div class="container">
+        <div class="row align-items-center justify-content-lg-between">
+            <div class="col-lg-6 col-md-12">
+                <div class="section-heading" data-aos="fade-up">
+                    <h4 class="h5 text-primary">Integration</h4>
+                    <h2>We Collaborate with Top Software Company</h2>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-12">
-                    <!-- Mobile Carousel -->
-                    <div id="integrationCarousel" class="carousel slide d-md-none" data-bs-ride="carousel" data-bs-interval="1500">
-                        <!-- Carousel Inner -->
-                        <div class="carousel-inner">
-                            @foreach ($brands as $index => $brand)
-                                <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
-                                    <div class="single-integration bg-white text-center p-3">
-                                        <img src="{{ asset('storage') . '/' . $brand->image }}" alt="integration" class="img-fluid">
-                                        <h6 class="mb-0 mt-4">{{ $brand->name }}</h6>
-                                    </div>
-                                </div>
-                            @endforeach
-                        </div>
-                    </div>
-                    <!-- Static Layout for Larger Screens -->
-                    <div class="integration-list d-none d-md-flex flex-wrap">
-                        @foreach ($brands as $brand)
-                            <div class="single-integration bg-white text-center p-3 mx-2">
-                                <img src="{{ asset('storage') . '/' . $brand->image }}" alt="integration" class="img-fluid">
-                                <h6 class="mb-0 mt-4">{{ $brand->name }}</h6>
-                            </div>
-                        @endforeach
-                    </div>
+            <div class="col-lg-4 col-md-12">
+                <div class="text-lg-end mb-5 mb-lg-0" data-aos="fade-up">
+                    <a href="integrations.html" class="btn btn-primary">View All Integrations</a>
                 </div>
             </div>
         </div>
-    </section>
+        <div class="row">
+            <div class="col-12">
+                <div id="integrationCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                    <div class="carousel-inner">
+                        @php
+                            $chunks = $brands->chunk(6); // Adjust number of items per slide
+                        @endphp
+                        @foreach($chunks as $index => $chunk)
+                            <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
+                                <div class="row">
+                                    @foreach($chunk as $brand)
+                                        <div class="col-md-2 col-4" data-aos="fade-up" data-aos-delay="50">
+                                            <div class="single-integration bg-white">
+                                                <img src="{{ asset('storage') . '/' . $brand->image }}" alt="{{ $brand->name }}"
+                                                    class="img-fluid">
+                                                <h6 class="mb-0 mt-4">{{ $brand->name }}</h6>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
 
-
+                    <!-- Carousel Controls -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#integrationCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#integrationCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--integration section end-->
 
     <!--customer review tab section start-->
     <section class="testimonial-section ptb-120 bg-light-subtle">
