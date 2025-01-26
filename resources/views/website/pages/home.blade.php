@@ -30,8 +30,8 @@
                             class="btn risk-btn-bg risk-btn-hover clr-white ff-risk-pri fs-14 fw-600 mt-30">Start
                             with us</a>
                         <div class="risk-customer-area mt-60">
-                            <p class="text-white ff-risk-pri fw-600">See how over 7,700 customers <span
-                                    class="risk-highlight-color fw-800">Help the world work</span></p>
+                            <p class="text-white ff-risk-pri fw-600">{{ __('app.see_how') }} <span
+                                    class="risk-highlight-color fw-800">{{ __('app.help_the_world') }}</span></p>
                             <div class="risk-customer-logo-wrapper d-flex align-items-center gap-10 flex-wrap">
                                 <img class="risk-customer-logo"
                                     src="{{ asset('assets/web/') }}/assets/img/risk_managment/customer.png" alt="">
@@ -63,16 +63,16 @@
                             <div class="risk-social d-flex align-items-center flex-column gap-20">
                                 <a class="d-flex align-items-center gap-1 ff-risk-pri fs-14 fw-700"
                                     href="{{ getSettingOf('facebook') }}" target="_blank"><span><i
-                                            class="fa-brands fa-facebook-f"></i></span>Facebook</a>
+                                            class="fa-brands fa-facebook-f"></i></span>{{ __('app.Facebook') }}</a>
                                 <a class="d-flex align-items-center gap-1 ff-risk-pri fs-14 fw-700"
                                     href="{{ getSettingOf('youtube') }}" target="_blank"><span><i
-                                            class="fa-brands fa-youtube"></i></span>Youtube</a>
+                                            class="fa-brands fa-youtube"></i></span>{{ __('app.Youtube') }}</a>
                                 <a class="d-flex align-items-center gap-1 ff-risk-pri fs-14 fw-700"
                                     href="{{ getSettingOf('instagram') }}" target="_blank"><span><i
-                                            class="fa-brands fa-instagram"></i></span>Instagram</a>
+                                            class="fa-brands fa-instagram"></i></span>{{ __('app.Instagram') }}</a>
                                 <a class="d-flex align-items-center gap-1 ff-risk-pri fs-14 fw-700"
                                     href="{{ getSettingOf('twitter') }}" target="_blank"><span><i
-                                            class="fa-brands fa-twitter"></i></span>Twitter</a>
+                                            class="fa-brands fa-twitter"></i></span>{{ __('app.Twitter') }}</a>
                             </div>
                         </div>
                     </div>
@@ -91,7 +91,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="position-relative">
-                        <h6 class="risk-sub-text fs-16 ff-risk-pri fw-700 mb-20">Explore How Can I Help You</h6>
+                        <h6 class="risk-sub-text fs-16 ff-risk-pri fw-700 mb-20">{{ __('app.Explore') }}</h6>
                         <h2 class="risk-title risk-color fs-42 ff-risk-pri flh-56 fw-800 mb-20">
                             {!! formateTitle($secondSection->title) !!}
                         </h2>
@@ -154,11 +154,9 @@
             <div class="row justify-content-between">
                 <div class="col-xl-5 col-lg-5 col-md-12">
                     <div class="section-heading" data-aos="fade-up">
-                        <h4 class="h5 text-primary">Quick Support</h4>
-                        <h2>Get in Touch Today!</h2>
-                        <p>Proactively deliver seamless core competencies with scalable. Completely fabricate
-                            transparent
-                            paradigms. </p>
+                        <h4 class="h5 text-primary">{{ __('app.Quick_Support') }}</h4>
+                        <h2>{{ __('app.Get_in_Touch') }}</h2>
+                        <p>{{ __('app.Proactively_deliver') }} </p>
                     </div>
                     <div class="row justify-content-between pb-5">
                         <div class="col-sm-6 mb-4 mb-md-0 mb-lg-0" data-aos="fade-up" data-aos-delay="50">
@@ -166,10 +164,10 @@
                                 <i class="fas fa-phone fa-2x text-primary"></i>
                             </div>
                             <div class="contact-info">
-                                <h5>Call Us</h5>
-                                <p>Questions about our product or pricing? Call for support</p>
+                                <h5>{{ __('app.Call Us') }}</h5>
+                                <p>{{ __('app.Questions_about') }}</p>
                                 <a href="tel:(415)231-59687" class="read-more-link text-decoration-none"><i
-                                        class="fas fa-phone me-2"></i> (415)231-59687</a>
+                                        class="fas fa-phone me-2"></i> {{ getSettingOf('website_phone') }}</a>
                             </div>
                         </div>
                         <div class="col-sm-6" data-aos="fade-up" data-aos-delay="100">
@@ -177,12 +175,12 @@
                                 <i class="fas fa-headset fa-2x text-danger"></i>
                             </div>
                             <div class="contact-info">
-                                <h5>Chat Us</h5>
-                                <p>Our support will help you from
+                                <h5>{{ __('app.Chat Us') }}</h5>
+                                <p>{{ __('app.Our_support_will_help_you_from') }}
                                     <strong>9am to 5pm EST.</strong>
                                 </p>
                                 <a href="#" class="read-more-link text-decoration-none"><i
-                                        class="fas fa-comment me-2"></i> Live Chat Now</a>
+                                        class="fas fa-comment me-2"></i> {{ __('app.Live Chat Now') }}</a>
                             </div>
                         </div>
                     </div>
@@ -191,35 +189,34 @@
                     <div class="register-wrap p-5 bg-white shadow rounded-custom position-relative" data-aos="fade-up"
                         data-aos-delay="150">
                         <form action="#" class="register-form position-relative z-5">
-                            <h3 class="mb-5 fw-medium">Fill out the form and we'll be in touch as soon as
-                                possible.</h3>
+                            <h3 class="mb-5 fw-medium">{{ __('app.Fill_out') }}</h3>
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="input-group mb-3">
-                                        <input type="text" class="form-control" placeholder="Name" aria-label="name">
+                                        <input type="text" class="form-control" placeholder="{{ __('app.Name') }}" aria-label="name">
                                     </div>
                                 </div>
                                 <div class="col-sm-6 ">
                                     <div class="input-group mb-3">
-                                        <input type="email" class="form-control" placeholder="Email"
+                                        <input type="email" class="form-control" placeholder="{{ __('app.Email') }}"
                                             aria-label="email">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="input-group mb-3">
-                                        <input type="text" class="form-control" placeholder="Company website"
+                                        <input type="text" class="form-control" placeholder="{{ __('app.Company website') }}"
                                             aria-label="company-website">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="input-group mb-3">
-                                        <input type="email" class="form-control" placeholder="Work email"
+                                        <input type="email" class="form-control" placeholder="{{ __('app.Work email') }}"
                                             aria-label="work-Email">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="input-group mb-3">
-                                        <input type="tel" class="form-control" placeholder="Phone number"
+                                        <input type="tel" class="form-control" placeholder="{{ __('app.Phone number') }}"
                                             aria-label="Phone number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
                                     </div>
                                 </div>
@@ -227,40 +224,40 @@
                                     <div class="input-group mb-3">
                                         <select class="form-control form-select" name="country" id="country"
                                             required="" data-msg="Please select your country.">
-                                            <option value="" selected="" disabled="">Country</option>
-                                            <option value="BH">Bahrain</option>
-                                            <option value="CA">Canada</option>
-                                            <option value="EG">Egypt</option>
-                                            <option value="FR">France</option>
-                                            <option value="DE">Germany</option>
-                                            <option value="GR">Greece</option>
-                                            <option value="IQ">Iraq</option>
-                                            <option value="Ho">Holland</option>
-                                            <option value="IT">Italy</option>
-                                            <option value="JO">Jordan</option>
-                                            <option value="KW">Kuwait</option>
-                                            <option value="LB">Lebanon</option>
-                                            <option value="LY">Libya</option>
-                                            <option value="OM">Oman</option>
-                                            <option value="QA">Qatar</option>
-                                            <option value="RO">Romania</option>
-                                            <option value="SA">Saudi Arabia</option>
-                                            <option value="ES">Spain</option>
-                                            <option value="SD">Sudan</option>
-                                            <option value="SY">Syria</option>
-                                            <option value="TN">Tunisia</option>
-                                            <option value="TR">Turkey</option>
-                                            <option value="UA">Ukraine</option>
-                                            <option value="AE">United Arab Emirates</option>
-                                            <option value="GB">United Kingdom</option>
-                                            <option value="US">United States</option>
-                                            <option value="YE">Yemen</option>
+                                            <option value="" selected="" disabled="">{{ __('app.Country') }}</option>
+                                            <option value="BH">{{ __('app.Bahrain') }}</option>
+                                            <option value="CA">{{ __('app.Canada') }}</option>
+                                            <option value="EG">{{ __('app.Egypt') }}</option>
+                                            <option value="FR">{{ __('app.France') }}</option>
+                                            <option value="DE">{{ __('app.Germany') }}</option>
+                                            <option value="GR">{{ __('app.Greece') }}</option>
+                                            <option value="IQ">{{ __('app.Iraq') }}</option>
+                                            <option value="Ho">{{ __('app.Holland') }}</option>
+                                            <option value="IT">{{ __('app.Italy') }}</option>
+                                            <option value="JO">{{ __('app.Jordan') }}</option>
+                                            <option value="KW">{{ __('app.Kuwait') }}</option>
+                                            <option value="LB">{{ __('app.Lebanon') }}</option>
+                                            <option value="LY">{{ __('app.Libya') }}</option>
+                                            <option value="OM">{{ __('app.Oman') }}</option>
+                                            <option value="QA">{{ __('app.Qatar') }}</option>
+                                            <option value="RO">{{ __('app.Romania') }}</option>
+                                            <option value="SA">{{ __('app.Saudi Arabia') }}</option>
+                                            <option value="ES">{{ __('app.Spain') }}</option>
+                                            <option value="SD">{{ __('app.Sudan') }}</option>
+                                            <option value="SY">{{ __('app.Syria') }}</option>
+                                            <option value="TN">{{ __('app.Tunisia') }}</option>
+                                            <option value="TR">{{ __('app.Turkey') }}</option>
+                                            <option value="UA">{{ __('app.Ukraine') }}</option>
+                                            <option value="AE">{{ __('app.United Arab Emirates') }}</option>
+                                            <option value="GB">{{ __('app.United Kingdom') }}</option>
+                                            <option value="US">{{ __('app.United States') }}</option>
+                                            <option value="YE">{{ __('app.Yemen') }}</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="input-group mb-3">
-                                        <textarea class="form-control" placeholder="Tell us more about your project, needs and budget" style="height: 120px"></textarea>
+                                        <textarea class="form-control" placeholder="{{ __('app.Tell_us') }}" style="height: 120px"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -268,14 +265,13 @@
                                         <input class="form-check-input" type="checkbox" value=""
                                             id="flexCheckChecked">
                                         <label class="form-check-label small" for="flexCheckChecked">
-                                            Yes, I'd like to receive occasional marketing emails from us. I have the
-                                            right to opt out at any time.
-                                            <a href="#"> View privacy policy</a>.
+                                            {{ __('app.liked') }}.
+                                            <a href="#"> {{ __('app.View privacy policy') }}</a>.
                                         </label>
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <button type="submit" class="btn btn-primary mt-4 d-block w-100">Get Started
+                                    <button type="submit" class="btn btn-primary mt-4 d-block w-100">{{ __('app.Get Started') }}
                                     </button>
                                 </div>
                             </div>
@@ -300,8 +296,7 @@
                     <div class="section-heading text-center" data-aos="fade-up">
                         {{-- <h4 class="h5 text-primary">Process</h4> --}}
                         <h2>{{ __('app.We_Follow_Our_Work_Process') }}</h2>
-                        <p>Conveniently mesh cooperative services via magnetic outsourcing. Dynamically grow
-                            functionalized value whereas accurate e-commerce. </p>
+                        <p>{{ __('app.Conveniently') }}. </p>
                     </div>
                 </div>
             </div>
@@ -361,38 +356,36 @@
                     <div class="col-lg-6 col-md-12">
                         <div class="digi-newsletter">
                             <div>
-                                <span class="span-arrow text-pink">Best Yout website</span>
+                                <span class="span-arrow text-pink">{{ __('app.Best Yout website') }}</span>
                                 <img src="{{ asset('assets/web/') }}/assets/img/arro-right.svg" alt="arrow">
                             </div>
-                            <h2>Test your Website for Free with Quiety</h2>
+                            <h2>{{ __('app.Test your Website for Free with Quiety') }}</h2>
                             <p>
-                                Intrinsicly cultivate user-centric collaboration and idea-sharing after value-added
-                                processes
-                                repurpose unique models and global schemas.
+                               {{ __('app.Intrinsicly') }}.
                             </p>
                             <form class="mt-4">
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="input-group mb-3">
                                             <input required type="text" class="form-control bordered-input-st"
-                                                placeholder="Name" aria-label="name">
+                                                placeholder="{{ __('app.Name') }}" aria-label="name">
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="input-group mb-3">
                                             <input required type="tel" class="form-control bordered-input-sec"
-                                                placeholder="Phone number" aria-label="Phone number">
+                                                placeholder="{{ __('app.Phone number') }}" aria-label="Phone number">
                                         </div>
                                     </div>
                                     <!-- <div class="col-12">
-                                                                                                <button type="submit" class="btn btn-primary mt-4 d-block w-100">Get Started
-                                                                                                </button>
-                                                                                            </div> -->
+                                                                                                    <button type="submit" class="btn btn-primary mt-4 d-block w-100">Get Started
+                                                                                                    </button>
+                                                                                                </div> -->
                                 </div>
                                 <div class="position-relative digi-news-form">
                                     <input required type="text" class="form-control ah-input-bg"
-                                        placeholder="Website Url">
-                                    <button class="digi-news-button">Analysis Webiste</button>
+                                        placeholder="{{ __('app.Website Url') }}">
+                                    <button class="digi-news-button">{{ __('app.Analysis Webiste') }}</button>
                                 </div>
                             </form>
                         </div>
@@ -416,13 +409,13 @@
             <div class="row align-items-center justify-content-lg-between">
                 <div class="col-lg-6 col-md-12">
                     <div class="section-heading" data-aos="fade-up">
-                        <h4 class="h5 text-primary">Integration</h4>
-                        <h2>We Collaborate with Top Software Company</h2>
+                        <h4 class="h5 text-primary">{{ __('app.Integration') }}</h4>
+                        <h2>{{ __('app.We_Collaborate') }}</h2>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12">
                     <div class="text-lg-end mb-5 mb-lg-0" data-aos="fade-up">
-                        <a href="integrations.html" class="btn btn-primary">View All Integrations</a>
+                        <a href="integrations.html" class="btn btn-primary">{{ __('app.View All Integrations') }}</a>
                     </div>
                 </div>
             </div>
@@ -467,10 +460,9 @@
             <div class="row justify-content-center align-content-center">
                 <div class="col-md-10 col-lg-6">
                     <div class="section-heading text-center" data-aos="fade-up">
-                        <h4 class="h5 text-primary">Testimonial</h4>
-                        <h2>What They Say About Us</h2>
-                        <p>Uniquely promote adaptive quality vectors rather than stand-alone e-markets pontificate
-                            alternative architectures with accurate schemas.</p>
+                        <h4 class="h5 text-primary">{{ __('app.Testimonial') }}</h4>
+                        <h2>{{ __('app.What They Say About Us') }}</h2>
+                        <p>{{ __('app.Uniquely_promote') }}.</p>
                     </div>
                 </div>
             </div>
@@ -543,7 +535,7 @@
                             @endforeach
                         </div>
                         <button class="btn btn-primary project-gallery__btn">
-                            All Templates
+                            {{ __('app.All Templates') }}
                         </button>
                     </div>
                 </div>
@@ -561,9 +553,8 @@
                 <div class="col-lg-6 col-md-12">
                     <div class="section-heading text-center">
                         {{-- <h4 class="text-primary h5">Blog</h4> --}}
-                        <h2>Our Latest News and Update</h2>
-                        <p>Assertively maximize cost effective methods of iterate team driven manufactured products
-                            through equity invested via customized benefits. </p>
+                        <h2>{{ __('app.Our Latest News and Update') }}</h2>
+                        <p>{{ __('app.Assertively') }}. </p>
                     </div>
                 </div>
             </div>
@@ -621,8 +612,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="text-center">
-                        <h2 class="it-company-title it-company-color fs-40 fw-600 flh-56 mb-40">Frequently Asked
-                            Questions</h2>
+                        <h2 class="it-company-title it-company-color fs-40 fw-600 flh-56 mb-40">{{ __('app.Frequently Asked Questions') }}</h2>
                     </div>
                 </div>
             </div>

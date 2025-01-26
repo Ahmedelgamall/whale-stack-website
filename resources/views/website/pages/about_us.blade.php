@@ -20,12 +20,10 @@
                     <div class="section-heading-wrap d-flex justify-content-between z-5 position-relative">
                         <div class="about-content-left">
                             <div class="about-info mb-5">
-                                <h1 class="fw-bold display-5">Grow your Business & Customer Satisfaction with
-                                    Quiety</h1>
-                                <p class="lead">Dynamically disintermediate technically sound technologies with
-                                    compelling quality vectors error-free communities. </p>
-                                <a href="career.html" class="btn btn-primary mt-4 me-3">Open Positions</a>
-                                <a href="#our-team" class="btn btn-soft-primary mt-4">Meet Our Team</a>
+                                <h1 class="fw-bold display-5">{{ __('app.Grow_your_Business') }}</h1>
+                                <p class="lead">{{ __('app.Dynamically_disintermediate') }}. </p>
+                                <a href="#" class="btn btn-primary mt-4 me-3">{{ __('app.Open Positions') }}</a>
+                                <a href="#our-team" class="btn btn-soft-primary mt-4">{{ __('app.Meet Our Team') }}</a>
                             </div>
                             {{-- <img src="assets/img/about-img-1.jpg" alt="about"
                                 class="img-fluid about-img-first mt-5 rounded-custom shadow"> --}}
@@ -52,12 +50,11 @@
             <div class="row justify-content-between">
                 <div class="col-lg-5 col-md-12 order-lg-1">
                     <div class="section-heading sticky-sidebar">
-                        <h4 class="h5 text-primary">Our Story</h4>
-                        <h2>A Great Story Starts with a Friendly Team</h2>
-                        <p>Globally e-enable principle-centered e-business before dynamic quality vectors cross-media
-                            materials before proactive outsourcing leverage other's vertical technology leadership. </p>
+                        <h4 class="h5 text-primary">{{ __('app.Our Story') }}</h4>
+                        <h2>{{ __('app.A Great Story') }}</h2>
+                        <p>{{ __('app.Globally e-enable') }}. </p>
                         <div class="mt-4">
-                            <h6 class="mb-3">We Are Awarded By-</h6>
+                            <h6 class="mb-3">{{ __('app.We Are Awarded By') }}-</h6>
                             <img src="assets/img/awards-01.svg" alt="awards" class="me-4 img-fluid">
                             <img src="assets/img/awards-02.svg" alt="awards" class="img-fluid">
                         </div>
@@ -80,27 +77,27 @@
                         <div class="story-grid rounded-custom bg-dark overflow-hidden position-relative">
                             <div class="story-item bg-light-subtle border">
                                 <h3 class="display-5 fw-bold mb-1 text-success">550K+</h3>
-                                <h6 class="mb-0">Active Users</h6>
+                                <h6 class="mb-0">{{ __('app.Active Users') }}</h6>
                             </div>
                             <div class="story-item bg-white border">
                                 <h3 class="display-5 fw-bold mb-1 text-primary">250+</h3>
-                                <h6 class="mb-0">Team Members</h6>
+                                <h6 class="mb-0">{{ __('app.Team Members') }}</h6>
                             </div>
                             <div class="story-item bg-white border">
                                 <h3 class="display-5 fw-bold mb-1 text-dark">$20M+</h3>
-                                <h6 class="mb-0">Revenue Per/Year</h6>
+                                <h6 class="mb-0">{{ __('app.Revenue Per/Year') }}</h6>
                             </div>
                             <div class="story-item bg-light-subtle border">
                                 <h3 class="display-5 fw-bold mb-1 text-warning">8 Years</h3>
-                                <h6 class="mb-0">In Business</h6>
+                                <h6 class="mb-0">{{ __('app.In Business') }}</h6>
                             </div>
                             <div class="story-item bg-light-subtle border">
                                 <h3 class="display-5 fw-bold mb-1 text-danger">425+</h3>
-                                <h6 class="mb-0">Clients Worldwide</h6>
+                                <h6 class="mb-0">{{ __('app.Clients Worldwide') }}</h6>
                             </div>
                             <div class="story-item bg-white border">
                                 <h3 class="display-5 fw-bold mb-1 text-primary">855+</h3>
-                                <h6 class="mb-0">Projects Completed</h6>
+                                <h6 class="mb-0">{{ __('app.Projects Completed') }}</h6>
                             </div>
                         </div>
                     </div>
@@ -111,74 +108,7 @@
     <!--our story section end-->
 
     <!--feature section two start-->
-    <section class="feature-section-two ptb-120 bg-light-subtle">
-        <div class="container">
-            <div class="row align-items-center justify-content-center">
-                <div class="col-lg-6 col-md-12">
-                    <div class="section-heading">
-                        <h4 class="h5 text-primary">Our Values</h4>
-                        <h2>The Core Values that Drive Everything</h2>
-                        <p>Quickly incubate functional channels with multidisciplinary architectures. Authoritatively
-                            fabricate formulate exceptional innovation.</p>
-                        <ul class="list-unstyled mt-5">
-                            <li class="d-flex align-items-start mb-4">
-                                <div class="icon-box bg-primary rounded me-4">
-                                    <i class="fas fa-bezier-curve text-white"></i>
-                                </div>
-                                <div class="icon-content">
-                                    <h3 class="h5">Pixel Perfect Design</h3>
-                                    <p>Progressively foster enterprise-wide systems whereas equity invested
-                                        web-readiness harness installed.
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="d-flex align-items-start mb-4">
-                                <div class="icon-box bg-danger rounded me-4">
-                                    <i class="fas fa-fingerprint text-white"></i>
-                                </div>
-                                <div class="icon-content">
-                                    <h3 class="h5">Unique &amp; Minimal Design</h3>
-                                    <p>Dramatically administrate progressive metrics without error-free globally
-                                        simplify standardized engineer efficient strategic.
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="d-flex align-items-start mb-4">
-                                <div class="icon-box bg-dark rounded me-4">
-                                    <i class="fas fa-cog text-white"></i>
-                                </div>
-                                <div class="icon-content">
-                                    <h3 class="h5">Efficiency & Accountability</h3>
-                                    <p>Objectively transition prospective collaboration and idea-sharing without focused
-                                        maintain focused niche markets niches.
-                                    </p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-7">
-                    <div class="feature-img-wrap position-relative d-flex flex-column align-items-end">
-                        <ul class="img-overlay-list list-unstyled position-absolute">
-                            <li class="d-flex align-items-center bg-white rounded shadow-sm p-3">
-                                <i class="fas fa-check bg-primary text-white rounded-circle"></i>
-                                <h6 class="mb-0">Create a Free Account</h6>
-                            </li>
-                            <li class="d-flex align-items-center bg-white rounded shadow-sm p-3">
-                                <i class="fas fa-check bg-primary text-white rounded-circle"></i>
-                                <h6 class="mb-0">Install Our Tracking Pixel</h6>
-                            </li>
-                            <li class="d-flex align-items-center bg-white rounded shadow-sm p-3">
-                                <i class="fas fa-check bg-primary text-white rounded-circle"></i>
-                                <h6 class="mb-0">Start Tracking your Website</h6>
-                            </li>
-                        </ul>
-                        <img src="assets/img/feature-img3.jpg" alt="feature image" class="img-fluid rounded-custom">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
     <!--feature section two end-->
 
     <!--team section start-->
@@ -187,10 +117,9 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6 col-md-12">
                     <div class="section-heading text-center">
-                        <h5 class="h6 text-primary">Our Team</h5>
-                        <h2>The People Behind Quiety</h2>
-                        <p>Intrinsicly strategize cutting-edge before interoperable applications incubate extensive
-                            expertise through integrated intellectual capital. </p>
+                        <h5 class="h6 text-primary">{{ __('app.Our Team') }}</h5>
+                        <h2>{{ __('app.The People Behind Whale Stack') }}</h2>
+                        <p>{{ __('app.Intrinsicly') }}. </p>
                     </div>
                 </div>
             </div>
@@ -228,10 +157,9 @@
             <div class="row justify-content-center align-content-center">
                 <div class="col-md-10 col-lg-6">
                     <div class="section-heading text-center">
-                        <h4 class="h5 text-primary">Testimonial</h4>
-                        <h2>What They Say About Us</h2>
-                        <p>Uniquely promote adaptive quality vectors rather than stand-alone e-markets pontificate
-                            alternative architectures with accurate schemas.</p>
+                        <h4 class="h5 text-primary">{{ __('Testimonial') }}</h4>
+                        <h2>{{ __('app.What They Say About Us') }}</h2>
+                        <p>{{ __('app.Uniquely promote') }}.</p>
                     </div>
                 </div>
             </div>

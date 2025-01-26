@@ -66,8 +66,8 @@
             <div class="row align-items-center justify-content-between">
                 <div class="col-lg-4 col-md-12">
                     <div class="section-heading">
-                        <h4 class="h5 text-primary">Related News</h4>
-                        <h2>More Latest News and Blog at Quiety</h2>
+                        <h4 class="h5 text-primary">{{ __('app.Related Blogs') }}</h4>
+                        <h2>{{ __('app.More Latest News and Blog at Quiety') }}</h2>
                     </div>
                 </div>
                 <div class="col-lg-7 col-md-12">

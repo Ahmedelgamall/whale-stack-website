@@ -18,9 +18,8 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-12">
                     <div class="section-heading text-center">
-                        <h1 class="display-5 fw-bold">Our Latest Projects</h1>
-                        <p class="lead mb-0">Completely integrate equity invested partnerships without revolutionary systems.
-                            Monotonectally network pandemic e-services via bricks-and-clicks information. </p>
+                        <h1 class="display-5 fw-bold">{{ __('app.Our Latest Projects') }}</h1>
+                        <p class="lead mb-0">{{ __('app.Completely integrate') }}. </p>
                     </div>
                 </div>
             </div>

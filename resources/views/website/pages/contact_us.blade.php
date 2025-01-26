@@ -17,9 +17,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-12">
-                    <h1 class="display-5 fw-bold">Contact Us</h1>
-                    <p class="lead">Seamlessly actualize client-based users after out-of-the-box value data through
-                        frictionless expertise.</p>
+                    <h1 class="display-5 fw-bold">{{ __('app.Contact Us') }}</h1>
+                    <p class="lead">{{ __('app.Seamlessly') }}.</p>
                 </div>
             </div>
             <div class="bg-circle rounded-circle circle-shape-3 position-absolute bg-dark-light right-5"></div>
@@ -36,12 +35,12 @@
                         class="contact-us-promo p-5 bg-white rounded-custom custom-shadow text-center d-flex flex-column h-100">
                         <span class="fas fa-comment fa-3x text-primary"></span>
                         <div class="contact-promo-info mb-4">
-                            <h5>Chat with us</h5>
-                            <p>We've got live Social Experts waiting to help you <strong>monday to friday</strong> from
-                                <strong>9am to 5pm EST.</strong>
+                            <h5>{{ __('app.Chat with us') }}</h5>
+                            <p>{{ __('app.We\'ve got live Social Experts waiting to help you') }} <strong>{{ __('app.monday to friday') }}</strong> {{ __('app.from') }}
+                                <strong>{{ __('app.9am to 5pm EST') }}.</strong>
                             </p>
                         </div>
-                        <a href="mailto:{{ getSettingOf('website_email') }}" class="btn btn-link mt-auto">Chat with us</a>
+                        <a href="mailto:{{ getSettingOf('website_email') }}" class="btn btn-link mt-auto">{{ __('app.Chat with us') }}</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
@@ -49,11 +48,11 @@
                         class="contact-us-promo p-5 bg-white rounded-custom custom-shadow text-center d-flex flex-column h-100">
                         <span class="fas fa-envelope fa-3x text-primary"></span>
                         <div class="contact-promo-info mb-4">
-                            <h5>Email Us</h5>
-                            <p>Simple drop us an email at <strong>{{ getSettingOf('website_email') }}</strong>
-                                and you'll receive a reply within 24 hours</p>
+                            <h5>{{ __('app.Email Us') }}</h5>
+                            <p>{{ __('app.Simple drop us an email at') }} <strong>{{ getSettingOf('website_email') }}</strong>
+                                {{ __('app.and you\'ll receive a reply within 24 hours') }}</p>
                         </div>
-                        <a href="mailto:{{ getSettingOf('website_email') }}" class="btn btn-primary mt-auto">Email Us</a>
+                        <a href="mailto:{{ getSettingOf('website_email') }}" class="btn btn-primary mt-auto">{{ __('app.Email Us') }}</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
@@ -61,9 +60,9 @@
                         class="contact-us-promo p-5 bg-white rounded-custom custom-shadow text-center d-flex flex-column h-100">
                         <span class="fas fa-phone fa-3x text-primary"></span>
                         <div class="contact-promo-info mb-4">
-                            <h5>Give us a call</h5>
-                            <p>Give us a ring.Our Experts are standing by <strong>monday to friday</strong> from
-                                <strong>9am to 5pm EST.</strong>
+                            <h5>{{ __('app.Give us a call') }}</h5>
+                            <p>{{ __('app.Give_us') }} <strong>{{ __('app.monday to frida') }}y</strong> {{ __('app.from') }}
+                                <strong>{{ __('app.9am to 5pm EST') }}.</strong>
                             </p>
                         </div>
                         <a href="tel:{{ getSettingOf('website_phone') }}" class="btn btn-link mt-auto">{{ getSettingOf('website_phone') }}</a>
@@ -81,49 +80,48 @@
             <div class="row justify-content-lg-between align-items-center">
                 <div class="col-lg-6 col-md-8">
                     <div class="section-heading">
-                        <h2>Talk to Our Sales & Marketing Department Team</h2>
-                        <p>Collaboratively promote client-focused convergence vis-a-vis customer directed alignments via
-                            standardized infrastructures.</p>
+                        <h2>{{ __('app.Talk to Our Sales') }}</h2>
+                        <p>{{ __('app.Collaboratively promote') }}.</p>
                     </div>
                     <form id="contactForm" class="register-form" method="POST">
                         @csrf
                         <div class="row">
                             <div class="col-sm-6">
-                                <label for="firstName" class="mb-1">First name <span class="text-danger">*</span></label>
+                                <label for="firstName" class="mb-1">{{ __('app.First name') }} <span class="text-danger">*</span></label>
                                 <div class="input-group mb-3">
                                     <input type="text" name="first_name" class="form-control" id="firstName" required
-                                        placeholder="First name" aria-label="First name">
+                                        placeholder="{{ __('app.First name') }}" aria-label="First name">
                                 </div>
                             </div>
                             <div class="col-sm-6 ">
-                                <label for="lastName" class="mb-1">Last name</label>
+                                <label for="lastName" class="mb-1">{{ __('app.Last name') }}</label>
                                 <div class="input-group mb-3">
-                                    <input type="text" name="last_name" class="form-control" id="lastName" placeholder="Last name"
+                                    <input type="text" name="last_name" class="form-control" id="lastName" placeholder="{{ __('app.Last name') }}"
                                         aria-label="Last name">
                                 </div>
                             </div>
                             <div class="col-sm-6">
-                                <label for="phone" class="mb-1">Phone <span class="text-danger">*</span></label>
+                                <label for="phone" class="mb-1">{{ __('app.Phone') }} <span class="text-danger">*</span></label>
                                 <div class="input-group mb-3">
-                                    <input type="text" name="phone" class="form-control" id="phone" required placeholder="Phone"
+                                    <input type="text" name="phone" class="form-control" id="phone" required placeholder="{{ __('app.Phone') }}"
                                         aria-label="Phone">
                                 </div>
                             </div>
                             <div class="col-sm-6">
-                                <label for="email" class="mb-1">Email<span class="text-danger">*</span></label>
+                                <label for="email" class="mb-1">{{ __('app.Email') }}<span class="text-danger">*</span></label>
                                 <div class="input-group mb-3">
-                                    <input type="email" name="email" class="form-control" id="email" required placeholder="Email"
+                                    <input type="email" name="email" class="form-control" id="email" required placeholder="{{ __('app.Email') }}"
                                         aria-label="Email">
                                 </div>
                             </div>
                             <div class="col-12">
-                                <label for="yourMessage" class="mb-1">Message <span class="text-danger">*</span></label>
+                                <label for="yourMessage" class="mb-1">{{ __('app.Message') }} <span class="text-danger">*</span></label>
                                 <div class="input-group mb-3">
-                                    <textarea class="form-control" name="message" id="yourMessage" required placeholder="How can we help you?" style="height: 120px"></textarea>
+                                    <textarea class="form-control" name="message" id="yourMessage" required placeholder="{{ __('app.How can we help you?') }}" style="height: 120px"></textarea>
                                 </div>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary mt-4">Get in Touch</button>
+                        <button type="submit" class="btn btn-primary mt-4">{{ __('app.Get in Touch') }}</button>
                     </form>
                 </div>
                 <div class="col-lg-5 col-md-10">

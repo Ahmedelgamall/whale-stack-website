@@ -12,8 +12,7 @@
                                     <img src="{{ asset('assets/web/') }}/assets/img/logo-color.png" alt="logo"
                                         class="img-fluid logo-color">
                                 </div>
-                                <p>Our latest news, articles, and resources, we will sent to
-                                    your inbox weekly.</p>
+                                <p>{{ __('app.Our_latest_news') }}.</p>
 
                                 <form class="newsletter-form position-relative d-block d-lg-flex d-md-flex">
                                     <input type="text" class="input-newsletter form-control me-2"
@@ -22,7 +21,7 @@
                                         class="btn btn-primary mt-3 mt-lg-0 mt-md-0">
                                 </form>
                                 <div class="ratting-wrap mt-4">
-                                    <h6 class="mb-0">10/10 Overall rating</h6>
+                                    <h6 class="mb-0">10/10{{ __('app.Overall_rating') }}</h6>
                                     <ul class="list-unstyled rating-list list-inline mb-0">
                                         <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
                                         <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
@@ -37,50 +36,42 @@
                             <div class="row">
                                 <div class="col-md-4 col-lg-4 mt-4 mt-md-0 mt-lg-0">
                                     <div class="footer-single-col">
-                                        <h3>Primary Pages</h3>
+                                        <h3>{{ __('app.Primary Pages') }}</h3>
                                         <ul class="list-unstyled footer-nav-list mb-lg-0">
-                                            <li><a href="index.html" class="text-decoration-none">Home</a></li>
-                                            <li><a href="about-us.html" class="text-decoration-none">About Us</a>
+                                            <li><a href="{{ route('web.home') }}"
+                                                    class="text-decoration-none">{{ __('app.Home') }}</a></li>
+                                            <li><a href="{{ route('web.about') }}"
+                                                    class="text-decoration-none">{{ __('app.About_us') }}</a>
                                             </li>
-                                            <li><a href="services.html" class="text-decoration-none">Services</a>
+                                            <li><a href="{{ route('web.blogs') }}"
+                                                    class="text-decoration-none">{{ __('app.Blogs') }}</a>
                                             </li>
-                                            <li><a href="career.html" class="text-decoration-none">Career</a></li>
-                                            <li><a href="integrations.html"
-                                                    class="text-decoration-none">Integrations</a>
+                                            <li><a href="{{ route('web.projects') }}"
+                                                    class="text-decoration-none">{{ __('app.Projects') }}</a>
                                             </li>
-                                            <li><a href="integration-single.html"
-                                                    class="text-decoration-none">Integration Single</a></li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-lg-4 mt-4 mt-md-0 mt-lg-0">
                                     <div class="footer-single-col">
-                                        <h3>Pages</h3>
+                                        <h3>{{ __('app.Pages') }}</h3>
                                         <ul class="list-unstyled footer-nav-list mb-lg-0">
-                                            <li><a href="blog.html" class="text-decoration-none">Blog</a></li>
-                                            <li><a href="blog-single.html" class="text-decoration-none">Blog
-                                                    Details</a></li>
-                                            <li><a href="contact-us.html" class="text-decoration-none">Contact</a>
+                                            <li><a href="{{ route('web.blogs') }}" class="text-decoration-none">{{ __('app.Blogs') }}</a></li>
+                                            <li><a href="{{ route('web.contact-us') }}" class="text-decoration-none">{{ __('app.Contact_us') }}</a>
                                             </li>
-                                            <li><a href="career-single.html" class="text-decoration-none">Career
-                                                    Single</a>
+                                            <li><a href="#" class="text-decoration-none">{{ __('app.Careers') }}</a>
                                             </li>
-                                            <li><a href="service-single.html" class="text-decoration-none">Services
-                                                    Single</a></li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-lg-4 mt-4 mt-md-0 mt-lg-0">
                                     <div class="footer-single-col">
-                                        <h3>Template</h3>
+                                        <h3>{{ __('app.Template') }}</h3>
                                         <ul class="list-unstyled footer-nav-list mb-lg-0">
-                                            <li><a href="contact-us.html" class="text-decoration-none">Contact</a>
+                                            <li><a href="{{ route('web.contact-us') }}" class="text-decoration-none">{{ __('app.Contact_us') }}</a>
                                             </li>
-                                            <li><a href="support.html" class="text-decoration-none">Support</a></li>
-                                            <li><a href="privacy-policy.html" class="text-decoration-none">Privacy
-                                                    and policy</a></li>
-                                            <li><a href="client-review.html" class="text-decoration-none">Customer
-                                                    Review</a></li>
+                                            <li><a href="#" class="text-decoration-none">{{ __('app.Privacy and policy') }}</a></li>
+                                            <li><a href="#" class="text-decoration-none">{{ __('app.Customer Review') }}</a></li>
                                             </li>
                                         </ul>
                                     </div>
@@ -106,13 +97,17 @@
                         <div class="col-md-4 col-lg-4">
                             <div class="footer-single-col text-start text-lg-end text-md-end">
                                 <ul class="list-unstyled list-inline footer-social-list mb-0">
-                                    <li class="list-inline-item"><a href="{{ getSettingOf('facebook') }}" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                    <li class="list-inline-item"><a href="{{ getSettingOf('facebook') }}"
+                                            target="_blank"><i class="fab fa-facebook-f"></i></a>
                                     </li>
-                                    <li class="list-inline-item"><a href="{{ getSettingOf('instagram') }}" target="_blank"><i class="fab fa-instagram"></i></a>
+                                    <li class="list-inline-item"><a href="{{ getSettingOf('instagram') }}"
+                                            target="_blank"><i class="fab fa-instagram"></i></a>
                                     </li>
-                                    <li class="list-inline-item"><a href="{{ getSettingOf('youtube') }}" target="_blank"><i class="fab fa-youtube"></i></a>
+                                    <li class="list-inline-item"><a href="{{ getSettingOf('youtube') }}"
+                                            target="_blank"><i class="fab fa-youtube"></i></a>
                                     </li>
-                                    <li class="list-inline-item"><a href="{{ getSettingOf('twitter') }}" target="_blank"><i class="fab fa-twitter"></i></a>
+                                    <li class="list-inline-item"><a href="{{ getSettingOf('twitter') }}"
+                                            target="_blank"><i class="fab fa-twitter"></i></a>
                                     </li>
                                 </ul>
                             </div>
