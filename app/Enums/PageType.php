@@ -9,6 +9,7 @@ enum PageType: int
     case PROJECTS = 3;
     case ABOUT_US = 4;
     case CONTACT_US = 5;
+    case BRANDS = 6;
 
     /**
      * Get a human-readable label for each page type.
@@ -21,6 +22,7 @@ enum PageType: int
             self::PROJECTS => 'Projects',
             self::ABOUT_US => 'About Us',
             self::CONTACT_US => 'Contact Us',
+            self::BRANDS => 'Brands',
         };
     }
 

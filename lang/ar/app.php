@@ -151,5 +151,11 @@ return [
     'Completely integrate equity' => 'دمج الشراكات المستثمرة بشكل كامل دون الأنظمة الثورية. ربط خدمات الإنترنت عبر الطوب والنقرات من خلال المعلومات',
     'Related Blogs' => 'المدونات ذات الصلة',
     'More Latest News and Blog at Quiety' => 'المزيد من الأخبار والمدونات الحديثة في Whale Stack',
-
+    'View All Brands' => 'عرض جميع البراندات',
+    'Our Latest News and brands' => 'براندات تم التعامل معها',
+    'Brands' => 'البراندات',
+    '' => '',
+    '' => '',
+    '' => '',
+    '' => '',
 ];

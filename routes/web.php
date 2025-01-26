@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Web\AboutController;
 use App\Http\Controllers\Web\BlogController;
+use App\Http\Controllers\Web\BrandController;
 use App\Http\Controllers\Web\ContactController;
 use App\Http\Controllers\Web\HomeController;
 use App\Http\Controllers\Web\ProjectController;
@@ -35,7 +36,8 @@ Route::group(
 
         /* Projects Page */
         Route::get('/projects', [ProjectController::class, 'getProjects'])->name('web.projects');
-
+        
+        Route::get('/brands', [BrandController::class, 'getBrands'])->name('web.brands');
         /* About Page */
         Route::get('/about-us', [AboutController::class, 'getAbout'])->name('web.about');
 

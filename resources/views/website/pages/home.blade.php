@@ -413,14 +413,14 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12">
-                    <div class="text-lg-end mb-5 mb-lg-0" data-aos="fade-up">
+                    {{-- <div class="text-lg-end mb-5 mb-lg-0" data-aos="fade-up">
                         <a href="integrations.html" class="btn btn-primary">{{ __('app.View All Integrations') }}</a>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
             <div class="col-lg-4 col-md-12">
                 <div class="text-lg-end mb-5 mb-lg-0" data-aos="fade-up">
-                    <a href="integrations.html" class="btn btn-primary">View All Brands</a>
+                    <a href="{{ route('web.brands') }}" class="btn btn-primary">{{ __('app.View All Brands') }}</a>
                 </div>
             </div>
         </div>
