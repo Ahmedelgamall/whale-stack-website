@@ -34,8 +34,8 @@
                             </div>
                         </div>
                         <div class="col-md-12 col-lg-7 mt-4 mt-md-0 mt-lg-0">
-                            <div class="row">
-                                <div class="col-md-4 col-lg-4 mt-4 mt-md-0 mt-lg-0">
+                            <div class="row hidden-footer">
+                                <div class="col-md-6 col-lg-4 mt-4 mt-md-0 mt-lg-0">
                                     <div class="footer-single-col">
                                         <h3>Primary Pages</h3>
                                         <ul class="list-unstyled footer-nav-list mb-lg-0">
@@ -46,31 +46,26 @@
                                             </li>
                                             <li><a href="career.html" class="text-decoration-none">Career</a></li>
                                             <li><a href="integrations.html"
-                                                    class="text-decoration-none">Integrations</a>
+                                                    class="text-decoration-none">brands</a>
                                             </li>
-                                            <li><a href="integration-single.html"
-                                                    class="text-decoration-none">Integration Single</a></li>
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="col-md-4 col-lg-4 mt-4 mt-md-0 mt-lg-0">
+                                <div class="col-md-6 col-lg-4 mt-4 mt-md-0 mt-lg-0">
                                     <div class="footer-single-col">
                                         <h3>Pages</h3>
                                         <ul class="list-unstyled footer-nav-list mb-lg-0">
-                                            <li><a href="blog.html" class="text-decoration-none">Blog</a></li>
-                                            <li><a href="blog-single.html" class="text-decoration-none">Blog
-                                                    Details</a></li>
+                                            <li><a href="blog.html" class="text-decoration-none">Blogs</a></li>
+                                            <li>
+                                                <a href="{{ route('web.about') }}" class="nav-link dropdown">{{ __('app.About_us') }}</a>
+                                            </li>
+                                            <li><a href="{{ route('web.home') }}" class="nav-link dropdown">{{ __('app.Home') }}</a></li>
                                             <li><a href="contact-us.html" class="text-decoration-none">Contact</a>
                                             </li>
-                                            <li><a href="career-single.html" class="text-decoration-none">Career
-                                                    Single</a>
-                                            </li>
-                                            <li><a href="service-single.html" class="text-decoration-none">Services
-                                                    Single</a></li>
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="col-md-4 col-lg-4 mt-4 mt-md-0 mt-lg-0">
+                                <div class="col-md-6 col-lg-4 mt-4 mt-md-0 mt-lg-0">
                                     <div class="footer-single-col">
                                         <h3>Template</h3>
                                         <ul class="list-unstyled footer-nav-list mb-lg-0">
@@ -99,8 +94,7 @@
                     <div class="row justify-content-between align-items-center">
                         <div class="col-md-7 col-lg-7">
                             <div class="copyright-text">
-                                <p class="mb-lg-0 mb-md-0">&copy; 2021 Quiety Rights Reserved. Designed By <a
-                                        href="https://themetags.com/" class="text-decoration-none">ThemeTags</a></p>
+                                <p class="mb-lg-0 mb-md-0">&copy;whale stack Rights Reserved.</p>
                             </div>
                         </div>
                         <div class="col-md-4 col-lg-4">

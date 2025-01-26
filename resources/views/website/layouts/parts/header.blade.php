@@ -289,7 +289,8 @@
                                 class="nav-link dropdown">{{ __('app.Contact_us') }}</a>
 >>>>>>> b567b9a18db77ff8ec9e4be8f0c5048ac5fb1ce7
                         </li>
-                        <li><a href="{{ route('web.about') }}" class="nav-link dropdown">{{ __('app.About_us') }}</a>
+                        <li>
+                            <a href="{{ route('web.about') }}" class="nav-link dropdown">{{ __('app.About_us') }}</a>
                         </li>
                         <li><a href="{{ route('web.projects') }}"
                                 class="nav-link dropdown">{{ __('app.Projects') }}</a></li>

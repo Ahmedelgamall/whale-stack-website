@@ -305,7 +305,7 @@
                 </div>
             </div>
             <div class="row d-flex align-items-center">
-                <div class="col-md-6 col-lg-3">
+                <div class="col-md-3">
                     <div class="process-card text-center px-4 py-lg-5 py-4 rounded-custom shadow-hover mb-3 mb-lg-0"
                         data-aos="fade-up" data-aos-delay="50">
                         <div class="process-icon border border-light bg-custom-light rounded-custom p-3">
@@ -316,7 +316,7 @@
                     </div>
                 </div>
                 <div class="dots-line first"></div>
-                <div class="col-md-6 col-lg-3">
+                <div class="col-md-3">
                     <div class="process-card text-center px-4 py-lg-5 py-4 rounded-custom shadow-hover mb-3 mb-lg-0"
                         data-aos="fade-up" data-aos-delay="100">
                         <div class="process-icon border border-light bg-custom-light rounded-custom p-3">
@@ -327,7 +327,7 @@
                     </div>
                 </div>
                 <div class="dots-line first"></div>
-                <div class="col-md-6 col-lg-3">
+                <div class="col-md-3">
                     <div class="process-card text-center px-4 py-lg-5 py-4 rounded-custom shadow-hover mb-3 mb-lg-0 mb-md-0"
                         data-aos="fade-up" data-aos-delay="150">
                         <div class="process-icon border border-light bg-custom-light rounded-custom p-3">
@@ -338,7 +338,7 @@
                     </div>
                 </div>
                 <div class="dots-line first"></div>
-                <div class="col-md-6 col-lg-3">
+                <div class="col-md-3">
                     <div class="process-card text-center px-4 py-lg-5 py-4 rounded-custom shadow-hover mb-0"
                         data-aos="fade-up" data-aos-delay="200">
                         <div class="process-icon border border-light bg-custom-light rounded-custom p-3">
@@ -409,7 +409,6 @@
     <!-- Newsletter End -->
 
 
-    <!--integration section start-->
     <section class="integration-section pt-60 pb-120">
         <div class="container">
             <div class="row align-items-center justify-content-lg-between">
@@ -427,38 +426,35 @@
             </div>
             <div class="row">
                 <div class="col-12">
-                    <div class="integration-wrapper position-relative w-100">
-                        <!--animated shape start-->
-                        <ul
-                            class="position-absolute animate-element parallax-element shape-service z--1 d-none d-lg-none d-xl-block">
-
-                            <li class="layer" data-depth="0.02">
-                                <img src="{{ asset('assets/web/') }}/assets/img/color-shape/feature-2.svg" alt="shape"
-                                    class="img-fluid position-absolute color-shape-2 z-5">
-                            </li>
-                            <li class="layer" data-depth="0.03">
-                                <img src="{{ asset('assets/web/') }}/assets/img/color-shape/feature-3.svg" alt="shape"
-                                    class="img-fluid position-absolute color-shape-3">
-                            </li>
-                        </ul>
-                        <!--animated shape end-->
-                        <ul class="integration-list list-unstyled mb-0">
-                            @foreach ($brands as $brand)
-                                <li data-aos="fade-up" data-aos-delay="50">
-                                    <div class="single-integration bg-white">
-                                        <img src="{{ asset('storage') . '/' . $brand->image }}" alt="integration"
-                                            class="img-fluid">
+                    <!-- Mobile Carousel -->
+                    <div id="integrationCarousel" class="carousel slide d-md-none" data-bs-ride="carousel" data-bs-interval="1500">
+                        <!-- Carousel Inner -->
+                        <div class="carousel-inner">
+                            @foreach ($brands as $index => $brand)
+                                <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
+                                    <div class="single-integration bg-white text-center p-3">
+                                        <img src="{{ asset('storage') . '/' . $brand->image }}" alt="integration" class="img-fluid">
                                         <h6 class="mb-0 mt-4">{{ $brand->name }}</h6>
                                     </div>
-                                </li>
+                                </div>
                             @endforeach
-
-                        </ul>
+                        </div>
+                    </div>
+                    <!-- Static Layout for Larger Screens -->
+                    <div class="integration-list d-none d-md-flex flex-wrap">
+                        @foreach ($brands as $brand)
+                            <div class="single-integration bg-white text-center p-3 mx-2">
+                                <img src="{{ asset('storage') . '/' . $brand->image }}" alt="integration" class="img-fluid">
+                                <h6 class="mb-0 mt-4">{{ $brand->name }}</h6>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
         </div>
-    </section> <!--integration section end-->
+    </section>
+
+
 
     <!--customer review tab section start-->
     <section class="testimonial-section ptb-120 bg-light-subtle">
