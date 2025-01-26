@@ -427,7 +427,7 @@
         </div>
         <div class="row">
             <div class="col-12">
-                <div id="integrationCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="30000">
+                <div id="integrationCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
                     <div class="carousel-inner">
                         @php
                             $chunks = $brands->chunk(6); // Adjust number of items per slide
