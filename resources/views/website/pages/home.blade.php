@@ -96,9 +96,8 @@
                             {!! formateTitle($secondSection->title) !!}
                         </h2>
                         <p class="risk-color-two ff-dmsans fs-16 flh-28 mb-0 fch-50">{{ $secondSection->description }}</p>
-                        <a href="{{ $secondSection->url }}"
-                            class="btn risk-outline-btn mt-40 risk-color ff-risk-pri fs-14 fw-700">Start
-                            Free Trial</a>
+                        {{-- <a href="{{ $secondSection->url }}"
+                            class="btn risk-outline-btn mt-40 risk-color ff-risk-pri fs-14 fw-700"></a> --}}
                         <img src="{{ asset('storage' . '/' . $secondSection->image) }}" alt="{{ $secondSection->title }}"
                             class="s-one position-absolute">
                     </div>
@@ -136,9 +135,9 @@
                                     <h3 class="h5">{{ $service->title }}</h3>
                                     {!! Str::limit($service->description, 300, '...') !!}
                                 </div>
-                                <a href="service-single.html"
+                                {{-- <a href="service-single.html"
                                     class="link-with-icon text-decoration-none mt-3">{{ __('app.View_Details') }}<i
-                                        class="fas fa-arrow-right"></i></a>
+                                        class="fas fa-arrow-right"></i></a> --}}
                             </div>
                         @endforeach
                     </div>
@@ -301,7 +300,7 @@
                 </div>
             </div>
             <div class="row d-flex align-items-center">
-                <div class="col-md-6 col-lg-3">
+                <div class="col-md-3">
                     <div class="process-card text-center px-4 py-lg-5 py-4 rounded-custom shadow-hover mb-3 mb-lg-0"
                         data-aos="fade-up" data-aos-delay="50">
                         <div class="process-icon border border-light bg-custom-light rounded-custom p-3">
@@ -312,7 +311,7 @@
                     </div>
                 </div>
                 <div class="dots-line first"></div>
-                <div class="col-md-6 col-lg-3">
+                <div class="col-md-3">
                     <div class="process-card text-center px-4 py-lg-5 py-4 rounded-custom shadow-hover mb-3 mb-lg-0"
                         data-aos="fade-up" data-aos-delay="100">
                         <div class="process-icon border border-light bg-custom-light rounded-custom p-3">
@@ -323,7 +322,7 @@
                     </div>
                 </div>
                 <div class="dots-line first"></div>
-                <div class="col-md-6 col-lg-3">
+                <div class="col-md-3">
                     <div class="process-card text-center px-4 py-lg-5 py-4 rounded-custom shadow-hover mb-3 mb-lg-0 mb-md-0"
                         data-aos="fade-up" data-aos-delay="150">
                         <div class="process-icon border border-light bg-custom-light rounded-custom p-3">
@@ -334,7 +333,7 @@
                     </div>
                 </div>
                 <div class="dots-line first"></div>
-                <div class="col-md-6 col-lg-3">
+                <div class="col-md-3">
                     <div class="process-card text-center px-4 py-lg-5 py-4 rounded-custom shadow-hover mb-0"
                         data-aos="fade-up" data-aos-delay="200">
                         <div class="process-icon border border-light bg-custom-light rounded-custom p-3">
@@ -419,40 +418,51 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="integration-wrapper position-relative w-100">
-                        <!--animated shape start-->
-                        <ul
-                            class="position-absolute animate-element parallax-element shape-service z--1 d-none d-lg-none d-xl-block">
-
-                            <li class="layer" data-depth="0.02">
-                                <img src="{{ asset('assets/web/') }}/assets/img/color-shape/feature-2.svg" alt="shape"
-                                    class="img-fluid position-absolute color-shape-2 z-5">
-                            </li>
-                            <li class="layer" data-depth="0.03">
-                                <img src="{{ asset('assets/web/') }}/assets/img/color-shape/feature-3.svg" alt="shape"
-                                    class="img-fluid position-absolute color-shape-3">
-                            </li>
-                        </ul>
-                        <!--animated shape end-->
-                        <ul class="integration-list list-unstyled mb-0">
-                            @foreach ($brands as $brand)
-                                <li data-aos="fade-up" data-aos-delay="50">
-                                    <div class="single-integration bg-white">
-                                        <img src="{{ asset('storage') . '/' . $brand->image }}" alt="integration"
-                                            class="img-fluid">
-                                        <h6 class="mb-0 mt-4">{{ $brand->name }}</h6>
-                                    </div>
-                                </li>
-                            @endforeach
-
-                        </ul>
-                    </div>
+            <div class="col-lg-4 col-md-12">
+                <div class="text-lg-end mb-5 mb-lg-0" data-aos="fade-up">
+                    <a href="integrations.html" class="btn btn-primary">View All Brands</a>
                 </div>
             </div>
         </div>
-    </section> <!--integration section end-->
+        <div class="row">
+            <div class="col-12">
+                <div id="integrationCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                    <div class="carousel-inner">
+                        @php
+                            $chunks = $brands->chunk(6); // Adjust number of items per slide
+                        @endphp
+                        @foreach($chunks as $index => $chunk)
+                            <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
+                                <div class="row">
+                                    @foreach($chunk as $brand)
+                                        <div class="col-md-2 col-4" data-aos="fade-up" data-aos-delay="50">
+                                            <div class="single-integration bg-white">
+                                                <img src="{{ asset('storage') . '/' . $brand->image }}" alt="{{ $brand->name }}"
+                                                    class="img-fluid" style="width: 170px; height: 100px; object-fit: cover; ">
+                                                {{-- <h6 class="mb-0 mt-4">{{ $brand->name }}</h6> --}}
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+
+                    <!-- Carousel Controls -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#integrationCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#integrationCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--integration section end-->
 
     <!--customer review tab section start-->
     <section class="testimonial-section ptb-120 bg-light-subtle">
@@ -510,7 +520,7 @@
     </section> <!--customer review tab section end-->
 
     <!-- Projects -->
-    <div class="sections pb-0">
+    {{-- <div class="sections pb-0">
         <div class="sections__head">
             <div class="container">
                 <div class="row justify-content-center">
@@ -541,7 +551,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- /Projects -->
 
 

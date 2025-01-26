@@ -33,8 +33,8 @@
                             </div>
                         </div>
                         <div class="col-md-12 col-lg-7 mt-4 mt-md-0 mt-lg-0">
-                            <div class="row">
-                                <div class="col-md-4 col-lg-4 mt-4 mt-md-0 mt-lg-0">
+                            <div class="row hidden-footer">
+                                <div class="col-md-6 col-lg-4 mt-4 mt-md-0 mt-lg-0">
                                     <div class="footer-single-col">
                                         <h3>{{ __('app.Primary Pages') }}</h3>
                                         <ul class="list-unstyled footer-nav-list mb-lg-0">
@@ -52,7 +52,7 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="col-md-4 col-lg-4 mt-4 mt-md-0 mt-lg-0">
+                                <div class="col-md-6 col-lg-4 mt-4 mt-md-0 mt-lg-0">
                                     <div class="footer-single-col">
                                         <h3>{{ __('app.Pages') }}</h3>
                                         <ul class="list-unstyled footer-nav-list mb-lg-0">
@@ -64,7 +64,7 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="col-md-4 col-lg-4 mt-4 mt-md-0 mt-lg-0">
+                                <div class="col-md-6 col-lg-4 mt-4 mt-md-0 mt-lg-0">
                                     <div class="footer-single-col">
                                         <h3>{{ __('app.Template') }}</h3>
                                         <ul class="list-unstyled footer-nav-list mb-lg-0">
@@ -90,8 +90,7 @@
                     <div class="row justify-content-between align-items-center">
                         <div class="col-md-7 col-lg-7">
                             <div class="copyright-text">
-                                <p class="mb-lg-0 mb-md-0">&copy; 2021 Quiety Rights Reserved. Designed By <a
-                                        href="https://themetags.com/" class="text-decoration-none">ThemeTags</a></p>
+                                <p class="mb-lg-0 mb-md-0">&copy;whale stack Rights Reserved.</p>
                             </div>
                         </div>
                         <div class="col-md-4 col-lg-4">

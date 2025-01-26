@@ -46,7 +46,3 @@ Route::group(
     }
 );
 
-
-
-
-// ahmed

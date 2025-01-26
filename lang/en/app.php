@@ -81,8 +81,8 @@ return [
                                 processes
                                 repurpose unique models and global schemas',
     'Analysis Webiste' => 'Analysis Webiste',
-    'Integration' => 'Integration',
-    'We_Collaborate' => 'We Collaborate with Top Software Company',
+    'Integration' => 'Our customers',
+    'We_Collaborate' => 'We Collaborate with Top Brands and Companies',
     'View All Integrations' => 'View All Integrations',
     'What They Say About Us' => 'What They Say About Us',
     'Uniquely_promote' => '>Uniquely promote adaptive quality vectors rather than stand-alone e-markets pontificate

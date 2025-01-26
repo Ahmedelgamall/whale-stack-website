@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl" data-bs-theme="light">
+<html lang="ar" dir="ltr" data-bs-theme="light">
 
 <head>
     <!--required meta tags-->
