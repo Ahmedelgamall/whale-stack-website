@@ -66,6 +66,12 @@
                 direction: ltr !important;
             }
         </style>
+    @elseif (app()->getLocale() == 'ar')
+        <style>
+            .container {
+                direction: rtl !important;
+            }
+        </style>
     @endif
 </head>
 
