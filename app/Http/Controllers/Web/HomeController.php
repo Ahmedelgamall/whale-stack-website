@@ -24,7 +24,7 @@ class HomeController extends Controller
     {
         $rows = StaticText::where('page_id', PageType::HOME)->get();
         $brands = Brand::orderBy('created_at', 'asc')->limit(18)->get();
-        $testimonials = Testimonial::latest()->get();
+        $testimonials = Testimonial::orderBy('created_at', 'asc')->get();
         $faqs = Faq::orderBy('created_at', 'asc')->limit(12)->get();
         $icons = [
             'fa-chart-simple icon-sm text-primary',
