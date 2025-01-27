@@ -499,7 +499,7 @@
                                                 {!! $testimonial->description !!}
                                             </blockquote>
                                             <ul class="review-rate mb-0 mt-2 list-unstyled list-inline"
-                                                @for ($i = 1; $i < $testimonial->rank; $i++) <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li> @endfor
+                                                @for ($i = 1; $i <= $testimonial->rank; $i++) <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li> @endfor
                                                 </ul>
                                                 <img src="{{ asset('assets/web/') }}/assets/img/testimonial/quotes.svg"
                                                     alt="quotes"
