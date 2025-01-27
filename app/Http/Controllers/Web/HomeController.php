@@ -24,7 +24,7 @@ class HomeController extends Controller
     {
         $rows = StaticText::where('page_id', PageType::HOME)->get();
         $brands = Brand::latest()->limit(18)->get();
-        $testimonials = Testimonial::all();
+        $testimonials = Testimonial::latest()->get();
         $faqs = Faq::latest()->limit(12)->get();
         $icons = [
             'fa-chart-simple icon-sm text-primary',
