@@ -48,6 +48,10 @@ class SiteMapCommand extends Command
             ->setLastModificationDate(now())
             ->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)
             ->setPriority(1.0));
+        $sitemap->add(Url::create('/brands')
+            ->setLastModificationDate(now())
+            ->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)
+            ->setPriority(1.0));
         $sitemap->add(Url::create('/contact-us')
             ->setLastModificationDate(now())
             ->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)
