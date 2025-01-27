@@ -1,7 +1,7 @@
         <header class="main-header position-absolute w-100">
             <nav class="navbar navbar-expand-xl navbar-dark sticky-header z-10">
                 <div class="container d-flex align-items-center justify-content-lg-between position-relative">
-                    <a href="index.html" class="navbar-brand d-flex align-items-center mb-md-0 text-decoration-none">
+                    <a href="{{ route('web.home') }}" class="navbar-brand d-flex align-items-center mb-md-0 text-decoration-none">
                         <img src="{{ asset('assets/web/') }}/assets/img/logo-white.png" alt="logo"
                             class="img-fluid logo-white" />
                         <img src="{{ asset('assets/web/') }}/assets/img/logo-color.png" alt="logo"
