@@ -30,7 +30,7 @@ class BlogController extends Controller
     public function showBlog($slug)
     {
         $blog = Blog::whereSlug($slug)->with('category')->firstOrFail();
-        $latestBlogs = Blog::with('category')->latest()->limit(3)->get();
+        $latestBlogs = Blog::with('category')->where('category_id', $blog->category_id)->latest()->limit(3)->get();
         return view('website.pages.show_blog', \compact('blog', 'latestBlogs'));
     }
 }

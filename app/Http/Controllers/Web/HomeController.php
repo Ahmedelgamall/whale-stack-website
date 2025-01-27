@@ -23,9 +23,9 @@ class HomeController extends Controller
     public function getHome()
     {
         $rows = StaticText::where('page_id', PageType::HOME)->get();
-        $brands = Brand::latest()->limit(18)->get();
+        $brands = Brand::orderBy('created_at', 'asc')->limit(18)->get();
         $testimonials = Testimonial::latest()->get();
-        $faqs = Faq::latest()->limit(12)->get();
+        $faqs = Faq::orderBy('created_at', 'asc')->limit(12)->get();
         $icons = [
             'fa-chart-simple icon-sm text-primary',
             'fa-file icon-sm text-success',
@@ -33,7 +33,7 @@ class HomeController extends Controller
             'fa-spell-check icon-sm text-dark',
             'fa-cog icon-sm text-warning',
         ];
-        $services = Service::latest()->limit(5)->get()->map(function ($service, $index) use ($icons) {
+        $services = Service::orderBy('created_at','asc')->limit(5)->get()->map(function ($service, $index) use ($icons) {
             $service->icon = $icons[$index % count($icons)];
             return $service;
         });
