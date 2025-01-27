@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\BrandController;
 use App\Http\Controllers\Admin\ContactUsController;
+use App\Http\Controllers\Admin\FullWebsiteController;
 use App\Http\Controllers\Admin\LanguageController;
 use App\Http\Controllers\Admin\MemberController;
 use App\Http\Controllers\Admin\ProjectCategoryController;
@@ -17,7 +18,9 @@ use App\Http\Controllers\Admin\SeoSettingController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\StaticTextController;
+use App\Http\Controllers\Admin\SubscriptionController;
 use App\Http\Controllers\Admin\TestimonialController;
+use App\Http\Controllers\Admin\TestWebsiteController;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 Route::group(
@@ -99,6 +102,21 @@ Route::group(
             Route::get('contact-us/data', [ContactUsController::class, 'data'])->name('contact-us.data');
             Route::post('contact-us/bulk-delete', [ContactUsController::class, 'bulkDelete'])->name('contact-us.bulkDelete');
             Route::resource('contact-us', ContactUsController::class)->only('index');
+
+            // full-website
+            Route::get('full-website/data', [FullWebsiteController::class, 'data'])->name('full-website.data');
+            Route::post('full-website/bulk-delete', [FullWebsiteController::class, 'bulkDelete'])->name('full-website.bulkDelete');
+            Route::resource('full-website', FullWebsiteController::class)->only('index');
+            
+            // test-website
+            Route::get('test-website/data', [TestWebsiteController::class, 'data'])->name('test-website.data');
+            Route::post('test-website/bulk-delete', [TestWebsiteController::class, 'bulkDelete'])->name('test-website.bulkDelete');
+            Route::resource('test-website', TestWebsiteController::class)->only('index');
+           
+            // subscription-website
+            Route::get('subscription-website/data', [SubscriptionController::class, 'data'])->name('subscription-website.data');
+            Route::post('subscription-website/bulk-delete', [SubscriptionController::class, 'bulkDelete'])->name('subscription-website.bulkDelete');
+            Route::resource('subscription-website', SubscriptionController::class)->only('index');
 
             // members
             Route::get('members/data', [MemberController::class, 'data'])->name('members.data');

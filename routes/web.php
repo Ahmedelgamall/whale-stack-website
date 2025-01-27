@@ -36,7 +36,7 @@ Route::group(
 
         /* Projects Page */
         Route::get('/projects', [ProjectController::class, 'getProjects'])->name('web.projects');
-        
+
         Route::get('/brands', [BrandController::class, 'getBrands'])->name('web.brands');
         /* About Page */
         Route::get('/about-us', [AboutController::class, 'getAbout'])->name('web.about');
@@ -45,6 +45,8 @@ Route::group(
         Route::get('/contact-us', [ContactController::class, 'getContactUs'])->name('web.contact-us');
 
         Route::post('/contact-submit', [ContactController::class, 'submitContact'])->name('contact.submit');
+        Route::post('/full-submit', [ContactController::class, 'submitFull'])->name('full.submit');
+        Route::post('/test-submit', [ContactController::class, 'submitTest'])->name('test.submit');
+        Route::post('/subscribtion-submit', [ContactController::class, 'submitSubscribtion'])->name('subscribtion.submit');
     }
 );
-

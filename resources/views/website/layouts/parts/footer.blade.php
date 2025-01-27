@@ -14,7 +14,7 @@
                                 </div>
                                 <p>{{ __('app.Our_latest_news') }}.</p>
 
-                                <form class="newsletter-form position-relative d-block d-lg-flex d-md-flex">
+                                <form id="subscribtionForm" class="newsletter-form position-relative d-block d-lg-flex d-md-flex">
                                     <input type="text" class="input-newsletter form-control me-2"
                                         placeholder="Enter your email" name="email" required="" autocomplete="off">
                                     <input type="submit" value="Subscribe" data-wait="Please wait..."

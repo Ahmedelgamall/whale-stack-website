@@ -206,6 +206,18 @@
                             href="{{ route('contact-us.index') }}"><i data-feather='message-circle'></i><span
                                 class="menu-title text-truncate" data-i18n="Languages">Contact Us </span></a>
                     </li>
+                    <li class="nav-item {{ active('subscription-website') }} "><a class="d-flex align-items-center"
+                            href="{{ route('subscription-website.index') }}"><i data-feather='message-circle'></i><span
+                                class="menu-title text-truncate" data-i18n="Languages">Subscriptions </span></a>
+                    </li>
+                    <li class="nav-item {{ active('test-website') }} "><a class="d-flex align-items-center"
+                            href="{{ route('test-website.index') }}"><i data-feather='message-circle'></i><span
+                                class="menu-title text-truncate" data-i18n="Languages">Test Website </span></a>
+                    </li>
+                    <li class="nav-item {{ active('full-website') }} "><a class="d-flex align-items-center"
+                            href="{{ route('full-website.index') }}"><i data-feather='message-circle'></i><span
+                                class="menu-title text-truncate" data-i18n="Languages">Full Cycle Website</span></a>
+                    </li>
                 </ul>
 
             </li>

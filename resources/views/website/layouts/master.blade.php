@@ -117,7 +117,63 @@
     <script src="{{ asset('assets/admin/app-assets/vendors/js/extensions/toastr.min.js') }}"></script>
     @yield('js')
     @include('admin.includes.swal')
+    <script>
+        $(document).ready(function() {
+            $('#subscribtionForm').on('submit', function(event) {
+                event.preventDefault();
 
+                // Get the submit button
+                var $submitButton = $(this).find('button[type="submit"]');
+
+                // Disable button and change text
+                $submitButton.prop('disabled', true).text('Sending...');
+
+                $.ajax({
+                    url: '{{ route('subscribtion.submit') }}',
+                    method: 'POST',
+                    data: $(this).serialize(),
+                    headers: {
+                        'X-CSRF-TOKEN': $('input[name="_token"]').val()
+                    },
+                    success: function(response) {
+                        if (response.success) {
+                            sweetAlert('success', 'Subscription Successfully!');
+                            $('#subscribtionForm')[0].reset();
+                        } else if (response.errors) {
+                            sweetAlert('error', 'Validation Error: ' + JSON.stringify(response
+                                .errors));
+                        } else {
+                            sweetAlert('error', 'An error occurred. Please try again.');
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        if (xhr.status ===
+                            422) { // 422 is the status code for validation errors in Laravel
+                            const errors = xhr.responseJSON.errors;
+
+                            // Iterate through the errors and display them
+                            let errorMessages = '';
+                            for (const field in errors) {
+                                if (errors.hasOwnProperty(field)) {
+                                    errorMessages += errors[field].join('<br>') + '<br>';
+                                }
+                            }
+
+                            sweetAlert('error', errorMessages)
+                        } else {
+
+                            sweetAlert('error', 'Something went wrong. Please try again.')
+
+                        }
+                    },
+                    complete: function() {
+                        // Re-enable button and restore text
+                        $submitButton.prop('disabled', false).text('Send Message');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

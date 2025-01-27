@@ -190,36 +190,37 @@
                 <div class="col-xl-5 col-lg-7 col-md-12">
                     <div class="register-wrap p-5 bg-white shadow rounded-custom position-relative" data-aos="fade-up"
                         data-aos-delay="150">
-                        <form action="#" class="register-form position-relative z-5">
+                        <form action="#" id="fullForm" class="register-form position-relative z-5">
+                            @csrf
                             <h3 class="mb-5 fw-medium">{{ __('app.Fill_out') }}</h3>
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="input-group mb-3">
-                                        <input type="text" class="form-control" placeholder="{{ __('app.Name') }}" aria-label="name">
+                                        <input type="text" name="name" class="form-control" placeholder="{{ __('app.Name') }}" aria-label="name">
                                     </div>
                                 </div>
                                 <div class="col-sm-6 ">
                                     <div class="input-group mb-3">
-                                        <input type="email" class="form-control" placeholder="{{ __('app.Email') }}"
+                                        <input type="email" name="email" class="form-control" placeholder="{{ __('app.Email') }}"
                                             aria-label="email">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="input-group mb-3">
-                                        <input type="text" class="form-control" placeholder="{{ __('app.Company website') }}"
+                                        <input type="text" name="url" class="form-control" placeholder="{{ __('app.Company website') }}"
                                             aria-label="company-website">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="input-group mb-3">
-                                        <input type="email" class="form-control" placeholder="{{ __('app.Work email') }}"
+                                        <input type="email" name="work_email" class="form-control" placeholder="{{ __('app.Work email') }}"
                                             aria-label="work-Email">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="input-group mb-3">
-                                        <input type="tel" class="form-control" placeholder="{{ __('app.Phone number') }}"
-                                            aria-label="Phone number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                                        <input type="tel" name="phone" class="form-control" placeholder="{{ __('app.Phone number') }}"
+                                            aria-label="Phone number" {{-- pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" --}}>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
@@ -227,39 +228,39 @@
                                         <select class="form-control form-select" name="country" id="country"
                                             required="" data-msg="Please select your country.">
                                             <option value="" selected="" disabled="">{{ __('app.Country') }}</option>
-                                            <option value="BH">{{ __('app.Bahrain') }}</option>
-                                            <option value="CA">{{ __('app.Canada') }}</option>
-                                            <option value="EG">{{ __('app.Egypt') }}</option>
-                                            <option value="FR">{{ __('app.France') }}</option>
-                                            <option value="DE">{{ __('app.Germany') }}</option>
-                                            <option value="GR">{{ __('app.Greece') }}</option>
-                                            <option value="IQ">{{ __('app.Iraq') }}</option>
-                                            <option value="Ho">{{ __('app.Holland') }}</option>
-                                            <option value="IT">{{ __('app.Italy') }}</option>
-                                            <option value="JO">{{ __('app.Jordan') }}</option>
-                                            <option value="KW">{{ __('app.Kuwait') }}</option>
-                                            <option value="LB">{{ __('app.Lebanon') }}</option>
-                                            <option value="LY">{{ __('app.Libya') }}</option>
-                                            <option value="OM">{{ __('app.Oman') }}</option>
-                                            <option value="QA">{{ __('app.Qatar') }}</option>
-                                            <option value="RO">{{ __('app.Romania') }}</option>
-                                            <option value="SA">{{ __('app.Saudi Arabia') }}</option>
-                                            <option value="ES">{{ __('app.Spain') }}</option>
-                                            <option value="SD">{{ __('app.Sudan') }}</option>
-                                            <option value="SY">{{ __('app.Syria') }}</option>
-                                            <option value="TN">{{ __('app.Tunisia') }}</option>
-                                            <option value="TR">{{ __('app.Turkey') }}</option>
-                                            <option value="UA">{{ __('app.Ukraine') }}</option>
-                                            <option value="AE">{{ __('app.United Arab Emirates') }}</option>
-                                            <option value="GB">{{ __('app.United Kingdom') }}</option>
-                                            <option value="US">{{ __('app.United States') }}</option>
-                                            <option value="YE">{{ __('app.Yemen') }}</option>
+                                            <opt.="BH">{{ __('app.Bahrain') }}</option>
+                                            <option value="Canada">{{ __('app.Canada') }}</option>
+                                            <option value="Egypt">{{ __('app.Egypt') }}</option>
+                                            <option value="France">{{ __('app.France') }}</option>
+                                            <option value="Germany">{{ __('app.Germany') }}</option>
+                                            <option value="Greece">{{ __('app.Greece') }}</option>
+                                            <option value="Iraq">{{ __('app.Iraq') }}</option>
+                                            <option value="Holland">{{ __('app.Holland') }}</option>
+                                            <option value="Italy">{{ __('app.Italy') }}</option>
+                                            <option value="Jordan">{{ __('app.Jordan') }}</option>
+                                            <option value="Kuwait">{{ __('app.Kuwait') }}</option>
+                                            <option value="Lebanon">{{ __('app.Lebanon') }}</option>
+                                            <option value="Libya">{{ __('app.Libya') }}</option>
+                                            <option value="Oman">{{ __('app.Oman') }}</option>
+                                            <option value="Qatar">{{ __('app.Qatar') }}</option>
+                                            <option value="Romania">{{ __('app.Romania') }}</option>
+                                            <option value="Saudi Arabia">{{ __('app.Saudi Arabia') }}</option>
+                                            <option value="Spain">{{ __('app.Spain') }}</option>
+                                            <option value="Sudan">{{ __('app.Sudan') }}</option>
+                                            <option value="Syria">{{ __('app.Syria') }}</option>
+                                            <option value="Tunisia">{{ __('app.Tunisia') }}</option>
+                                            <option value="Turkey">{{ __('app.Turkey') }}</option>
+                                            <option value="Ukraine">{{ __('app.Ukraine') }}</option>
+                                            <option value="United Arab Emirates">{{ __('app.United Arab Emirates') }}</option>
+                                            <option value="United Kingdom">{{ __('app.United Kingdom') }}</option>
+                                            <option value="United States">{{ __('app.United States') }}</option>
+                                            <option value="Yemen">{{ __('app.Yemen') }}</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="input-group mb-3">
-                                        <textarea class="form-control" placeholder="{{ __('app.Tell_us') }}" style="height: 120px"></textarea>
+                                        <textarea class="form-control" name="message" placeholder="{{ __('app.Tell_us') }}" style="height: 120px"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -365,17 +366,17 @@
                             <p>
                                {{ __('app.Intrinsicly') }}.
                             </p>
-                            <form class="mt-4">
+                            <form id="testForm" class="mt-4">
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="input-group mb-3">
-                                            <input required type="text" class="form-control bordered-input-st"
+                                            <input required type="text" name="name" class="form-control bordered-input-st"
                                                 placeholder="{{ __('app.Name') }}" aria-label="name">
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="input-group mb-3">
-                                            <input required type="tel" class="form-control bordered-input-sec"
+                                            <input required type="tel" name="phone" class="form-control bordered-input-sec"
                                                 placeholder="{{ __('app.Phone number') }}" aria-label="Phone number">
                                         </div>
                                     </div>
@@ -385,9 +386,9 @@
                                                                                                 </div> -->
                                 </div>
                                 <div class="position-relative digi-news-form">
-                                    <input required type="text" class="form-control ah-input-bg"
+                                    <input required type="url" name="url"  class="form-control ah-input-bg"
                                         placeholder="{{ __('app.Website Url') }}">
-                                    <button class="digi-news-button">{{ __('app.Analysis Webiste') }}</button>
+                                    <button type="submit" class="digi-news-button">{{ __('app.Analysis Webiste') }}</button>
                                 </div>
                             </form>
                         </div>
@@ -663,4 +664,118 @@
     <!-- Faq -->
 @endsection
 @section('js')
+    <script>
+        $(document).ready(function() {
+            $('#fullForm').on('submit', function(event) {
+                event.preventDefault();
+
+                // Get the submit button
+                var $submitButton = $(this).find('button[type="submit"]');
+
+                // Disable button and change text
+                $submitButton.prop('disabled', true).text('Sending...');
+
+                $.ajax({
+                    url: '{{ route('full.submit') }}',
+                    method: 'POST',
+                    data: $(this).serialize(),
+                    headers: {
+                        'X-CSRF-TOKEN': $('input[name="_token"]').val()
+                    },
+                    success: function(response) {
+                        if (response.success) {
+                            sweetAlert('success', 'Message sent successfully!');
+                            $('#fullForm')[0].reset();
+                        } else if (response.errors) {
+                            sweetAlert('error', 'Validation Error: ' + JSON.stringify(response
+                                .errors));
+                        } else {
+                            sweetAlert('error', 'An error occurred. Please try again.');
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        if (xhr.status ===
+                            422) { // 422 is the status code for validation errors in Laravel
+                            const errors = xhr.responseJSON.errors;
+
+                            // Iterate through the errors and display them
+                            let errorMessages = '';
+                            for (const field in errors) {
+                                if (errors.hasOwnProperty(field)) {
+                                    errorMessages += errors[field].join('<br>') + '<br>';
+                                }
+                            }
+
+                            sweetAlert('error', errorMessages)
+                        } else {
+
+                            sweetAlert('error', 'Something went wrong. Please try again.')
+
+                        }
+                    },
+                    complete: function() {
+                        // Re-enable button and restore text
+                        $submitButton.prop('disabled', false).text('Send Message');
+                    }
+                });
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('#testForm').on('submit', function(event) {
+                event.preventDefault();
+
+                // Get the submit button
+                var $submitButton = $(this).find('button[type="submit"]');
+
+                // Disable button and change text
+                $submitButton.prop('disabled', true).text('Sending...');
+
+                $.ajax({
+                    url: '{{ route('test.submit') }}',
+                    method: 'POST',
+                    data: $(this).serialize(),
+                    headers: {
+                        'X-CSRF-TOKEN': $('input[name="_token"]').val()
+                    },
+                    success: function(response) {
+                        if (response.success) {
+                            sweetAlert('success', 'Message For Test Your Website Sent Successfully!');
+                            $('#testForm')[0].reset();
+                        } else if (response.errors) {
+                            sweetAlert('error', 'Validation Error: ' + JSON.stringify(response
+                                .errors));
+                        } else {
+                            sweetAlert('error', 'An error occurred. Please try again.');
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        if (xhr.status ===
+                            422) { // 422 is the status code for validation errors in Laravel
+                            const errors = xhr.responseJSON.errors;
+
+                            // Iterate through the errors and display them
+                            let errorMessages = '';
+                            for (const field in errors) {
+                                if (errors.hasOwnProperty(field)) {
+                                    errorMessages += errors[field].join('<br>') + '<br>';
+                                }
+                            }
+
+                            sweetAlert('error', errorMessages)
+                        } else {
+
+                            sweetAlert('error', 'Something went wrong. Please try again.')
+
+                        }
+                    },
+                    complete: function() {
+                        // Re-enable button and restore text
+                        $submitButton.prop('disabled', false).text('Send Message');
+                    }
+                });
+            });
+        });
+    </script>
 @endsection
