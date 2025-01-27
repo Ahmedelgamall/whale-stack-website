@@ -29,6 +29,7 @@ return [
     'Youtube' => 'يوتيوب',
     'Instagram' => 'إنستغرام',
     'Twitter' => 'تويتر',
+    'Linkedin' => 'لينكدإن',
     'Explore' => 'استكشف كيف يمكنني مساعدتك',
     'Quick_Support' => 'الدعم السريع',
     'Get_in_Touch' => 'تواصل معنا اليوم!',

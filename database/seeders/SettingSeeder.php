@@ -50,7 +50,8 @@ class SettingSeeder extends Seeder
             ['section' => 'social', 'display_name' => 'facebook', 'key' => 'facebook', 'type' => 'url', 'order' => 1, 'is_static' => 1, 'static_value' => 'https://www.facebook.com'],
             ['section' => 'social', 'display_name' => 'instagram', 'key' => 'instagram', 'type' => 'url', 'order' => 2, 'is_static' => 1, 'static_value' => 'https://www.instagram.com'],
             ['section' => 'social', 'display_name' => 'youtube', 'key' => 'youtube', 'type' => 'url', 'order' => 3, 'is_static' => 1, 'static_value' => 'https://www.youtube.com'],
-            ['section' => 'social', 'display_name' => 'twitter', 'key' => 'twitter', 'type' => 'url', 'order' => 3, 'is_static' => 1, 'static_value' => 'https://www.twitter.com']
+            ['section' => 'social', 'display_name' => 'twitter', 'key' => 'twitter', 'type' => 'url', 'order' => 3, 'is_static' => 1, 'static_value' => 'https://www.twitter.com'],
+            ['section' => 'social', 'display_name' => 'linkedin', 'key' => 'linkedin', 'type' => 'url', 'order' => 3, 'is_static' => 1, 'static_value' => 'https://www.linkedin.com']
         ]);
 
         // seo

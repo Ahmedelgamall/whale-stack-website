@@ -28,6 +28,7 @@ return [
     'Youtube' => 'Youtube',
     'Instagram' => 'Instagram',
     'Twitter' => 'Twitter',
+    'Linkedin' => 'Linkedin',
     'Explore' => 'Explore How Can I Help You',
     'Quick_Support' => 'Quick Support',
     'Get_in_Touch' => 'Get in Touch Today!',

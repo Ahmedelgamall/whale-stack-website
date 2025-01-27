@@ -73,6 +73,9 @@
                                 <a class="d-flex align-items-center gap-1 ff-risk-pri fs-14 fw-700"
                                     href="{{ getSettingOf('twitter') }}" target="_blank"><span><i
                                             class="fa-brands fa-twitter"></i></span>{{ __('app.Twitter') }}</a>
+                                <a class="d-flex align-items-center gap-1 ff-risk-pri fs-14 fw-700"
+                                    href="{{ getSettingOf('linkedin') }}" target="_blank"><span><i
+                                            class="fa-brands fa-linkedin"></i></span>{{ __('app.Linkedin') }}</a>
                             </div>
                         </div>
                     </div>

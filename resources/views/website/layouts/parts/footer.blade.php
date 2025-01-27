@@ -108,6 +108,9 @@
                                     <li class="list-inline-item"><a href="{{ getSettingOf('twitter') }}"
                                             target="_blank"><i class="fab fa-twitter"></i></a>
                                     </li>
+                                    <li class="list-inline-item"><a href="{{ getSettingOf('linkedin') }}"
+                                            target="_blank"><i class="fab fa-linkedin"></i></a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
