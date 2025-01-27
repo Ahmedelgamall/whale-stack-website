@@ -145,12 +145,14 @@ class BlogController extends Controller
     public function destroy($id)
     {
         Blog::destroy($id);
+        Artisan::call('generate:site-map');
         return final_response('success', 'data deleted successfully');
     }
 
     public function bulkDelete(Request $request)
     {
         Blog::destroy($request->items);
+        Artisan::call('generate:site-map');
         return final_response('success', 'data deleted successfully');
     }
 }
