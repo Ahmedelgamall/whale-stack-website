@@ -9,6 +9,7 @@ use App\Models\Category;
 use App\Traits\Files;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\Artisan;
 use Yajra\DataTables\Facades\DataTables;
 use Illuminate\Support\Str;
 
@@ -77,6 +78,7 @@ class BlogController extends Controller
             // Update the slug by concatenating the ID
             $slug = Str::slug($data['en']['title']) . '-' . $blog->id;
             $blog->update(['slug' => $slug]);
+            Artisan::call('generate:site-map');
         } catch (\Exception $exception) {
             return final_response('error', $exception->getMessage(), '', 500);
         }
@@ -126,6 +128,7 @@ class BlogController extends Controller
 
             $data['slug'] = Str::slug($data['en']['title']) . '-' . $blogs->id;
             $blogs->update($data);
+            Artisan::call('generate:site-map');
         } catch (\Exception $exception) {
             return final_response('error', $exception->getMessage(), '', $exception->getMessage(), 500);
         }
