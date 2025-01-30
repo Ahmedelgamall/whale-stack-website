@@ -406,44 +406,40 @@
     <!-- Newsletter End -->
 
 
-    <!--integration section start-->
-    <section class="integration-section pt-60 pb-120">
-        <div class="container">
-            <div class="row align-items-center justify-content-lg-between">
-                <div class="col-lg-6 col-md-12">
-                    <div class="section-heading" data-aos="fade-up">
-                        <h4 class="h5 text-primary">{{ __('app.Integration') }}</h4>
-                        <h2>{{ __('app.We_Collaborate') }}</h2>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-12">
-                    {{-- <div class="text-lg-end mb-5 mb-lg-0" data-aos="fade-up">
-                        <a href="integrations.html" class="btn btn-primary">{{ __('app.View All Integrations') }}</a>
-                    </div> --}}
+<!-- Brands Section Start -->
+<section class="brands-section pt-60 pb-120">
+    <div class="container">
+        <!-- Section Heading -->
+        <div class="row align-items-center justify-content-between mb-5">
+            <div class="col-lg-6 col-md-12">
+                <div class="section-heading" data-aos="fade-up">
+                    <h4 class="h5 text-primary">{{ __('app.Integration') }}</h4>
+                    <h2>{{ __('app.We_Collaborate') }}</h2>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-12">
-                <div class="text-lg-end mb-5 mb-lg-0" data-aos="fade-up">
-                    <a href="{{ route('web.brands') }}" class="btn btn-primary">{{ __('app.View All Brands') }}</a>
-                </div>
+            <div class="col-lg-4 col-md-12 text-lg-end">
+                <a href="{{ route('web.brands') }}" class="btn btn-primary" data-aos="fade-up">
+                    {{ __('app.View All Brands') }}
+                </a>
             </div>
         </div>
+
+        <!-- Brands Carousel -->
         <div class="row">
             <div class="col-12">
-                <div id="integrationCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                <div id="brandsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="993000">
                     <div class="carousel-inner">
                         @php
                             $chunks = $brands->chunk(6); // Adjust number of items per slide
                         @endphp
                         @foreach($chunks as $index => $chunk)
                             <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
-                                <div class="row">
+                                <div class="row justify-content-center">
                                     @foreach($chunk as $brand)
-                                        <div class="col-md-2 col-4" data-aos="fade-up" data-aos-delay="50">
-                                            <div class="single-integration bg-white">
+                                        <div class="col-md-2 col-sm-4 col-6" data-aos="fade-up" data-aos-delay="50">
+                                            <div class="single-brand text-center p-3 bg-white rounded shadow-sm" style="width: 100%; height:100px;">
                                                 <img src="{{ asset('storage') . '/' . $brand->image }}" alt="{{ $brand->name }}"
-                                                    class="img-fluid" style="width: 170px; height: 100px; object-fit: cover; ">
-                                                {{-- <h6 class="mb-0 mt-4">{{ $brand->name }}</h6> --}}
+                                                    class="img-fluid brand-logo" style="width: 100%; height: 100%;">
                                             </div>
                                         </div>
                                     @endforeach
@@ -453,11 +449,11 @@
                     </div>
 
                     <!-- Carousel Controls -->
-                    <button class="carousel-control-prev" type="button" data-bs-target="#integrationCarousel" data-bs-slide="prev">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#brandsCarousel" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#integrationCarousel" data-bs-slide="next">
+                    <button class="carousel-control-next" type="button" data-bs-target="#brandsCarousel" data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
@@ -466,7 +462,7 @@
         </div>
     </div>
 </section>
-<!--integration section end-->
+<!-- Brands Section End -->
 
     <!--customer review tab section start-->
     <section class="testimonial-section ptb-120 bg-light-subtle">
