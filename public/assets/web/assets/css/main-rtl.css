@@ -7784,7 +7784,7 @@
      -webkit-transition: all .3s ease-in-out;
      transition: all .3s ease-in-out;
 
-     height: 310px;
+     height: 220px;
      text-align: center;
  }
 
@@ -7797,7 +7797,7 @@
      position: relative;
      overflow: hidden;
 
-     height: 240px;
+     height: 160px;
      object-fit: cover;
  }
 
