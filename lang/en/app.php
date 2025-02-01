@@ -76,11 +76,9 @@ return [
     'Get Started' => 'Get Started',
     'Conveniently' => 'Conveniently mesh cooperative services via magnetic outsourcing. Dynamically grow
                             functionalized value whereas accurate e-commerce',
-    'Best Yout website' => 'Best Yout website',
+    'Best Yout website' => 'Analytics of your website',
     'Test your Website for Free with Quiety' => 'Test your Website for Free with Quiety',
-    'Intrinsicly' => 'Intrinsicly cultivate user-centric collaboration and idea-sharing after value-added
-                                processes
-                                repurpose unique models and global schemas',
+    'Intrinsicly' => 'Get a free analysis of your website and discover how you can improve it',
     'Analysis Webiste' => 'Analysis Webiste',
     'Integration' => 'Our customers',
     'We_Collaborate' => 'We Collaborate with Top Brands and Companies',

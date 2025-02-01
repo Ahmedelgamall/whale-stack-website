@@ -34,7 +34,7 @@
             <!-- Regular brands Grid -->
             <div class="row">
                 @foreach ($brands as $brand)
-                    <div class="col-lg-2 col-md-4">
+                    <div class="col-lg-2 col-4">
                         <div class="single-article rounded-custom my-3">
                                 <img src="{{ asset('storage/' . $brand->image) }}" alt="{{ $brand->name }}"
                                     class="img-fluid">
