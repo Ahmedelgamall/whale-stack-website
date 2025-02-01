@@ -7782,7 +7782,10 @@
      background-clip: border-box;
      border: 1px solid #f1f1f1;
      -webkit-transition: all .3s ease-in-out;
-     transition: all .3s ease-in-out
+     transition: all .3s ease-in-out;
+
+     height: 310px;
+     text-align: center;
  }
 
  .single-article a {
@@ -7792,7 +7795,10 @@
 
  .article-img {
      position: relative;
-     overflow: hidden
+     overflow: hidden;
+
+     height: 240px;
+     object-fit: cover;
  }
 
  .article-img:before {

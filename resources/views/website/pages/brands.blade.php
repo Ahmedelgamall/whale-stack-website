@@ -34,27 +34,19 @@
             <!-- Regular brands Grid -->
             <div class="row">
                 @foreach ($brands as $brand)
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-3 col-md-6">
                         <div class="single-article rounded-custom my-3">
                                 <img src="{{ asset('storage/' . $brand->image) }}" alt="{{ $brand->name }}"
                                     class="img-fluid">
                             <div class="article-content p-4">
                                 {{-- <div class="article-category mb-4 d-block">
-                            <a href="{{ route('brand.category', $brand->category->slug) }}" 
+                            <a href="{{ route('brand.category', $brand->category->slug) }}"
                                class="d-inline-block text-{{ $brand->category->color ?? 'primary' }} badge bg-{{ $brand->category->color ?? 'primary' }}-soft">
                                 {{ $brand->category->name }}
                             </a>
                         </div> --}}
                                     <h2 class="h5 article-title limit-2-line-text">{{ $brand->name }}</h2>
 
-                                <a href="javascript:;">
-                                    <div class="d-flex align-items-center pt-4">
-                                        <div class="avatar-info">
-                                            <span
-                                                class="small fw-medium text-muted">{{ $brand->created_at->format('F d, Y') }}</span>
-                                        </div>
-                                    </div>
-                                </a>
                             </div>
                         </div>
                     </div>

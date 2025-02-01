@@ -26,9 +26,6 @@
                             <img src="{{ asset('assets/web/') }}/assets/img/risk_managment/font.png" alt=""></span>
                         </h1>
                         <p class="text-white fs-20 ff-dmsans fw-500 flh-28">{{ $firstSection->description }}</p>
-                        <a href="{{ $firstSection->url }}"
-                            class="btn risk-btn-bg risk-btn-hover clr-white ff-risk-pri fs-14 fw-600 mt-30">Start
-                            with us</a>
                         <div class="risk-customer-area mt-60">
                             <p class="text-white ff-risk-pri fw-600">{{ __('app.see_how') }} <span
                                     class="risk-highlight-color fw-800">{{ __('app.help_the_world') }}</span></p>
@@ -138,9 +135,6 @@
                                     <h3 class="h5">{{ $service->title }}</h3>
                                     {!! Str::limit($service->description, 300, '...') !!}
                                 </div>
-                                {{-- <a href="service-single.html"
-                                    class="link-with-icon text-decoration-none mt-3">{{ __('app.View_Details') }}<i
-                                        class="fas fa-arrow-right"></i></a> --}}
                             </div>
                         @endforeach
                     </div>

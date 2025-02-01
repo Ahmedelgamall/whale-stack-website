@@ -30395,6 +30395,10 @@ a:hover,
     display: block
 }
 
+.feature-card{
+    height: 340px !important;
+}
+
 .feature-card.border:hover {
     border-color: #175cff !important;
     -webkit-transition: all .3s ease-in-out;
