@@ -168,11 +168,11 @@
                             <div class="contact-info">
                                 <h5>{{ __('app.Call Us') }}</h5>
                                 <p>{{ __('app.Questions_about') }}</p>
-                                <a href="tel:(415)231-59687" class="read-more-link text-decoration-none"><i
+                                <a href="tel:01001894940" class="read-more-link text-decoration-none"><i
                                         class="fas fa-phone me-2"></i> {{ getSettingOf('website_phone') }}</a>
                             </div>
                         </div>
-                        <div class="col-sm-6" data-aos="fade-up" data-aos-delay="100">
+                        {{-- <div class="col-sm-6" data-aos="fade-up" data-aos-delay="100">
                             <div class="icon-box d-inline-block rounded-circle bg-danger-soft">
                                 <i class="fas fa-headset fa-2x text-danger"></i>
                             </div>
@@ -184,7 +184,7 @@
                                 <a href="#" class="read-more-link text-decoration-none"><i
                                         class="fas fa-comment me-2"></i> {{ __('app.Live Chat Now') }}</a>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <div class="col-xl-5 col-lg-7 col-md-12">
@@ -219,7 +219,7 @@
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="input-group mb-3">
-                                        <input type="tel" name="phone" class="form-control" placeholder="{{ __('app.Phone number') }}"
+                                        <input type="number" name="phone" class="form-control" placeholder="{{ __('app.Phone number') }}"
                                             aria-label="Phone number" {{-- pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" --}}>
                                     </div>
                                 </div>
@@ -376,7 +376,7 @@
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="input-group mb-3">
-                                            <input required type="tel" name="phone" class="form-control bordered-input-sec"
+                                            <input required type="nubmer" name="phone" class="form-control bordered-input-sec"
                                                 placeholder="{{ __('app.Phone number') }}" aria-label="Phone number">
                                         </div>
                                     </div>
@@ -439,7 +439,7 @@
                                         <div class="col-md-2 col-sm-4 col-6" data-aos="fade-up" data-aos-delay="50">
                                             <div class="single-brand text-center p-3 bg-white rounded shadow-sm" style="width: 100%; height:100px;">
                                                 <img src="{{ asset('storage') . '/' . $brand->image }}" alt="{{ $brand->name }}"
-                                                    class="img-fluid brand-logo" style="width: 100%; height: 100%;">
+                                                    class="img-fluid brand-logo" style="width: 100%; height: 100%; object-fit:cover;">
                                             </div>
                                         </div>
                                     @endforeach

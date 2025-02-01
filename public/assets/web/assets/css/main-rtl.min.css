@@ -3967,7 +3967,8 @@
  }
 
  .rounded-custom {
-     border-radius: 1rem !important
+     border-radius: 1rem !important;
+     height: 300px !important;
  }
 
  body {

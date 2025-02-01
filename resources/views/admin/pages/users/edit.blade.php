@@ -75,7 +75,7 @@
                             <div class="col-md-5">
                                 <div class="mb-1">
                                     <label class="form-label" for="phone">Phone </label>
-                                    <input type="tel" id="phone" class="form-control" placeholder="phone .. "
+                                    <input type="number" id="phone" class="form-control" placeholder="phone .. "
                                         name="phone" required value="{{ $user->phone }}">
                                 </div>
                             </div>

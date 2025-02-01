@@ -118,4 +118,13 @@
                 </div>
             </div>
             <!--footer bottom end-->
+
+            <div class="sticky-buttons">
+                <a href="https://wa.me/+201001894940" class="whatsapp-button" target="_blank" aria-label="Chat with us on WhatsApp">
+                  <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp Icon">
+                </a>
+                <a href="tel:+201001894940" class="call-button" aria-label="Call us">
+                <img src="https://img.icons8.com/color/48/000000/phone.png" alt="Call Icon">
+                </a>
+              </div>
         </footer>

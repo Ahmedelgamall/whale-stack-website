@@ -22,7 +22,7 @@ return [
     'Arabic' => 'Arabic',
     'English' => 'English',
     'Language' => 'Language',
-    'see_how' => 'See how over 7,700 customers',
+    'see_how' => 'See how over 400 customers',
     'help_the_world' => 'Help the world work',
     'Facebook' => 'Facebook',
     'Youtube' => 'Youtube',

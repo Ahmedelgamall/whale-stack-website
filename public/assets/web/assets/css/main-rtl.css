@@ -44568,11 +44568,55 @@
 
 
 .navbar-toggler{
-    color: #000139;
+    /* color: #000139; */
     /* background-color: white; */
+
+    background: linear-gradient(270deg, rgb(0, 127, 255) -29.66%, rgb(255, 77, 84) 117.57%);
+    margin: 0 8px;
 }
 
-/* .flaticon-menu
-{
+
+.sticky-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+}
+
+.sticky-buttons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sticky-buttons img {
+    width: 40px;
+    height: 40px;
+}
+
+.call-button{
     color: white !important;
-} */
+    background-color: #233d62 !important;
+}
+
+@media (max-width: 550px) {
+    .sticky-buttons a {
+        width: 40px;
+        height: 40px;
+    }
+
+    .sticky-buttons img {
+        width: 26.5px;
+        height: 26.5px;
+    }
+
+}

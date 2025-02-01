@@ -62,8 +62,13 @@
     @yield('css')
     @if (app()->getLocale() == 'en')
         <style>
-            .container {
+            /* changing language css .................... */
+            .container, input, select, textarea {
                 direction: ltr !important;
+            }
+            .navbar-toggler.right-0 {
+                left: auto;
+                right: 0;
             }
         </style>
     @elseif (app()->getLocale() == 'ar')
@@ -71,6 +76,7 @@
             .container {
                 direction: rtl !important;
             }
+
         </style>
     @endif
 </head>
