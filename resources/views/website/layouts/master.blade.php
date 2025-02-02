@@ -10,16 +10,16 @@
     <meta name="twitter:site" content="@themetags">
     <meta name="twitter:creator" content="@themetags">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Quiety - Creative SAAS Technology & IT Solutions Bootstrap 5 HTML Template">
+    <meta name="twitter:title" content="Whale stack - Website & Mobile App Development Company">
     <meta name="twitter:description"
-        content="Quiety creative Saas, software technology, Saas agency & business Bootstrap 5 Html template. It is best and famous software company and Saas website template.">
+        content="Whale stack - Website & Mobile App Development Company">
     <meta name="twitter:image" content="#">
 
     <!--facebook og-->
     <meta property="og:url" content="#">
-    <meta name="twitter:title" content="Quiety - Creative SAAS Technology & IT Solutions Bootstrap 5 HTML Template">
+    <meta name="twitter:title" content="Whale stack - Website & Mobile App Development Company">
     <meta property="og:description"
-        content="Quiety creative Saas, software technology, Saas agency & business Bootstrap 5 Html template. It is best and famous software company and Saas website template.">
+        content="Whale stack - Website & Mobile App Development Company">
     <meta property="og:image" content="#">
     <meta property="og:image:secure_url" content="#">
     <meta property="og:image:type" content="image/png">
@@ -28,7 +28,7 @@
 
     <!--meta-->
     <meta name="description"
-        content="Quiety creative Saas, software technology, Saas agency & business Bootstrap 5 Html template. It is best and famous software company and Saas website template.">
+        content="Whale stack - Website & Mobile App Development Company">
     <meta name="author" content="ThemeTags">
 
     <!--favicon icon-->

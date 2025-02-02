@@ -77,7 +77,7 @@ return [
     'Conveniently' => 'Conveniently mesh cooperative services via magnetic outsourcing. Dynamically grow
                             functionalized value whereas accurate e-commerce',
     'Best Yout website' => 'Analytics of your website',
-    'Test your Website for Free with Quiety' => 'Test your Website for Free with Quiety',
+    'Test your Website for Free with Whale stack' => 'Test your Website for Free with Whalestack',
     'Intrinsicly' => 'Get a free analysis of your website and discover how you can improve it',
     'Analysis Webiste' => 'Analysis Webiste',
     'Integration' => 'Our customers',
@@ -109,11 +109,9 @@ return [
     'Privacy and policy' => 'Privacy and policy',
     'Customer Review' => 'Customer Review',
     //******************************************** */
-    'Grow_your_Business' => 'Grow your Business & Customer Satisfaction with
-                                    Whale Stack',
-    'Dynamically_disintermediate' => 'Dynamically disintermediate technically sound technologies with
-                                    compelling quality vectors error-free communities',
-    'Open Positions' => 'Open Positions',
+    'Grow_your_Business' => 'We understand the unique needs of each market.',
+    'Dynamically_disintermediate' => 'Our team of experts is dedicated to delivering top-notch digital solutions that drive growth and success.',
+    'Open Positions' => 'contact us',
     'Meet Our Team' => 'Meet Our Team',
     'Our Story' => 'Our Story',
     'A Great Story' => 'A Great Story Starts with a Friendly Team',
@@ -172,7 +170,7 @@ return [
     'Completely integrate equity' => 'Completely integrate equity invested partnerships without revolutionary systems.
                             Monotonectally network pandemic e-services via bricks-and-clicks information',
     'Related Blogs' => 'Related Blogs',
-    'More Latest News and Blog at Quiety' => 'More Latest News and Blog at Whale Stack',
+    'More Latest News and Blog at Whale stack' => 'More Latest News and Blog at Whale Stack',
     'View All Brands' => 'View All Brands',
     'Our Latest News and brands' => 'Our Latest News and brands',
     'Brands' => 'Brands',
