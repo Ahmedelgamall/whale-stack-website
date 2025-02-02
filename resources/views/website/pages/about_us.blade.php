@@ -22,8 +22,7 @@
                             <div class="about-info mb-5">
                                 <h1 class="fw-bold display-5">{{ __('app.Grow_your_Business') }}</h1>
                                 <p class="lead">{{ __('app.Dynamically_disintermediate') }}. </p>
-                                <a href="#" class="btn btn-primary mt-4 me-3">{{ __('app.Open Positions') }}</a>
-                                <a href="#our-team" class="btn btn-soft-primary mt-4">{{ __('app.Meet Our Team') }}</a>
+                                <a href="{{ route('web.contact-us') }}" class="btn btn-primary mt-4 me-3">{{ __('app.Open Positions') }}</a>
                             </div>
                             {{-- <img src="assets/img/about-img-1.jpg" alt="about"
                                 class="img-fluid about-img-first mt-5 rounded-custom shadow"> --}}

@@ -7,10 +7,11 @@
                         <div class="col-md-8 col-lg-4 mb-md-4 mb-lg-0">
                             <div class="footer-single-col">
                                 <div class="footer-single-col mb-4">
-                                    <img src="{{ asset('assets/web/') }}/assets/img/logo-white.png" alt="logo"
+                                    {{-- <img src="{{ asset('assets/web/') }}/assets/img/logo-white.png" alt="logo"
                                         class="img-fluid logo-white">
                                     <img src="{{ asset('assets/web/') }}/assets/img/logo-color.png" alt="logo"
-                                        class="img-fluid logo-color">
+                                        class="img-fluid logo-color"> --}}
+                                        <span style="font-size: 22px; font-weight: 700;" class="risk-gd-text">Whale stack</span>
                                 </div>
                                 <p>{{ __('app.Our_latest_news') }}.</p>
 

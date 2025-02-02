@@ -2,10 +2,12 @@
             <nav class="navbar navbar-expand-xl navbar-dark sticky-header z-10">
                 <div class="container d-flex align-items-center justify-content-lg-between position-relative">
                     <a href="{{ route('web.home') }}" class="navbar-brand d-flex align-items-center mb-md-0 text-decoration-none">
-                        <img src="{{ asset('assets/web/') }}/assets/img/logo-white.png" alt="logo"
+                        {{-- <img src="{{ asset('assets/web/') }}/assets/img/logo-white.png" alt="logo"
                             class="img-fluid logo-white" />
                         <img src="{{ asset('assets/web/') }}/assets/img/logo-color.png" alt="logo"
-                            class="img-fluid logo-color" />
+                            class="img-fluid logo-color" /> --}}
+                            {{-- <h1 style="font-size: 22px; color: #4e1416;">Whale stack</h1> --}}
+                            <span style="font-size: 22px; font-weight: 700;" class="risk-gd-text">Whale stack</span>
                     </a>
 
                     <div class="nav-item dropdown" style="margin-left: 50px;">
