@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
     <url>
-        <loc>http://localhost</loc>
-        <lastmod>2025-01-25T18:03:03+00:00</lastmod>
+        <loc>https://whalestack.net</loc>
+        <lastmod>2025-01-25T18:15:21+00:00</lastmod>
 
             </url>
     <url>
-        <loc>http://localhost/projects</loc>
-        <lastmod>2025-01-25T18:03:03+00:00</lastmod>
+        <loc>https://whalestack.net/projects</loc>
+        <lastmod>2025-01-25T18:15:21+00:00</lastmod>
 
             </url>
     <url>
-        <loc>http://localhost/about-us</loc>
-        <lastmod>2025-01-25T18:03:03+00:00</lastmod>
+        <loc>https://whalestack.net/about-us</loc>
+        <lastmod>2025-01-25T18:15:21+00:00</lastmod>
 
             </url>
     <url>
-        <loc>http://localhost/blogs</loc>
-        <lastmod>2025-01-25T18:03:03+00:00</lastmod>
+        <loc>https://whalestack.net/blogs</loc>
+        <lastmod>2025-01-25T18:15:21+00:00</lastmod>
 
             </url>
     <url>
-        <loc>http://localhost/contact-us</loc>
-        <lastmod>2025-01-25T18:03:03+00:00</lastmod>
+        <loc>https://whalestack.net/contact-us</loc>
+        <lastmod>2025-01-25T18:15:21+00:00</lastmod>
 
             </url>
     <url>
-        <loc>http://localhost/blog/first-insight-7</loc>
-        <lastmod>2025-01-22T07:53:43+00:00</lastmod>
+        <loc>https://whalestack.net/blog/growing-your-business-with-google-ads-2</loc>
+        <lastmod>2025-01-24T21:16:11+00:00</lastmod>
 
             </url>
 </urlset>
