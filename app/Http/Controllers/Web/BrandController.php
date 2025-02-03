@@ -15,7 +15,7 @@ class BrandController extends Controller
      */
     public function getBrands()
     {
-        $brands = Brand::orderBy('created_at', 'asc')->paginate(9);
+        $brands = Brand::orderBy('created_at', 'asc')->paginate(60);
         return view('website.pages.brands', compact('brands'));
     }
 }

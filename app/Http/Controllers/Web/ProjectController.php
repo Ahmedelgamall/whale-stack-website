@@ -16,7 +16,7 @@ class ProjectController extends Controller
      */
     public function getProjects()
     {
-        $projects = Project::with('category')->latest()->paginate(9);
+        $projects = Project::with('category')->latest()->paginate(30);
         $categories = ProjectCategory::latest()->get();
         return view('website.pages.projects', compact('projects', 'categories'));
     }

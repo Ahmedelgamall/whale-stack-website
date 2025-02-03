@@ -17,7 +17,7 @@ class BlogController extends Controller
     public function getBlogs()
     {
         $featuredBlogs = Blog::with('category')->latest()->take(2)->get();
-        $blogs = Blog::with('category')->latest()->paginate(9);
+        $blogs = Blog::with('category')->latest()->paginate(30);
         $categories = Category::latest()->get();
         return view('website.pages.blogs', compact('blogs', 'categories', 'featuredBlogs'));
     }

@@ -32,9 +32,9 @@ class ContactController extends Controller
         $validated = $request->validate([
             'first_name' => 'required|string|max:50',
             'last_name' => 'required|string|max:50',
-            'email' => 'required|email|max:120',
+            'email' => 'email|max:120',
             'phone' => 'required|max:30',
-            'message' => 'required|string|max:1000',
+            'message' => 'string|max:1000',
         ]);
 
         ContactUs::create($validated);
@@ -52,11 +52,11 @@ class ContactController extends Controller
         $validated = $request->validate([
             'name' => 'required|string|max:200',
             'email' => 'required|email|max:120',
-            'work_email' => 'required|email|max:120',
+            'work_email' => 'email|max:120',
             'country' => 'required|max:120',
             'phone' => 'required|max:30',
-            'url' => 'required|max:250',
-            'message' => 'required|string|max:1000',
+            'url' => 'max:250',
+            'message' => 'string|max:1000',
         ]);
 
         Website::create($validated + [

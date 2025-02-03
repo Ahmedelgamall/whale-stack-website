@@ -7903,8 +7903,10 @@
  }
 
  .page-item.active .page-link {
-     background: #175cff;
-     border-color: #175cff
+    margin: 0 14px;
+    border-radius: 3px;
+    background: linear-gradient(270deg, rgb(0, 127, 255) -29.66%, rgb(255, 77, 84) 117.57%);
+    border-color: transparent;
  }
 
  .page-link:focus {
